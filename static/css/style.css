@@ -16,10 +16,23 @@
     border-radius: 10px;
     border-color:#7c0000;
     background-color:#7c0000;
+    float: right;
+    margin-right: 10px;
+}
+
+.portBtn:hover{
+    color: #7c0000;
+    background-color: white;
+}
+
+.portBtns{
+    align-items: end;
+    float: right;
 }
 
 .center-right-text{
     display: inline-block;
     position: absolute;
-    right: 0;
+    right: 100px;
+    bottom: 25%;
 }
