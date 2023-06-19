@@ -4,16 +4,22 @@
     background-color: #000000;
 }
 
-h1{
+.name{
     color: #FF0000;
     font-size: 100px;
     font-weight: bold;
 }
 
-#portBtn{
+.portBtn{
     color: white;
     font-size: 48px;
     border-radius: 10px;
     border-color:#7c0000;
     background-color:#7c0000;
+}
+
+.center-right-text{
+    display: inline-block;
+    position: absolute;
+    right: 0;
 }
