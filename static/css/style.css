@@ -2,12 +2,14 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url(assests/wallpaper\ ver\ 2\ without\ text.jpg);
     background-color: #000000;
+    animation: expand .8s ease forwards;
 }
 
 .name{
     color: #FF0000;
     font-size: 100px;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 .portBtn{
@@ -33,6 +35,6 @@
 .center-right-text{
     display: inline-block;
     position: absolute;
-    right: 100px;
+    right: 125px;
     bottom: 25%;
 }
