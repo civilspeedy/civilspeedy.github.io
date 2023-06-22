@@ -9,7 +9,8 @@
     color: #FF0000;
     font-size: 100px;
     font-weight: bold;
-    margin-bottom: 0;
+    margin: 0;
+    float: right;
 }
 
 .portBtn{
@@ -25,6 +26,7 @@
 .portBtn:hover{
     color: #7c0000;
     background-color: white;
+    font-weight: bold;
 }
 
 .portBtns{
@@ -37,4 +39,12 @@
     position: absolute;
     right: 125px;
     bottom: 25%;
+}
+
+#undertext{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    float: right;
 }
