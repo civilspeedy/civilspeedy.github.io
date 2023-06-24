@@ -6,7 +6,7 @@
 }
 
 .name{
-    color: #FF0000;
+    color: #005eff;
     font-size: 100px;
     font-weight: bold;
     margin: 0;
@@ -17,16 +17,17 @@
     color: white;
     font-size: 48px;
     border-radius: 10px;
-    border-color:#7c0000;
-    background-color:#7c0000;
+    border-color:#005eff;
+    background-color:#005eff;
     float: right;
     margin-right: 10px;
 }
 
 .portBtn:hover{
-    color: #7c0000;
+    color: #005eff;
     background-color: white;
     font-weight: bold;
+    border-color: white;
 }
 
 .portBtns{
