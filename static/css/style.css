@@ -63,3 +63,7 @@
     background-image: url(../assests/homeIn.png);
     background-color: white;
 }
+h1{
+    color: #005eff;
+    align-self: center;
+}
