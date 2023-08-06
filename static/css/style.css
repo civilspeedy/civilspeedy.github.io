@@ -59,18 +59,30 @@
 .homeBtn:hover{
     float: left;
     background-image: url(../assests/homeIn.png);
-}
+}   
 h1{
     color: #005eff;
-    display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
+    margin-bottom: 0;
 }
+
 .top-box{
     text-align: center;
 }
-.center-box{
-    background-color: darkgray;
+li{
+    color: white;
+    background-color: darkgrey;
     border-radius: 10px;
+    background-color: rgb(71, 71, 71);
+    border-radius: 10px;
+    font-size: 25px;
+}
+ul{
+    padding-top: 0;
+    margin-top: 0;
+    background-color: rgb(71, 71, 71);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px;
 }
