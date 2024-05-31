@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+#topText {
+  align-items: center;
+  text-align: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 20px;
+}
+#subjectList {
+  list-style-type: none;
+  text-align: left;
+  display: block;
+  right: 10%;
+  top: 30%;
+  position: absolute;
+  align-self: flex-end;
+}

@@ -4,44 +4,37 @@ import viteLogo from '/vite.svg';
 import './App.css';
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  const [buttonHovered, setButtonHovered] = useState(null);
+
+  const subjects = [
+    'Software Engineering',
+    'Web Development',
+    'Cinematography',
+    'Graphic Design',
+    'Video Editing',
+    'Photography',
+    'About Me',
+  ];
 
   return (
     <>
+      <div id='topText'>
+        <h1>Charlie Slorick</h1>
+      </div>
       <div>
-        <a
-          href='https://vitejs.dev'
-          target='_blank'
-        >
-          <img
-            src={viteLogo}
-            className='logo'
-            alt='Vite logo'
-          />
-        </a>
-        <a
-          href='https://react.dev'
-          target='_blank'
-        >
-          <img
-            src={reactLogo}
-            className='logo react'
-            alt='React logo'
-          />
-        </a>
+        <ul id='subjectList'>
+          {subjects.map((text, index) => (
+            <li key={index}>
+              <button
+                onMouseEnter={() => setButtonHovered(index)}
+                onMouseLeave={() => setButtonHovered(null)}
+              >
+                {buttonHovered == index ? '>' + text : text}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
