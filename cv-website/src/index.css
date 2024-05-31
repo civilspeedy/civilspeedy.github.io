@@ -30,11 +30,11 @@ h1 {
 }
 
 button {
-  font-size: 34px;
+  font-size: 40px;
   font-family: inherit;
   font-weight: 500;
   background-color: #000000;
   border-width: 0;
   text-align: left;
-  width: 420px;
+  width: 500px;
 }
