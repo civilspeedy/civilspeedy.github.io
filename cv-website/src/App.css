@@ -53,8 +53,8 @@
   list-style-type: none;
   text-align: left;
   display: block;
-  right: 10%;
+  right: 5%;
   top: 30%;
+  padding: 20px;
   position: absolute;
-  align-self: flex-end;
 }

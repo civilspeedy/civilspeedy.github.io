@@ -24,6 +24,7 @@ a:hover {
 
 li {
   display: block;
+  padding-inline: 10px;
 }
 body {
   margin: 0;
@@ -41,8 +42,9 @@ h1 {
 button {
   font-size: 34px;
   font-family: inherit;
-  padding: 10px;
   font-weight: 500;
   background-color: #000000;
   border-width: 0;
+  text-align: left;
+  width: 420px;
 }

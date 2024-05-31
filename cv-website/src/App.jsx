@@ -29,7 +29,7 @@ export default function App() {
                 onMouseEnter={() => setButtonHovered(index)}
                 onMouseLeave={() => setButtonHovered(null)}
               >
-                {buttonHovered == index ? '>' + text : text}
+                {buttonHovered == index ? '> ' + text : text}
               </button>
             </li>
           ))}
