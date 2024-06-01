@@ -45,6 +45,7 @@ export default function App() {
               {subjects.map((text, index) => (
                 <li key={index}>
                   <button
+                    id='subjectButton'
                     onMouseEnter={() => setButtonHovered(index)}
                     onMouseLeave={() => setButtonHovered(null)}
                     onClick={() => setButtonClicked(index)}

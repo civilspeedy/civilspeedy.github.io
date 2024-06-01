@@ -29,7 +29,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+#subjectButton {
   font-size: 40px;
   font-family: inherit;
   font-weight: 500;
@@ -37,4 +37,12 @@ button {
   border-width: 0;
   text-align: left;
   width: 550px;
+}
+
+button {
+  font-size: 40px;
+  font-family: inherit;
+  font-weight: 500;
+  background-color: rgb(0, 0, 0);
+  border-width: 0;
 }

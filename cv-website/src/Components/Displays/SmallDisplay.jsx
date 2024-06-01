@@ -5,8 +5,10 @@ import javaScriptIcon from '../../assets/JavaScript.svg';
 import reactIcon from '../../assets/React.svg';
 import flaskIcon from '../../assets/Flask.svg';
 import sqliteIcon from '../../assets/Sqlite.svg';
+import nodeIcon from '../../assets/Node.svg';
+
 import '../../App.css';
-import { blue, lightBlue, yellow } from '@mui/material/colors';
+import { blue, green, lightBlue, yellow } from '@mui/material/colors';
 
 export default function SmallDisplay({ title }) {
   const attributes = (title) => {
@@ -23,6 +25,8 @@ export default function SmallDisplay({ title }) {
         return [flaskIcon, 'black'];
       case 'Sqlite':
         return [sqliteIcon, lightBlue[100]];
+      case 'Node':
+        return [nodeIcon, green[400]];
       default:
         return [null, 'black'];
     }
