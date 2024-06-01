@@ -1,14 +1,7 @@
-import { useEffect, useState } from 'react';
-import '../../../src/App.css';
+import React from 'react';
+import '../../App.css';
 
-export default function SmallDisplay({ title }) {
-  const [image, setImage] = useState(null);
-
-  // not sure what too do
-  useEffect(() => {
-    setImage(import(`../../assets/${title}.svg`));
-  }, [title]);
-
+export default function SmallDisplay({ title, image }) {
   return (
     <div id='smallDisplay'>
       <img

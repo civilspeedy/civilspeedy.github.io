@@ -18,7 +18,7 @@ export default function App() {
   }, [buttonClicked]);
 
   const subjects = [
-    'Software Engineering',
+    'Software Engineering', // needs size adjustments
     'Web Development',
     'Cinematography',
     'Graphic Design',
@@ -29,19 +29,18 @@ export default function App() {
 
   return (
     <>
-      <div id='topText'>
-        <h1>Charlie Slorick</h1>
-      </div>
       {pageState === null ? (
         <div>
+          <div id='topText'>
+            <h1>Charlie Slorick</h1>
+          </div>
           <ul id='subjectList'>
             {subjects.map((text, index) => (
               <li key={index}>
                 <button
                   onMouseEnter={() => setButtonHovered(index)}
                   onMouseLeave={() => setButtonHovered(null)}
-                  onClick={() => setButtonClicked(index)}
-                >
+                  onClick={() => setButtonClicked(index)}>
                   {buttonHovered == index ? '> ' + text : text}
                 </button>
               </li>
