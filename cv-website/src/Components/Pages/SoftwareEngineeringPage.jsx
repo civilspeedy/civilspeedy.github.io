@@ -43,7 +43,7 @@ export default function SoftwareEngineeringPage() {
             />
           ))}
         </div>
-        <h2>/FrameworkExperience</h2>
+        <h2>/Framework Experience</h2>
         <div id='displayArea'>
           {frameworkTitles.map((title, index) => (
             <SmallDisplay

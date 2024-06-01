@@ -61,9 +61,10 @@
 #smallDisplay {
   background-color: #888;
   border-radius: 20px;
-  padding: 20px;
-  margin: 10px;
+  padding: 10px;
+  margin: 5px;
   max-width: 100px;
+  height: fit-content;
 }
 
 #smallDisplayText {
@@ -77,13 +78,21 @@
 
 #displayArea {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   flex: 1;
   flex-direction: row;
-  background-color: aqua;
   right: 0px;
   left: 0px;
 }
+
 #container {
   right: 0;
   left: 0;
+}
+
+#backButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }

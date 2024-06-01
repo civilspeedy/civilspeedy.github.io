@@ -7,14 +7,17 @@ import GraphicDesignPage from './Components/Pages/GraphicDesignPage';
 import VideoEditingPage from './Components/Pages/VideoEditingPage';
 import PhotographyPage from './Components/Pages/PhotographyPage';
 import AboutMePage from './Components/Pages/AboutMePage';
+import { Box, Grow } from '@mui/material';
 
 export default function App() {
   const [pageState, setPageState] = useState(null);
   const [buttonHovered, setButtonHovered] = useState(null);
   const [buttonClicked, setButtonClicked] = useState(null);
+  const [stateChange, setStateChange] = useState(false);
 
   useEffect(() => {
     setPageState(buttonClicked);
+    setStateChange(true);
   }, [buttonClicked]);
 
   const subjects = [
@@ -29,6 +32,9 @@ export default function App() {
 
   return (
     <>
+      <div id='backButton'>
+        <button onClick={() => setButtonClicked(null)}>../</button>
+      </div>
       {pageState === null ? (
         <div>
           <div id='topText'>
@@ -49,13 +55,19 @@ export default function App() {
         </div>
       ) : (
         <>
-          {pageState === 0 && <SoftwareEngineeringPage />}
-          {pageState === 1 && <WebDevelopmentPage />}
-          {pageState === 2 && <CinematographyPage />}
-          {pageState === 3 && <GraphicDesignPage />}
-          {pageState === 4 && <VideoEditingPage />}
-          {pageState === 5 && <PhotographyPage />}
-          {pageState === 6 && <AboutMePage />}
+          <Box sx={{ display: 'flex' }}>
+            <Grow in={stateChange}>
+              <div>
+                {pageState === 0 && <SoftwareEngineeringPage />}
+                {pageState === 1 && <WebDevelopmentPage />}
+                {pageState === 2 && <CinematographyPage />}
+                {pageState === 3 && <GraphicDesignPage />}
+                {pageState === 4 && <VideoEditingPage />}
+                {pageState === 5 && <PhotographyPage />}
+                {pageState === 6 && <AboutMePage />}
+              </div>
+            </Grow>
+          </Box>
         </>
       )}
     </>
