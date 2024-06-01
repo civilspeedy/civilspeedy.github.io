@@ -40,18 +40,21 @@ export default function App() {
           <div id='topText'>
             <h1>Charlie Slorick</h1>
           </div>
-          <ul id='subjectList'>
-            {subjects.map((text, index) => (
-              <li key={index}>
-                <button
-                  onMouseEnter={() => setButtonHovered(index)}
-                  onMouseLeave={() => setButtonHovered(null)}
-                  onClick={() => setButtonClicked(index)}>
-                  {buttonHovered == index ? '> ' + text : text}
-                </button>
-              </li>
-            ))}
-          </ul>
+          <Grow in={stateChange}>
+            <ul id='subjectList'>
+              {subjects.map((text, index) => (
+                <li key={index}>
+                  <button
+                    onMouseEnter={() => setButtonHovered(index)}
+                    onMouseLeave={() => setButtonHovered(null)}
+                    onClick={() => setButtonClicked(index)}
+                  >
+                    {buttonHovered == index ? '> ' + text : text}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </Grow>
         </div>
       ) : (
         <>

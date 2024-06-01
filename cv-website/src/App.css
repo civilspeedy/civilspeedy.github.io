@@ -59,16 +59,16 @@
 }
 
 #smallDisplay {
-  background-color: #888;
+  background-color: white;
   border-radius: 20px;
-  padding: 10px;
+  padding: 5px;
   margin: 5px;
-  max-width: 100px;
+  max-width: 120px;
   height: fit-content;
 }
 
 #smallDisplayText {
-  color: white;
+  color: black;
 }
 
 #smallImage {
@@ -84,6 +84,7 @@
   flex-direction: row;
   right: 0px;
   left: 0px;
+  top: 0px;
 }
 
 #container {
