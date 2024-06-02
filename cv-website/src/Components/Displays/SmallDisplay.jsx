@@ -6,9 +6,19 @@ import reactIcon from '../../assets/React.svg';
 import flaskIcon from '../../assets/Flask.svg';
 import sqliteIcon from '../../assets/Sqlite.svg';
 import nodeIcon from '../../assets/Node.svg';
+import HTMLIcon from '../../assets/HTML.svg';
+import tkinterIcon from '../../assets/Tkinter.png';
+import expoIcon from '../../assets/Expo.svg';
 
 import '../../App.css';
-import { blue, green, lightBlue, yellow } from '@mui/material/colors';
+import {
+  blue,
+  green,
+  grey,
+  lightBlue,
+  orange,
+  yellow,
+} from '@mui/material/colors';
 
 export default function SmallDisplay({ title }) {
   const attributes = (title) => {
@@ -27,6 +37,12 @@ export default function SmallDisplay({ title }) {
         return [sqliteIcon, lightBlue[100]];
       case 'Node':
         return [nodeIcon, green[400]];
+      case 'HTML':
+        return [HTMLIcon, orange[900]];
+      case 'Tkinter':
+        return [tkinterIcon, grey[600]];
+      case 'Expo':
+        return [expoIcon, blue[900]];
       default:
         return [null, 'black'];
     }
@@ -37,6 +53,8 @@ export default function SmallDisplay({ title }) {
 
   const hoverStyle = {
     filter: hover ? `drop-shadow(0 0 1em ${color})` : 'none',
+    transition: 'transform 0.1s ease-in-out',
+    transform: hover ? 'translateY(-10px)' : 'translateY(0)',
   };
 
   return (

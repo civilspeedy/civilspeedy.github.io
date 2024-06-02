@@ -8,10 +8,11 @@ import VideoEditingPage from './Components/Pages/VideoEditingPage';
 import PhotographyPage from './Components/Pages/PhotographyPage';
 import AboutMePage from './Components/Pages/AboutMePage';
 import { Box, Grow } from '@mui/material';
+import MenuButton from './Components/Buttons/MenuButton';
 
 export default function App() {
   const [pageState, setPageState] = useState(null);
-  const [buttonHovered, setButtonHovered] = useState(null);
+
   const [buttonClicked, setButtonClicked] = useState(null);
   const [stateChange, setStateChange] = useState(false);
 
@@ -22,7 +23,6 @@ export default function App() {
 
   const subjects = [
     'Software Engineering', // needs size adjustments
-    'Web Development',
     'Cinematography',
     'Graphic Design',
     'Video Editing',
@@ -44,14 +44,12 @@ export default function App() {
             <ul id='subjectList'>
               {subjects.map((text, index) => (
                 <li key={index}>
-                  <button
-                    id='subjectButton'
-                    onMouseEnter={() => setButtonHovered(index)}
-                    onMouseLeave={() => setButtonHovered(null)}
-                    onClick={() => setButtonClicked(index)}
-                  >
-                    {buttonHovered == index ? '> ' + text : text}
-                  </button>
+                  <MenuButton
+                    text={text}
+                    setButtonClicked={setButtonClicked}
+                    key={index}
+                    index={index}
+                  />
                 </li>
               ))}
             </ul>
@@ -63,12 +61,11 @@ export default function App() {
             <Grow in={stateChange}>
               <div>
                 {pageState === 0 && <SoftwareEngineeringPage />}
-                {pageState === 1 && <WebDevelopmentPage />}
-                {pageState === 2 && <CinematographyPage />}
-                {pageState === 3 && <GraphicDesignPage />}
-                {pageState === 4 && <VideoEditingPage />}
-                {pageState === 5 && <PhotographyPage />}
-                {pageState === 6 && <AboutMePage />}
+                {pageState === 1 && <CinematographyPage />}
+                {pageState === 2 && <GraphicDesignPage />}
+                {pageState === 3 && <VideoEditingPage />}
+                {pageState === 4 && <PhotographyPage />}
+                {pageState === 5 && <AboutMePage />}
               </div>
             </Grow>
           </Box>

@@ -60,7 +60,7 @@
 
 #smallDisplay {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 5px;
   margin: 5px;
   max-width: 120px;
@@ -102,4 +102,19 @@
   left: 0px;
   right: 0px;
   align-self: center;
+}
+
+#projectDisplay {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+#projectDisplay h2 {
+  color: black;
+}
+
+#projectDisplay p {
+  color: black;
 }
