@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import SmallDisplay from '../Displays/SmallDisplay';
 import { Grow } from '@mui/material';
@@ -6,9 +6,9 @@ import ProjectDisplay from '../Displays/ProjectDisplay';
 import ViewProjects from '../Buttons/ViewProjects';
 
 export default function SoftwareEngineeringPage() {
-  const [hovered, setHovered] = useState(false);
   const [viewProjects, setViewProjects] = useState(false);
   const languageTitles = ['JavaScript', 'Python', 'Java', 'HTML', 'SQL'];
+  const [projectsSate, setProjectsState] = useState([]);
   const frameworkTitles = [
     'React/React-Native',
     'Expo',
@@ -17,25 +17,13 @@ export default function SoftwareEngineeringPage() {
     'Flask',
     'Tkinter',
   ];
-
-  const projectTitles = [
-    'Conversational Interface For Weather',
-    'Todo App',
-    'Payroll System',
-    'Prototype Web-Store',
-    'Weather Data Entry Site',
-    'Stocks Trading Simulator',
-  ];
-
-  const miniIcons = [
-    ['JavaScript', 'Python', 'React/React-Native', 'Expo', 'Node', 'Flask'],
-    ['JavaScript', 'React/React-Native', 'Expo', 'Node'],
-    ['Python', 'SQL', 'Flask', 'Sqlite'],
-    ['Python', 'HTML', 'JavaScript', 'Flask'],
-    ['Python', 'HTML', 'JavaScript', 'Flask'],
-    ['Python', 'SQL', 'Sqlite', 'Tkinter'],
-  ];
-
+  // issues with data get
+  useEffect(() => {
+    fetch('../../assets/json/softwareProjects.json').then((data) =>
+      setProjectsState(data)
+    );
+  }, []);
+  console.log(projectsSate);
   return (
     <>
       <div id='container'>
@@ -68,11 +56,10 @@ export default function SoftwareEngineeringPage() {
               <div>
                 <button onClick={() => setViewProjects(false)}>../</button>
                 <h1>/Projects</h1>
-                {projectTitles.map((title, index) => (
+                {projectsSate.map((item, index) => (
                   <ProjectDisplay
-                    title={title}
+                    project={item}
                     key={index}
-                    iconsInUse={miniIcons[index]}
                   />
                 ))}
               </div>

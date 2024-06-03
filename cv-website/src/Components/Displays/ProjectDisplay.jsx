@@ -1,15 +1,13 @@
 import '../../App.css';
 import { icons } from '../../App';
-export default function ProjectDisplay({ title, iconsInUse }) {
-  // a component for displaying software projects
-
+export default function ProjectDisplay({ project }) {
   return (
     <>
       <div id='projectDisplay'>
-        <h2>{title}</h2>
-        <p>test</p>
+        <h2>{project.title}</h2>
+        <p>{project.description}</p>
         <div id='iconDisplay'>
-          {iconsInUse.map((item, index) => (
+          {project.icons.map((item, index) => (
             <img
               id='miniIcon'
               src={icons[item]}
