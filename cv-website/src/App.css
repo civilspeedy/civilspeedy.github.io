@@ -118,3 +118,7 @@
 #projectDisplay p {
   color: black;
 }
+#miniIcon {
+  width: 30px;
+  height: 30px;
+}

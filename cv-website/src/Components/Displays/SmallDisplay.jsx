@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import javaIcon from '../../assets/Java.svg';
-import pythonIcon from '../../assets/Python.svg';
-import javaScriptIcon from '../../assets/JavaScript.svg';
-import reactIcon from '../../assets/React.svg';
-import flaskIcon from '../../assets/Flask.svg';
-import sqliteIcon from '../../assets/Sqlite.svg';
-import nodeIcon from '../../assets/Node.svg';
-import HTMLIcon from '../../assets/HTML.svg';
-import tkinterIcon from '../../assets/Tkinter.png';
-import expoIcon from '../../assets/Expo.svg';
-
+import { icons } from '../../App';
 import '../../App.css';
 import {
   blue,
@@ -22,30 +12,45 @@ import {
 
 export default function SmallDisplay({ title }) {
   const attributes = (title) => {
+    const list = [icons[title]];
     switch (title) {
       case 'Java':
-        return [javaIcon, 'orange'];
+        list.push('orange');
+        break;
       case 'Python':
-        return [pythonIcon, blue.A700];
+        list.push(blue.A700);
+        break;
       case 'JavaScript':
-        return [javaScriptIcon, yellow[400]];
-      case 'React & React-Native':
-        return [reactIcon, lightBlue.A700];
+        list.push(yellow[400]);
+        break;
+      case 'React/React-Native':
+        list.push(lightBlue.A700);
+        break;
       case 'Flask':
-        return [flaskIcon, 'black'];
+        list.push('black');
+        break;
       case 'Sqlite':
-        return [sqliteIcon, lightBlue[100]];
+        list.push(lightBlue[100]);
+        break;
       case 'Node':
-        return [nodeIcon, green[400]];
+        list.push(green[400]);
+        break;
       case 'HTML':
-        return [HTMLIcon, orange[900]];
+        list.push(orange[900]);
+        break;
       case 'Tkinter':
-        return [tkinterIcon, grey[600]];
+        list.push(grey[600]);
+        break;
       case 'Expo':
-        return [expoIcon, blue[900]];
+        list.push(blue[900]);
+        break;
+      case 'SQL':
+        list.push(yellow[600]);
+        break;
       default:
-        return [null, 'black'];
+        return null;
     }
+    return list;
   };
 
   const [hover, setHover] = useState(false);

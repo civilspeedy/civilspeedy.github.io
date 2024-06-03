@@ -10,6 +10,32 @@ import AboutMePage from './Components/Pages/AboutMePage';
 import { Box, Grow } from '@mui/material';
 import MenuButton from './Components/Buttons/MenuButton';
 
+import javaIcon from './assets/Java.svg';
+import pythonIcon from './assets/Python.svg';
+import javaScriptIcon from './assets/JavaScript.svg';
+import reactIcon from './assets/React.svg';
+import flaskIcon from './assets/Flask.svg';
+import sqliteIcon from './assets/Sqlite.svg';
+import nodeIcon from './assets/Node.svg';
+import HTMLIcon from './assets/HTML.svg';
+import tkinterIcon from './assets/Tkinter.png';
+import expoIcon from './assets/Expo.svg';
+import SQLIcon from './assets/SQL.svg';
+
+export const icons = {
+  Java: javaIcon,
+  Python: pythonIcon,
+  JavaScript: javaScriptIcon,
+  'React/React-Native': reactIcon,
+  Flask: flaskIcon,
+  Sqlite: sqliteIcon,
+  Node: nodeIcon,
+  HTML: HTMLIcon,
+  Tkinter: tkinterIcon,
+  Expo: expoIcon,
+  SQL: SQLIcon,
+};
+
 export default function App() {
   const [pageState, setPageState] = useState(null);
 

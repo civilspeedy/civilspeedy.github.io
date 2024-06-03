@@ -8,15 +8,16 @@ import ViewProjects from '../Buttons/ViewProjects';
 export default function SoftwareEngineeringPage() {
   const [hovered, setHovered] = useState(false);
   const [viewProjects, setViewProjects] = useState(false);
-  const languageTitles = ['JavaScript', 'Python', 'Java', 'HTML'];
+  const languageTitles = ['JavaScript', 'Python', 'Java', 'HTML', 'SQL'];
   const frameworkTitles = [
-    'React & React-Native',
+    'React/React-Native',
     'Expo',
     'Node',
     'Sqlite',
     'Flask',
     'Tkinter',
   ];
+
   const projectTitles = [
     'Conversational Interface For Weather',
     'Todo App',
@@ -24,6 +25,15 @@ export default function SoftwareEngineeringPage() {
     'Prototype Web-Store',
     'Weather Data Entry Site',
     'Stocks Trading Simulator',
+  ];
+
+  const miniIcons = [
+    ['JavaScript', 'Python', 'React/React-Native', 'Expo', 'Node', 'Flask'],
+    ['JavaScript', 'React/React-Native', 'Expo', 'Node'],
+    ['Python', 'SQL', 'Flask', 'Sqlite'],
+    ['Python', 'HTML', 'JavaScript', 'Flask'],
+    ['Python', 'HTML', 'JavaScript', 'Flask'],
+    ['Python', 'SQL', 'Sqlite', 'Tkinter'],
   ];
 
   return (
@@ -59,7 +69,11 @@ export default function SoftwareEngineeringPage() {
                 <button onClick={() => setViewProjects(false)}>../</button>
                 <h1>/Projects</h1>
                 {projectTitles.map((title, index) => (
-                  <ProjectDisplay title={title} />
+                  <ProjectDisplay
+                    title={title}
+                    key={index}
+                    iconsInUse={miniIcons[index]}
+                  />
                 ))}
               </div>
             </Grow>
