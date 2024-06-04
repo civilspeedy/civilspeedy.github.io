@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import SoftwareEngineeringPage from './Components/Pages/SoftwareEngineeringPage';
 import CinematographyPage from './Components/Pages/CinematographyPage';
@@ -22,6 +22,7 @@ import expoIcon from './assets/icons/Expo.svg';
 import SQLIcon from './assets/icons/SQL.svg';
 import bunIcon from './assets/icons/Bun.svg';
 import viteIcon from './assets/icons/Vite.svg';
+import HomeButton from './Components/Buttons/HomeButton';
 
 export const icons = {
   Java: javaIcon,
@@ -41,7 +42,6 @@ export const icons = {
 
 export default function App() {
   const [pageState, setPageState] = useState(null);
-
   const [buttonClicked, setButtonClicked] = useState(null);
   const [stateChange, setStateChange] = useState(false);
 
@@ -61,9 +61,7 @@ export default function App() {
 
   return (
     <>
-      <div id='backButton'>
-        <button onClick={() => setButtonClicked(null)}>../</button>
-      </div>
+      <HomeButton />
       {pageState === null ? (
         <div>
           <div id='topText'>
