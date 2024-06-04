@@ -18,12 +18,14 @@ export default function CinematographyPage() {
             Link
           </a>
         </p>
-        {videos.map((item, index) => (
-          <VideoDisplay
-            video={item}
-            key={index}
-          />
-        ))}
+        <div id='videosContainer'>
+          {videos.map((item, index) => (
+            <VideoDisplay
+              video={item}
+              key={index}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

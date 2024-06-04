@@ -43,7 +43,7 @@ export default function ProjectDisplay({ project }) {
         <p>Links:</p>
         <LinkGithub />
         <p>Uses:</p>
-        <div id='iconDisplay'>
+        <div id='iconDisplay' /**maybe add glow on hover */>
           {project.icons.map((item, index) => (
             <img
               id='miniIcon'
