@@ -4,11 +4,11 @@ import SmallDisplay from '../Displays/SmallDisplay';
 import { Grow } from '@mui/material';
 import ProjectDisplay from '../Displays/ProjectDisplay';
 import ViewProjects from '../Buttons/ViewProjects';
+import projectsData from '../../assets/json/softwareProjects.json';
 
 export default function SoftwareEngineeringPage() {
   const [viewProjects, setViewProjects] = useState(false);
   const languageTitles = ['JavaScript', 'Python', 'Java', 'HTML', 'SQL'];
-  const [projectsSate, setProjectsState] = useState([]);
   const frameworkTitles = [
     'React/React-Native',
     'Expo',
@@ -17,13 +17,7 @@ export default function SoftwareEngineeringPage() {
     'Flask',
     'Tkinter',
   ];
-  // issues with data get
-  useEffect(() => {
-    fetch('../../assets/json/softwareProjects.json').then((data) =>
-      setProjectsState(data)
-    );
-  }, []);
-  console.log(projectsSate);
+
   return (
     <>
       <div id='container'>
@@ -56,7 +50,7 @@ export default function SoftwareEngineeringPage() {
               <div>
                 <button onClick={() => setViewProjects(false)}>../</button>
                 <h1>/Projects</h1>
-                {projectsSate.map((item, index) => (
+                {projectsData.map((item, index) => (
                   <ProjectDisplay
                     project={item}
                     key={index}

@@ -21,6 +21,8 @@ import HTMLIcon from './assets/HTML.svg';
 import tkinterIcon from './assets/Tkinter.png';
 import expoIcon from './assets/Expo.svg';
 import SQLIcon from './assets/SQL.svg';
+import bunIcon from './assets/Bun.svg';
+import viteIcon from './assets/Vite.svg';
 
 export const icons = {
   Java: javaIcon,
@@ -34,6 +36,8 @@ export const icons = {
   Tkinter: tkinterIcon,
   Expo: expoIcon,
   SQL: SQLIcon,
+  Bun: bunIcon,
+  Vite: viteIcon,
 };
 
 export default function App() {
