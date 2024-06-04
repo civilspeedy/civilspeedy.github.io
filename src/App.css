@@ -100,3 +100,9 @@
   display: flex;
   justify-content: center;
 }
+#videoDisplay {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
