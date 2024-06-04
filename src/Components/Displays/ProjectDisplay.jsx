@@ -1,10 +1,10 @@
 import '../../App.css';
 import { icons } from '../../App';
 export default function ProjectDisplay({ project }) {
+  // text sizing needs adjusting
   const LinkGithub = () => {
     const link = project.github;
     if (Array.isArray(link)) {
-      console.log('Array!');
       return (
         <div>
           {link.map((item, index) => (
@@ -37,7 +37,9 @@ export default function ProjectDisplay({ project }) {
     <>
       <div id='projectDisplay'>
         <h2>{project.title}</h2>
-        <p>{project.description}</p>
+        <div id='descContainer'>
+          <p style={{ maxWidth: '50%' }}>{project.description}</p>
+        </div>
         <p>Links:</p>
         <LinkGithub />
         <p>Uses:</p>

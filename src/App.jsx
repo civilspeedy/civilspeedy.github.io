@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import SoftwareEngineeringPage from './Components/Pages/SoftwareEngineeringPage';
-import WebDevelopmentPage from './Components/Pages/WebDevelopmentPage';
 import CinematographyPage from './Components/Pages/CinematographyPage';
 import GraphicDesignPage from './Components/Pages/GraphicDesignPage';
 import VideoEditingPage from './Components/Pages/VideoEditingPage';

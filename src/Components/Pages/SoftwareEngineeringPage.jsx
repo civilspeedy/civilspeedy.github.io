@@ -50,12 +50,14 @@ export default function SoftwareEngineeringPage() {
               <div>
                 <button onClick={() => setViewProjects(false)}>../</button>
                 <h1>/Projects</h1>
-                {projectsData.map((item, index) => (
-                  <ProjectDisplay
-                    project={item}
-                    key={index}
-                  />
-                ))}
+                <div id='projectsContainer'>
+                  {projectsData.map((item, index) => (
+                    <ProjectDisplay
+                      project={item}
+                      key={index}
+                    />
+                  ))}
+                </div>
               </div>
             </Grow>
           </div>
