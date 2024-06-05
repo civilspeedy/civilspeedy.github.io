@@ -8,6 +8,7 @@ import photoshopIcon from '../../assets/icons/Photoshop.svg';
 import A2 from '../../assets/graphicDesign/posters/A2.jpg';
 import lockdown from '../../assets/graphicDesign/posters/lockdown.jpg';
 import silhouette from '../../assets/graphicDesign/Website/silhouette.jpg';
+import dutyCalls from '../../assets/graphicDesign/Website/website_1.png';
 
 export default function GraphicDesignPage() {
   const images = {
@@ -17,8 +18,10 @@ export default function GraphicDesignPage() {
     A2: A2,
     lockdown: lockdown,
     silhouette: silhouette,
+    dutyCalls: dutyCalls,
   };
 
+  // images probably could do with resizing
   return (
     <>
       <div>
@@ -32,9 +35,10 @@ export default function GraphicDesignPage() {
             Link
           </a>
         </p>
-        <h2>Tools:</h2>
+        <h2>Tools Experience:</h2>
         <div id='displayArea'>
           <div id='toolDisplay'>
+            <p>Photoshop</p>
             <img
               id='smallImage'
               src={photoshopIcon}

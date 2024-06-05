@@ -67,12 +67,12 @@ export default function SmallDisplay({ title }) {
       id='smallDisplay'
       style={hoverStyle}
       onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
+      onMouseLeave={() => setHover(false)}>
       <img
         id='smallImage'
         src={icon}
         alt='Logo'
+        loading='lazy'
       />
       <p id='smallDisplayText'>{title}</p>
     </div>
