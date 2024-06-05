@@ -5,12 +5,18 @@ import theHand from '../../assets/graphicDesign/personal/theHand.png';
 import wallpaper from '../../assets/graphicDesign/personal/wallpaper.jpg';
 import GraphicDisplay from '../Displays/GraphicDisplay';
 import photoshopIcon from '../../assets/icons/Photoshop.svg';
+import A2 from '../../assets/graphicDesign/posters/A2.jpg';
+import lockdown from '../../assets/graphicDesign/posters/lockdown.jpg';
+import silhouette from '../../assets/graphicDesign/Website/silhouette.jpg';
 
 export default function GraphicDesignPage() {
   const images = {
     theEye: theEye,
     theHand: theHand,
     wallpaper: wallpaper,
+    A2: A2,
+    lockdown: lockdown,
+    silhouette: silhouette,
   };
 
   return (
@@ -22,8 +28,7 @@ export default function GraphicDesignPage() {
           pages {'--> '}
           <a
             href='https://www.blogger.com/profile/16227584340087484499'
-            target='_blank'
-          >
+            target='_blank'>
             Link
           </a>
         </p>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../../App.css';
 
 export default function HomeButton({ setButtons, setState, originalText }) {
   const [hovered, setHovered] = useState(false);
@@ -18,8 +19,7 @@ export default function HomeButton({ setButtons, setState, originalText }) {
         onClick={() => {
           setState(null);
           setButtons(null);
-        }}
-      >
+        }}>
         {hovered == true ? '> ' + originalText : originalText}
       </button>
     </div>

@@ -3,5 +3,15 @@
     "title": "Personal Creations",
     "description": "These are designs I have made for my personal enjoyment along with practicing my skills.",
     "images": ["theEye", "theHand", "wallpaper"]
+  },
+  {
+    "title": "Media Studies A-Level",
+    "description": "",
+    "images": ["A2", "silhouette"]
+  },
+  {
+    "title": "Poster Competition",
+    "description": "",
+    "images": ["lockdown"]
   }
 ]
