@@ -3,8 +3,9 @@ import '../../App.css';
 import SmallDisplay from '../Displays/SmallDisplay';
 import { Grow } from '@mui/material';
 import ProjectDisplay from '../Displays/ProjectDisplay';
-import ViewProjects from '../Buttons/ViewProjects';
+import ViewProjects from '../Buttons/HoverButton';
 import projectsData from '../../assets/json/softwareProjects.json';
+import HoverButton from '../Buttons/HoverButton';
 
 export default function SoftwareEngineeringPage() {
   const [viewProjects, setViewProjects] = useState(false);
@@ -42,13 +43,21 @@ export default function SoftwareEngineeringPage() {
                 />
               ))}
             </div>
-            <ViewProjects setViewProjects={setViewProjects} />
+            <HoverButton
+              setState={setViewProjects}
+              state={viewProjects}
+              originalText={'View Projects'}
+            />
           </div>
         ) : (
           <div>
             <Grow in={viewProjects}>
               <div>
-                <button onClick={() => setViewProjects(false)}>../</button>
+                <HoverButton
+                  setState={setViewProjects}
+                  state={viewProjects}
+                  originalText={'Back'}
+                />
                 <h1>/Projects</h1>
                 <div id='projectsContainer'>
                   {projectsData.map((item, index) => (

@@ -1,21 +1,12 @@
 import { useEffect, useState } from 'react';
 
-export default function ViewProjects({ setViewProjects }) {
+export default function HoverButton({ state, setState, originalText }) {
   const [hovered, setHovered] = useState(false);
-  const [text, setText] = useState('View Projects');
 
   const hoverStyle = {
     transition: 'transform 0.3s ease-in-out',
     transform: hovered ? 'translateX(20px)' : 'translateX(0)',
   };
-
-  useEffect(() => {
-    if (hovered) {
-      setText('> ' + text);
-    } else {
-      setText(text);
-    }
-  }, [hovered]);
 
   return (
     <button
@@ -23,9 +14,9 @@ export default function ViewProjects({ setViewProjects }) {
       style={hoverStyle}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      onClick={() => setViewProjects(true)}
+      onClick={() => setState(!state)}
     >
-      {hovered == true ? '> View Projects' : 'View Projects'}
+      {hovered == true ? '> ' + originalText : originalText}
     </button>
   );
 }

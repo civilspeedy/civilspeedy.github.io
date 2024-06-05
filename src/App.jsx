@@ -61,7 +61,6 @@ export default function App() {
 
   return (
     <>
-      <HomeButton />
       {pageState === null ? (
         <div>
           <div id='topText'>
@@ -85,6 +84,13 @@ export default function App() {
       ) : (
         <>
           <Box sx={{ display: 'flex' }}>
+            {pageState !== null && (
+              <HomeButton
+                setState={setPageState}
+                setButtons={setButtonClicked}
+                originalText={'Home'}
+              />
+            )}
             <Grow in={stateChange}>
               <div>
                 {pageState === 0 && <SoftwareEngineeringPage />}

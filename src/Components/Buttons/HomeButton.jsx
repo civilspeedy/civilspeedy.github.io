@@ -1,30 +1,27 @@
-import { useEffect, useState } from 'react';
-import '../../App.css';
+import { useState } from 'react';
 
-export default function HomeButton() {
+export default function HomeButton({ setButtons, setState, originalText }) {
   const [hovered, setHovered] = useState(false);
-  const [textSate, setTextState] = useState('home');
-  // I have no idea why this is broken
 
-  useEffect(() => {
-    if (hovered) {
-      setTextState('> ' + 'home');
-    } else {
-      setTextState('home');
-    }
-  }, [hovered]);
+  const hoverStyle = {
+    transition: 'transform 0.3s ease-in-out',
+    transform: hovered ? 'translateX(20px)' : 'translateX(0)',
+  };
 
   return (
-    <button
-      id='homeButton'
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onMouseOver={() => setHovered(true)}
-      onClick={() => {
-        console.log('Click!');
-      }}
-    >
-      {textSate}
-    </button>
+    <div id='homeButton'>
+      <button
+        id='projectsButton'
+        style={hoverStyle}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        onClick={() => {
+          setState(null);
+          setButtons(null);
+        }}
+      >
+        {hovered == true ? '> ' + originalText : originalText}
+      </button>
+    </div>
   );
 }
