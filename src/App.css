@@ -117,3 +117,14 @@
   top: 10px;
   display: flex;
 }
+
+#toolDisplay {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+  align-self: center;
+}
+#toolDisplay p {
+  color: black;
+}
