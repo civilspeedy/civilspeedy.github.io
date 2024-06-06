@@ -1,0 +1,31 @@
+import MenuButton from '../Buttons/MenuButton';
+
+export default function HomePage({ setPageState }) {
+  const subjects = [
+    'Software Engineering',
+    'Cinematography',
+    'Graphic Design',
+    'Video Editing',
+    'Photography',
+    'About Me',
+  ];
+
+  return (
+    <div>
+      <div id='topText'>
+        <h1>Charlie Slorick</h1>
+      </div>
+      <ul id='subjectList'>
+        {subjects.map((text, index) => (
+          <li key={index}>
+            <MenuButton
+              text={text}
+              setButtonClicked={setPageState}
+              index={index}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}

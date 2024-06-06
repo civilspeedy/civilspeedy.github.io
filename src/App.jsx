@@ -6,7 +6,6 @@ import GraphicDesignPage from './Components/Pages/GraphicDesignPage';
 import VideoEditingPage from './Components/Pages/VideoEditingPage';
 import PhotographyPage from './Components/Pages/PhotographyPage';
 import AboutMePage from './Components/Pages/AboutMePage';
-import { Box, Grow } from '@mui/material';
 import MenuButton from './Components/Buttons/MenuButton';
 
 import javaIcon from './assets/icons/Java.svg';
@@ -22,6 +21,8 @@ import expoIcon from './assets/icons/Expo.svg';
 import SQLIcon from './assets/icons/SQL.svg';
 import bunIcon from './assets/icons/Bun.svg';
 import viteIcon from './assets/icons/Vite.svg';
+import HomePage from './Components/Pages/HomePage';
+import { Grow } from '@mui/material';
 import HomeButton from './Components/Buttons/HomeButton';
 
 export const icons = {
@@ -42,68 +43,57 @@ export const icons = {
 
 export default function App() {
   const [pageState, setPageState] = useState(null);
-  const [buttonClicked, setButtonClicked] = useState(null);
-  const [stateChange, setStateChange] = useState(false);
+  const homePage = <HomePage setPageState={setPageState} />;
+  const [page, setPage] = useState(homePage);
+  const [growEffect, setGrowEffect] = useState(false);
 
   useEffect(() => {
-    setPageState(buttonClicked);
-    setStateChange(true);
-  }, [buttonClicked]);
+    setGrowEffect(true);
 
-  const subjects = [
-    'Software Engineering', // needs size adjustments
-    'Cinematography',
-    'Graphic Design',
-    'Video Editing',
-    'Photography',
-    'About Me',
-  ];
+    // grow effect not working
+
+    switch (pageState) {
+      case 0:
+        setPage(<SoftwareEngineeringPage />);
+        break;
+      case 1:
+        setPage(<CinematographyPage />);
+        break;
+      case 2:
+        setPage(<GraphicDesignPage />);
+        break;
+      case 3:
+        setPage(<VideoEditingPage />);
+        break;
+      case 4:
+        setPage(<PhotographyPage />);
+        break;
+      case 5:
+        setPage(<AboutMePage />);
+        break;
+      default:
+        setPage(homePage);
+        break;
+    }
+  }, [pageState]);
 
   return (
     <>
-      {pageState === null ? (
-        <div>
-          <div id='topText'>
-            <h1>Charlie Slorick</h1>
-          </div>
-          <Grow in={stateChange}>
-            <ul id='subjectList'>
-              {subjects.map((text, index) => (
-                <li key={index}>
-                  <MenuButton
-                    text={text}
-                    setButtonClicked={setButtonClicked}
-                    key={index}
-                    index={index}
-                  />
-                </li>
-              ))}
-            </ul>
-          </Grow>
-        </div>
-      ) : (
-        <>
-          <Box sx={{ display: 'flex' }}>
-            {pageState !== null && (
+      <div>
+        {pageState === null ? (
+          <div>{page}</div>
+        ) : (
+          <Grow in={growEffect}>
+            <div>
               <HomeButton
                 setState={setPageState}
-                setButtons={setButtonClicked}
                 originalText={'Home'}
               />
-            )}
-            <Grow in={stateChange}>
-              <div>
-                {pageState === 0 && <SoftwareEngineeringPage />}
-                {pageState === 1 && <CinematographyPage />}
-                {pageState === 2 && <GraphicDesignPage />}
-                {pageState === 3 && <VideoEditingPage />}
-                {pageState === 4 && <PhotographyPage />}
-                {pageState === 5 && <AboutMePage />}
-              </div>
-            </Grow>
-          </Box>
-        </>
-      )}
+              {page}
+            </div>
+          </Grow>
+        )}
+      </div>
     </>
   );
 }
