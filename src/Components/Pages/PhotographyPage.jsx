@@ -12,6 +12,7 @@ import ten from '../../assets/photography/10.jpg';
 import eleven from '../../assets/photography/11.jpg';
 import twelve from '../../assets/photography/12.png';
 import { ImageList, ImageListItem } from '@mui/material';
+import SmallDisplay from '../Displays/SmallDisplay';
 
 export default function PhotographyPage() {
   //mention photoshop and lightroom
@@ -33,6 +34,9 @@ export default function PhotographyPage() {
     <>
       <div>
         <h1>/Photography Portfolio</h1>
+        <div>
+          <SmallDisplay title={'Photoshop'} />
+        </div>
         <ImageList
           variant='masonry'
           cols={2}

@@ -6,8 +6,6 @@ import GraphicDesignPage from './Components/Pages/GraphicDesignPage';
 import VideoEditingPage from './Components/Pages/VideoEditingPage';
 import PhotographyPage from './Components/Pages/PhotographyPage';
 import AboutMePage from './Components/Pages/AboutMePage';
-import MenuButton from './Components/Buttons/MenuButton';
-
 import javaIcon from './assets/icons/Java.svg';
 import pythonIcon from './assets/icons/Python.svg';
 import javaScriptIcon from './assets/icons/JavaScript.svg';
@@ -22,7 +20,6 @@ import SQLIcon from './assets/icons/SQL.svg';
 import bunIcon from './assets/icons/Bun.svg';
 import viteIcon from './assets/icons/Vite.svg';
 import HomePage from './Components/Pages/HomePage';
-import { Grow } from '@mui/material';
 import HomeButton from './Components/Buttons/HomeButton';
 
 export const icons = {
@@ -45,13 +42,8 @@ export default function App() {
   const [pageState, setPageState] = useState(null);
   const homePage = <HomePage setPageState={setPageState} />;
   const [page, setPage] = useState(homePage);
-  const [growEffect, setGrowEffect] = useState(false);
 
   useEffect(() => {
-    setGrowEffect(true);
-
-    // grow effect not working
-
     switch (pageState) {
       case 0:
         setPage(<SoftwareEngineeringPage />);
@@ -83,15 +75,13 @@ export default function App() {
         {pageState === null ? (
           <div>{page}</div>
         ) : (
-          <Grow in={growEffect}>
-            <div>
-              <HomeButton
-                setState={setPageState}
-                originalText={'Home'}
-              />
-              {page}
-            </div>
-          </Grow>
+          <div>
+            <HomeButton
+              setState={setPageState}
+              originalText={'Home'}
+            />
+            {page}
+          </div>
         )}
       </div>
     </>

@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import '../../App.css';
 import SmallDisplay from '../Displays/SmallDisplay';
-import { Grow } from '@mui/material';
 import ProjectDisplay from '../Displays/ProjectDisplay';
-import ViewProjects from '../Buttons/HoverButton';
 import projectsData from '../../assets/json/softwareProjects.json';
 import HoverButton from '../Buttons/HoverButton';
+import { Grow } from '@mui/material';
 
 export default function SoftwareEngineeringPage() {
   const [viewProjects, setViewProjects] = useState(false);
