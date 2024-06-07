@@ -1,0 +1,28 @@
+{
+  "name": "Charlie Slorick",
+  "education": [
+    {
+      "name": "Bournemouth University",
+      "subjects": ["Software Engineering (BaHons)"]
+    },
+    {
+      "name": "A-Level",
+      "subjects": [
+        "Media Studies - A*",
+        "Computer Science - A",
+        "Photoshop - B"
+      ]
+    },
+    {
+      "name": "GCSE",
+      "subjects": [
+        "English Literature",
+        "Maths",
+        "History",
+        "Combined Science",
+        "Media Studies",
+        "Computer Science"
+      ]
+    }
+  ]
+}

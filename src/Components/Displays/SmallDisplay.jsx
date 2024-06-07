@@ -7,6 +7,7 @@ import {
   grey,
   lightBlue,
   orange,
+  purple,
   yellow,
 } from '@mui/material/colors';
 
@@ -47,8 +48,20 @@ export default function SmallDisplay({ title }) {
       case 'SQL':
         list.push(yellow[600]);
         break;
+      case 'Photoshop':
+        list.push(blue[600]);
+        break;
+      case 'Lightroom':
+        list.push(blue[300]);
+        break;
+      case 'Premiere Pro':
+        list.push(purple.A400);
+        break;
+      case 'Vegas':
+        list.push(blue.A700);
+        break;
       default:
-        return null;
+        list.push('black');
     }
     return list;
   };

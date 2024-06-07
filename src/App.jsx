@@ -21,6 +21,10 @@ import bunIcon from './assets/icons/Bun.svg';
 import viteIcon from './assets/icons/Vite.svg';
 import HomePage from './Components/Pages/HomePage';
 import HomeButton from './Components/Buttons/HomeButton';
+import PhotoshopIcon from './assets/icons/Photoshop.svg';
+import LightroomIcon from './assets/icons/Lightroom.svg';
+import VegasIcon from './assets/icons/Vegas.svg';
+import PremiereProIcon from './assets/icons/Premiere.svg';
 
 export const icons = {
   Java: javaIcon,
@@ -36,6 +40,10 @@ export const icons = {
   SQL: SQLIcon,
   Bun: bunIcon,
   Vite: viteIcon,
+  Photoshop: PhotoshopIcon,
+  Lightroom: LightroomIcon,
+  Vegas: VegasIcon,
+  'Premiere Pro': PremiereProIcon,
 };
 
 export default function App() {

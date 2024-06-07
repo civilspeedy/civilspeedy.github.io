@@ -34,8 +34,11 @@ export default function PhotographyPage() {
     <>
       <div>
         <h1>/Photography Portfolio</h1>
-        <div>
+
+        <h2>Tools used:</h2>
+        <div id='displayArea'>
           <SmallDisplay title={'Photoshop'} />
+          <SmallDisplay title={'Lightroom'} />
         </div>
         <ImageList
           variant='masonry'

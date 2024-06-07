@@ -9,6 +9,7 @@ import A2 from '../../assets/graphicDesign/posters/A2.jpg';
 import lockdown from '../../assets/graphicDesign/posters/lockdown.jpg';
 import silhouette from '../../assets/graphicDesign/Website/silhouette.jpg';
 import dutyCalls from '../../assets/graphicDesign/Website/website_1.png';
+import SmallDisplay from '../Displays/SmallDisplay';
 
 export default function GraphicDesignPage() {
   const images = {
@@ -37,14 +38,7 @@ export default function GraphicDesignPage() {
         </p>
         <h2>Tools Experience:</h2>
         <div id='displayArea'>
-          <div id='toolDisplay'>
-            <p>Photoshop</p>
-            <img
-              id='smallImage'
-              src={photoshopIcon}
-            />
-            <p>Over 4 Years Experience</p>
-          </div>
+          <SmallDisplay title={'Photoshop'} />
         </div>
         {graphicProjects.map((item, index) => (
           <GraphicDisplay

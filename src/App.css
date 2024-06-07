@@ -131,3 +131,13 @@
 #toolDisplay h2 {
   color: black;
 }
+
+#educationDisplay {
+  margin: 10px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: fit-content;
+  max-height: fit-content;
+}
