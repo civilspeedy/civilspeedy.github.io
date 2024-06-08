@@ -23,8 +23,7 @@ export default function MenuButton({ text, index, setButtonClicked }) {
       style={hoverStyle}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      onClick={() => setButtonClicked(index)}
-    >
+      onClick={() => setButtonClicked(index)}>
       {textSate}
     </button>
   );

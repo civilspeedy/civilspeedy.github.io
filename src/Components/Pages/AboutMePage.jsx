@@ -3,22 +3,34 @@ import aboutMe from '../../assets/json/aboutMe.json';
 import EducationDisplay from '../Displays/EducationDisplay';
 
 export default function AboutMePage() {
-  const name = aboutMe.name;
   const education = aboutMe.education;
-  console.log('name: ', name, ' education: ', education);
+  const other = aboutMe.other;
+  const bio = aboutMe.bio;
 
   return (
     <>
-      <div>
+      <div id='centerDiv'>
         <h1>/About me</h1>
-        <h2>{aboutMe.name}</h2>
-        <h3>Education:</h3>
-        <div id='displayArea'>
+        <div id='educationDisplay'>
+          <h2>Charlie Slorick</h2>
+          {bio.map((item, index) => (
+            <p
+              key={index}
+              style={{ textAlign: 'left' }}>
+              {item}
+            </p>
+          ))}
+
+          <h2>Education:</h2>
           {education.map((item, index) => (
             <EducationDisplay
               education={item}
               key={index}
             />
+          ))}
+          <h2>Other Qualifications</h2>
+          {other.map((item, index) => (
+            <p key={index}>{item}</p>
           ))}
         </div>
       </div>
