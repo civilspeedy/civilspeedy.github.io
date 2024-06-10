@@ -13,42 +13,49 @@
       "Expo",
       "Node",
       "Flask"
-    ]
+    ],
+    "images": ["weather chat 1", "weather chat 2"]
   },
   {
     "title": "This Website!",
     "description": "This website was created not only to showcase my skills but to learn and practice with react and bun.",
     "github": "https://github.com/civilspeedy/civilspeedy.github.io",
-    "icons": ["JavaScript", "React/React-Native", "Bun", "Vite"]
+    "icons": ["JavaScript", "React/React-Native", "Bun", "Vite"],
+    "images": []
   },
   {
     "title": "Todo App",
-    "description": "A Expo mobile for creating tasks, and upon complete receiving points and motivational messages.",
+    "description": "An Expo mobile app for creating tasks, and upon complete receiving points and motivational messages.",
     "github": "https://github.com/civilspeedy/ubicomp_assign_2",
-    "icons": ["JavaScript", "React/React-Native", "Expo", "Node"]
+    "icons": ["JavaScript", "React/React-Native", "Expo", "Node"],
+    "images": ["todo 1", "todo 2"]
   },
   {
-    "title": "Payroll System",
-    "description": "For an assignment we were task with operating as if we were part of a large organisation and our team was in charge of the payroll system for this organisation.",
-    "github": null,
-    "icons": ["Python", "SQL", "Flask", "Sqlite"]
+    "title": "Prototype Trails App",
+    "description": "To learn the basics for react-native and Expo we were with redesigning a trail finding.",
+    "github": "https://github.com/civilspeedy/ubicomp_assign_1",
+    "icons": ["JavaScript", "React/React-Native", "Expo", "Node"],
+    "images": ["hike 5", "hike 7"]
   },
   {
     "title": "Prototype Web-Store",
     "description": "A prototype web store using flask.",
     "github": "https://github.com/civilspeedy/Team-5",
-    "icons": ["Python", "HTML", "JavaScript", "Flask"]
+    "icons": ["Python", "HTML", "JavaScript", "Flask"],
+    "images": []
   },
   {
     "title": "Weather Data Entry Site",
     "description": "A simple flask web site for entering weather data. Was part of my university teaching to learn javascript and flask.",
     "github": "https://github.com/civilspeedy/Weather-Assignment",
-    "icons": ["Python", "HTML", "JavaScript", "Flask"]
+    "icons": ["Python", "HTML", "JavaScript", "Flask"],
+    "images": ["weather web 1", "weather web 2"]
   },
   {
     "title": "Stocks Trading Simulator",
     "description": "My A-Level project using tkinter, it gathers real data relating to stocks to allow the simulated buying and selling of these stocks.",
     "github": "https://github.com/civilspeedy/Merchant-Project",
-    "icons": ["Python", "SQL", "Sqlite", "Tkinter"]
+    "icons": ["Python", "SQL", "Sqlite", "Tkinter"],
+    "images": []
   }
 ]

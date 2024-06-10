@@ -71,7 +71,7 @@
   background-color: white;
   border-radius: 5px;
   padding: 5px;
-  max-width: fit-content;
+  max-width: 50%;
   margin: 10px;
   padding: 20px;
 }
@@ -144,4 +144,11 @@
   justify-content: center;
   flex-wrap: wrap;
   flex: 1;
+}
+#projectScreenshot {
+  width: fit-content;
+  height: fit-content;
+  max-width: 200px;
+  align-self: center;
+  margin: 10px;
 }
