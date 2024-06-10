@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { icons } from '../../App';
 import '../../App.css';
 import {
   blue,
@@ -10,6 +9,7 @@ import {
   purple,
   yellow,
 } from '@mui/material/colors';
+import { icons } from '../../assets/js objects/icons';
 
 export default function SmallDisplay({ title }) {
   const attributes = (title) => {

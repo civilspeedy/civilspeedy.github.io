@@ -1,5 +1,5 @@
 import '../../App.css';
-import { icons } from '../../App';
+import { icons } from '../../assets/js objects/icons';
 import weatherWeb1 from '../../assets/softwareScreenshots/weather web 1.png';
 import weatherWeb2 from '../../assets/softwareScreenshots/weather web 2.png';
 import hike5 from '../../assets/softwareScreenshots/Hike 5.png';

@@ -1,7 +1,7 @@
 import '../../App.css';
 export default function VideoDisplay({ video }) {
   return (
-    <div id='videoDisplay'>
+    <div id='projectDisplay'>
       <h2 style={{ color: 'black' }}>{video.title}</h2>
 
       <iframe
