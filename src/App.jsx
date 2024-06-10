@@ -8,6 +8,7 @@ import PhotographyPage from './Components/Pages/PhotographyPage';
 import AboutMePage from './Components/Pages/AboutMePage';
 import HomePage from './Components/Pages/HomePage';
 import HomeButton from './Components/Buttons/HomeButton';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 // need mobile version
 export default function App() {
@@ -43,19 +44,28 @@ export default function App() {
 
   return (
     <>
-      <div>
-        {pageState === null ? (
-          <div>{page}</div>
-        ) : (
-          <div>
-            <HomeButton
-              setState={setPageState}
-              originalText={'Home'}
-            />
-            {page}
-          </div>
-        )}
-      </div>
+      <BrowserView>
+        <div>
+          {pageState === null ? (
+            <div>{page}</div>
+          ) : (
+            <div>
+              <HomeButton
+                setState={setPageState}
+                originalText={'Home'}
+              />
+              {page}
+            </div>
+          )}
+        </div>
+      </BrowserView>
+      <MobileView>
+        <h2>
+          You appear to be on mobile. Apologies but the mobile version of this
+          website isn't ready. Please set your browser to 'View as Desktop' for
+          now.
+        </h2>
+      </MobileView>
     </>
   );
 }
