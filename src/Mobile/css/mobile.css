@@ -1,0 +1,30 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+  font-weight: 300;
+
+  color-scheme: light dark;
+  color: white;
+  background-color: #000000;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+#top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 5px;
+}
+
+#mButton {
+  background-color: white;
+  color: #000000;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
