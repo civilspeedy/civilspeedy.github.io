@@ -1,15 +1,7 @@
 import MenuButton from '../Buttons/MenuButton';
+import subjects from '../../assets/json/subjects.json';
 
 export default function HomePage({ setPageState }) {
-  const subjects = [
-    'Software Engineering',
-    'Cinematography',
-    'Graphic Design',
-    'Video Editing',
-    'Photography',
-    'About Me',
-  ];
-
   return (
     <div>
       <div id='topText'>
