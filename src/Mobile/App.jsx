@@ -15,7 +15,7 @@ export default function M_App() {
   useEffect(() => {
     switch (page) {
       case 'Software Engineering':
-        setPageComponent(<M_SoftwareEngineering />);
+        setPageComponent(<M_SoftwareEngineering setPage={setPage} />);
         break;
       case 'Cinematography':
         setPageComponent(<M_Cinematography />);

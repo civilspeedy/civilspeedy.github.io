@@ -1,7 +1,9 @@
-export default function M_HomeButton() {
+export default function M_HomeButton({ setPage }) {
   return (
-    <div>
-      <p>test</p>
-    </div>
+    <button
+      id='mobileHomeButton'
+      onClick={() => setPage(null)}>
+      Home
+    </button>
   );
 }
