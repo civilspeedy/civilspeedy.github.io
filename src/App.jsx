@@ -10,6 +10,7 @@ import HomePage from './Components/Pages/HomePage';
 import HomeButton from './Components/Buttons/HomeButton';
 import { BrowserView, MobileView } from 'react-device-detect';
 import M_HomePage from './Mobile/Pages/HomePage';
+import M_App from './Mobile/App';
 
 // need mobile version
 export default function App() {
@@ -61,7 +62,7 @@ export default function App() {
         </div>
       </BrowserView>
       <MobileView>
-        <M_HomePage />
+        <M_App />
       </MobileView>
     </>
   );
