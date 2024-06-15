@@ -28,3 +28,13 @@ h1 {
   padding: 10px;
   margin: 10px;
 }
+
+#mobileProject {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+#projects {
+  padding-top: 100px;
+}

@@ -1,4 +1,7 @@
-export default function M_HomeButton () {
-    return (
-    )
+export default function M_HomeButton() {
+  return (
+    <div>
+      <p>test</p>
+    </div>
+  );
 }

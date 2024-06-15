@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../css/mobile.css';
 import subjects from '../../assets/json/subjects.json';
-import M_MenuButton from '../Components/buttons/MenuButton';
+import M_MenuButton from '../Components/Buttons/MenuButton';
 
 export default function M_HomePage({ setPage }) {
   return (
