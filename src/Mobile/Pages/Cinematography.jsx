@@ -11,6 +11,7 @@ export default function M_Cinematography({ setPage }) {
         <VideoDisplay
           video={item}
           key={index}
+          mobile={true}
         />
       ))}
     </div>

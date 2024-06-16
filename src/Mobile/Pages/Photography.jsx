@@ -1,7 +1,7 @@
 export default function M_Photography() {
   return (
     <div>
-      <p>Test</p>
+      <p>Sorry still in development</p>
     </div>
   );
 }

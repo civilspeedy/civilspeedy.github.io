@@ -1,12 +1,20 @@
 import '../../App.css';
-export default function VideoDisplay({ video }) {
+export default function VideoDisplay({ video, mobile }) {
+  let width = '560';
+  let height = '315';
+  let style = 'projectDisplay';
+  if (mobile) {
+    width = '300';
+    height = 'auto';
+    style = 'projectDisplayMobile';
+  }
   return (
-    <div id='projectDisplay'>
+    <div id={style}>
       <h2 style={{ color: 'black' }}>{video.title}</h2>
 
       <iframe
-        width='560'
-        height='315'
+        width={width}
+        height={height}
         src={'https://www.youtube-nocookie.com/embed/' + video.link}
         title='YouTube video player'
         frameborder='0'

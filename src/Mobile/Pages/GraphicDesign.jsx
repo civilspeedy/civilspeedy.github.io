@@ -1,7 +1,7 @@
 export default function M_GraphicDesign() {
   return (
     <div>
-      <p>test</p>
+      <p>Sorry still in development</p>
     </div>
   );
 }
