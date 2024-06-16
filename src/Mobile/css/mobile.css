@@ -8,17 +8,14 @@
   background-color: #000000;
 }
 
-h1 {
-  font-size: 20px;
-  line-height: 1.1;
-}
-
 #top {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   margin: 5px;
+  font-size: 3em;
+  line-height: 1.1;
 }
 
 #mButton {

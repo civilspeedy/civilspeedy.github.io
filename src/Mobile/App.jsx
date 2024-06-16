@@ -18,19 +18,19 @@ export default function M_App() {
         setPageComponent(<M_SoftwareEngineering setPage={setPage} />);
         break;
       case 'Cinematography':
-        setPageComponent(<M_Cinematography />);
+        setPageComponent(<M_Cinematography setPage={setPage} />);
         break;
       case 'Graphic Design':
-        setPageComponent(<M_GraphicDesign />);
+        setPageComponent(<M_GraphicDesign setPage={setPage} />);
         break;
       case 'Video Editing':
-        setPageComponent(<M_VideoEditing />);
+        setPageComponent(<M_VideoEditing setPage={setPage} />);
         break;
       case 'Photography':
-        setPageComponent(<M_Photography />);
+        setPageComponent(<M_Photography setPage={setPage} />);
         break;
       case 'About Me':
-        setPageComponent(<M_AboutMe />);
+        setPageComponent(<M_AboutMe setPage={setPage} />);
         break;
       case null:
         setPageComponent(homePage);

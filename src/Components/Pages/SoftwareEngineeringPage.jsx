@@ -63,6 +63,7 @@ export default function SoftwareEngineeringPage() {
                     <ProjectDisplay
                       project={item}
                       key={index}
+                      displayImages={true}
                     />
                   ))}
                 </div>

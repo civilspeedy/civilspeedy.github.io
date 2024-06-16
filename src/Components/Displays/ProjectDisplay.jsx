@@ -9,17 +9,23 @@ import todo2 from '../../assets/softwareScreenshots/todo 2.png';
 import weatherChat1 from '../../assets/softwareScreenshots/Weather Chat 1.png';
 import weatherChat2 from '../../assets/softwareScreenshots/Weather Chat 2.png';
 
-export default function ProjectDisplay({ project }) {
-  const images = {
-    'weather web 1': weatherWeb1,
-    'weather web 2': weatherWeb2,
-    'hike 5': hike5,
-    'hike 7': hike7,
-    'todo 1': todo1,
-    'todo 2': todo2,
-    'weather chat 1': weatherChat1,
-    'weather chat 2': weatherChat2,
-  };
+export default function ProjectDisplay({ project, displayImages }) {
+  let images = {};
+  let style = 'projectDisplayMobile';
+  if (displayImages) {
+    style = 'projectDisplay';
+    images = {
+      'weather web 1': weatherWeb1,
+      'weather web 2': weatherWeb2,
+      'hike 5': hike5,
+      'hike 7': hike7,
+      'todo 1': todo1,
+      'todo 2': todo2,
+      'weather chat 1': weatherChat1,
+      'weather chat 2': weatherChat2,
+    };
+  }
+
   // text sizing needs adjusting
   const LinkGithub = () => {
     const link = project.github;
@@ -54,7 +60,7 @@ export default function ProjectDisplay({ project }) {
   };
   return (
     <>
-      <div id='projectDisplay'>
+      <div id={style}>
         <h2>{project.title}</h2>
 
         {project.images.map((item, index) => (

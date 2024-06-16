@@ -76,6 +76,14 @@
   padding: 20px;
 }
 
+#projectDisplayMobile {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  color: black;
+}
+
 #projectDisplay h2 {
   color: black;
 }

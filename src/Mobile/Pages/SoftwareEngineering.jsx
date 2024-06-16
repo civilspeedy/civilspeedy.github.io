@@ -3,6 +3,7 @@ import projects from '../../assets/json/softwareProjects.json';
 import M_ProjectDisplay from '../Components/Displays/ProjectDisplays';
 import '../css/mobile.css';
 import M_HomeButton from '../Components/buttons/HomeButton';
+import ProjectDisplay from '../../Components/Displays/ProjectDisplay';
 export default function M_SoftwareEngineering({ setPage }) {
   return (
     <div>
@@ -10,9 +11,10 @@ export default function M_SoftwareEngineering({ setPage }) {
       <M_HomeButton setPage={setPage} />
       <div id='projects'>
         {projects.map((item, index) => (
-          <M_ProjectDisplay
+          <ProjectDisplay
             project={item}
             key={index}
+            displayImages={false}
           />
         ))}
       </div>
