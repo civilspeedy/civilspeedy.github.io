@@ -35,6 +35,14 @@
 #mobileHomeButton {
   background-color: white;
   color: black;
-  margin-top: 40%;
   border-radius: 10px;
+}
+
+#displayAreaMobile {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: row;
+  max-width: fit-content;
 }

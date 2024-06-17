@@ -13,9 +13,9 @@ import eleven from '../../assets/photography/11.jpg';
 import twelve from '../../assets/photography/12.png';
 import { ImageList, ImageListItem } from '@mui/material';
 import SmallDisplay from '../Displays/SmallDisplay';
+import M_HomeButton from '../../Mobile/Components/buttons/HomeButton';
 
-export default function PhotographyPage() {
-  //mention photoshop and lightroom
+export default function PhotographyPage({ isMobile, setPage }) {
   const images = [
     one,
     two,
@@ -34,6 +34,7 @@ export default function PhotographyPage() {
     <>
       <div>
         <h1>/Photography Portfolio</h1>
+        {isMobile && <M_HomeButton setPage={setPage} />}
 
         <h2>Tools used:</h2>
         <div id='displayArea'>

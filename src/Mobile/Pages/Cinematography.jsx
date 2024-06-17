@@ -6,6 +6,7 @@ export default function M_Cinematography({ setPage }) {
   return (
     <div>
       <h1 id='top'>/Cinematography</h1>
+      <div style={{ margin: '15%' }} />
       <M_HomeButton setPage={setPage} />
       {projects.map((item, index) => (
         <VideoDisplay

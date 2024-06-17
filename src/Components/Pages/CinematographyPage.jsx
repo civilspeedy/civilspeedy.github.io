@@ -4,6 +4,7 @@ import videos from '../../assets/json/videoProjects.json';
 import VideoDisplay from '../Displays/VideoDisplay';
 
 export default function CinematographyPage() {
+  // replace with video production containing video editing too
   return (
     <>
       <div>
@@ -13,8 +14,7 @@ export default function CinematographyPage() {
           pages {'--> '}
           <a
             href='https://www.blogger.com/profile/16227584340087484499'
-            target='_blank'
-          >
+            target='_blank'>
             Link
           </a>
         </p>

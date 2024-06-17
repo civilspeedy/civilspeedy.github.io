@@ -1,7 +1,12 @@
-export default function M_AboutMe() {
+import AboutMePage from '../../Components/Pages/AboutMePage';
+
+export default function M_AboutMe({ setPage }) {
   return (
     <div>
-      <p>Sorry still in development</p>
+      <AboutMePage
+        isMobile={true}
+        setPage={setPage}
+      />
     </div>
   );
 }

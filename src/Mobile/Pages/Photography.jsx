@@ -1,7 +1,12 @@
-export default function M_Photography() {
+import PhotographyPage from '../../Components/Pages/PhotographyPage';
+
+export default function M_Photography({ setPage }) {
   return (
     <div>
-      <p>Sorry still in development</p>
+      <PhotographyPage
+        isMobile={true}
+        setPage={setPage}
+      />
     </div>
   );
 }

@@ -3,7 +3,6 @@ import M_SoftwareEngineering from './Pages/SoftwareEngineering';
 import M_HomePage from './Pages/HomePage';
 import M_Cinematography from './Pages/Cinematography';
 import M_GraphicDesign from './Pages/GraphicDesign';
-import M_VideoEditing from './Pages/VideoEditing';
 import M_Photography from './Pages/Photography';
 import M_AboutMe from './Pages/AboutMe';
 
@@ -22,9 +21,6 @@ export default function M_App() {
         break;
       case 'Graphic Design':
         setPageComponent(<M_GraphicDesign setPage={setPage} />);
-        break;
-      case 'Video Editing':
-        setPageComponent(<M_VideoEditing setPage={setPage} />);
         break;
       case 'Photography':
         setPageComponent(<M_Photography setPage={setPage} />);
