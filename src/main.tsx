@@ -8,31 +8,34 @@ import CinematographyPage from './pages/Cinematography';
 import GraphicDesignPage from './pages/GraphicDesign';
 import PhotographyPage from './pages/Photography';
 import AboutMePage from './pages/AboutMe';
+import { getPage } from './logic/ContentCreator';
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Home />,
+        element: <Home page={getPage('home')} />,
     },
     {
         path: '/Software Engineering',
-        element: <SoftwareEngineeringPage />,
+        element: (
+            <SoftwareEngineeringPage page={getPage('Software Engineering')} />
+        ),
     },
     {
         path: '/Cinematography',
-        element: <CinematographyPage />,
+        element: <CinematographyPage page={getPage('Cinematography')} />,
     },
     {
         path: '/Graphic Design',
-        element: <GraphicDesignPage />,
+        element: <GraphicDesignPage page={getPage('Graphic Design')} />,
     },
     {
         path: '/Photography',
-        element: <PhotographyPage />,
+        element: <PhotographyPage page={getPage('Photography')} />,
     },
     {
         path: '/About Me',
-        element: <AboutMePage />,
+        element: <AboutMePage page={getPage('About Me')} />,
     },
 ]);
 

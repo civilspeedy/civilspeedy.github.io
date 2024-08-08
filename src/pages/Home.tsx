@@ -1,11 +1,15 @@
 import React from 'react';
-import { buttonLabels, getPage } from '../logic/ContentCreator';
+import { buttonLabels } from '../logic/ContentCreator';
 import { Link } from 'react-router-dom';
+import { homePage } from '../logic/types';
 
-export default function Home(): React.JSX.Element {
-    const page: object = getPage('home');
+type types = { page: homePage };
+
+export default function Home({ page }: types): React.JSX.Element {
     const buttonNames: string[] = buttonLabels();
     console.log(buttonNames);
+
+    //buttons need to scale
 
     return (
         <>

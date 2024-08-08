@@ -19,7 +19,7 @@ export const buttonLabels = (): string[] => {
  * @param name - the name of page.
  * @returns an object containing the content for the page.
  */
-export const getPage = (name: string): object => {
+export const getPage = (name: string): any => {
     for (let page of content) {
         if (page.name === name) {
             return page;
