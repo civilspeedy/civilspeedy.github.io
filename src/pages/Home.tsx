@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { buttonLabels } from '../logic/ContentCreator';
 import { Link } from 'react-router-dom';
-import { homePage } from '../logic/types';
+import { homePage, scale } from '../logic/types';
+import { scaleFactor } from '../logic/contentScaler';
 
 type types = { page: homePage };
 
 export default function Home({ page }: types): React.JSX.Element {
     const buttonNames: string[] = buttonLabels();
-    console.log(buttonNames);
+    const [scale, setScale] = useState<scale>({ width: 0, height: 0 });
 
     //buttons need to scale
+
+    useEffect(() => {
+        setScale(scaleFactor); //use to scale buttons
+    }, []);
 
     return (
         <>
