@@ -8,7 +8,7 @@ import CinematographyPage from './pages/Cinematography';
 import GraphicDesignPage from './pages/GraphicDesign';
 import PhotographyPage from './pages/Photography';
 import AboutMePage from './pages/AboutMe';
-import { getPage } from './logic/ContentCreator';
+import { getPage } from './logic/contentCreator';
 
 const router = createBrowserRouter([
     {

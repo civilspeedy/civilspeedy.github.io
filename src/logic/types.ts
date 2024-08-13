@@ -54,3 +54,10 @@ type subject = {
 export type TYPES = { page: page };
 
 export type scale = { width: number; height: number };
+
+export type resolutions = {
+    sHeight: number;
+    sWidth: number;
+    wHeight: number;
+    wWidth: number;
+};

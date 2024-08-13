@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import { buttonLabels } from '../logic/ContentCreator';
 import { Link } from 'react-router-dom';
 import { homePage, scale } from '../logic/types';
-import { scaleContent } from '../logic/contentScaler';
+import { buttonLabels } from '../logic/contentCreator';
+import { scaleContent, scaleText } from '../logic/contentScaler';
 
 type types = { page: homePage };
 
 export default function Home({ page }: types): React.JSX.Element {
     const buttonNames: string[] = buttonLabels();
     const orginalScale: scale = { height: 20, width: 40 };
-    const [btnScale, setBtnScale] = useState<scale>(orginalScale);
+    const [btnScale, setBtnScale] = useState<scale>(scaleContent(orginalScale));
+    const orginalFont: number = 10;
+    const [btnFont, setBtnFont] = useState<number>(orginalFont);
 
     useEffect(() => {
-        setBtnScale(scaleContent(orginalScale));
+        const scaleAll = () => {
+            setBtnScale(scaleContent(orginalScale));
+            setBtnFont(scaleText(orginalFont)); // needs max size
+        };
+
+        window.addEventListener('resize', scaleAll);
+
+        return () => window.removeEventListener('resize', scaleAll);
     }, []);
 
     return (
@@ -26,14 +35,17 @@ export default function Home({ page }: types): React.JSX.Element {
                     <div id='sub'>
                         <div id='btnDiv'>
                             {buttonNames.map((item, index) => (
-                                <Link to={'/' + item}>
+                                <Link
+                                    to={'/' + item}
+                                    key={index}
+                                >
                                     <button
                                         style={{
                                             width: btnScale.width,
                                             height: btnScale.height,
+                                            fontSize: btnFont,
                                         }}
                                         title={item}
-                                        key={index}
                                     >
                                         {item}
                                     </button>
