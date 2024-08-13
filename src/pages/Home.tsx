@@ -2,18 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { buttonLabels } from '../logic/ContentCreator';
 import { Link } from 'react-router-dom';
 import { homePage, scale } from '../logic/types';
-import { scaleFactor } from '../logic/contentScaler';
+import { scaleContent } from '../logic/contentScaler';
 
 type types = { page: homePage };
 
 export default function Home({ page }: types): React.JSX.Element {
     const buttonNames: string[] = buttonLabels();
-    const [scale, setScale] = useState<scale>({ width: 0, height: 0 });
-
-    //buttons need to scale
+    const orginalScale: scale = { height: 20, width: 40 };
+    const [btnScale, setBtnScale] = useState<scale>(orginalScale);
 
     useEffect(() => {
-        setScale(scaleFactor); //use to scale buttons
+        setBtnScale(scaleContent(orginalScale));
     }, []);
 
     return (
@@ -29,6 +28,10 @@ export default function Home({ page }: types): React.JSX.Element {
                             {buttonNames.map((item, index) => (
                                 <Link to={'/' + item}>
                                     <button
+                                        style={{
+                                            width: btnScale.width,
+                                            height: btnScale.height,
+                                        }}
                                         title={item}
                                         key={index}
                                     >
