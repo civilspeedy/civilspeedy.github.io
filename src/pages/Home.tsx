@@ -7,54 +7,54 @@ import { scaleContent, scaleText } from '../logic/contentScaler';
 type types = { page: homePage };
 
 export default function Home({ page }: types): React.JSX.Element {
-    const buttonNames: string[] = buttonLabels();
-    const orginalScale: scale = { height: 20, width: 40 };
-    const [btnScale, setBtnScale] = useState<scale>(scaleContent(orginalScale));
-    const orginalFont: number = 10;
-    const [btnFont, setBtnFont] = useState<number>(orginalFont);
+  const buttonNames: string[] = buttonLabels();
+  const orginalScale: scale = { height: 20, width: 40 };
+  const [btnScale, setBtnScale] = useState<scale>(scaleContent(orginalScale));
+  const orginalFont: number = 10;
+  const [btnFont, setBtnFont] = useState<number>(orginalFont);
 
-    useEffect(() => {
-        const scaleAll = () => {
-            setBtnScale(scaleContent(orginalScale));
-            setBtnFont(scaleText(orginalFont)); // needs max size
-        };
+  useEffect(() => {
+    const scaleAll = () => {
+      setBtnScale(scaleContent(orginalScale));
+      setBtnFont(scaleText(orginalFont)); // needs max size
+    };
 
-        window.addEventListener('resize', scaleAll);
+    scaleAll();
 
-        return () => window.removeEventListener('resize', scaleAll);
-    }, []);
+    window.addEventListener('resize', scaleAll);
 
-    return (
-        <>
-            <div style={{ backgroundColor: 'blue' }}>
-                <h1>{page.h1}</h1>
-                <div id='container'>
-                    <div id='sub'>
-                        <p>temp</p>
-                    </div>
-                    <div id='sub'>
-                        <div id='btnDiv'>
-                            {buttonNames.map((item, index) => (
-                                <Link
-                                    to={'/' + item}
-                                    key={index}
-                                >
-                                    <button
-                                        style={{
-                                            width: btnScale.width,
-                                            height: btnScale.height,
-                                            fontSize: btnFont,
-                                        }}
-                                        title={item}
-                                    >
-                                        {item}
-                                    </button>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+    return () => window.removeEventListener('resize', scaleAll);
+  }, []);
+
+  return (
+    <>
+      <div style={{ backgroundColor: 'blue' }}>
+        <h1>{page.h1}</h1>
+        <div id='container'>
+          <div id='sub'>
+            <p>temp</p>
+          </div>
+          <div id='sub'>
+            <div id='btnDiv'>
+              {buttonNames.map((item, index) => (
+                <Link
+                  to={'/' + item}
+                  key={index}>
+                  <button
+                    style={{
+                      width: btnScale.width,
+                      height: btnScale.height,
+                      fontSize: btnFont,
+                    }}
+                    title={item}>
+                    {item}
+                  </button>
+                </Link>
+              ))}
             </div>
-        </>
-    );
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
