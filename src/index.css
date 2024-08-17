@@ -37,6 +37,9 @@ button {
     border-width: 2px;
     font-weight: bolder;
     max-height: 100px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 button:hover {

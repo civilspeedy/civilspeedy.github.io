@@ -1,16 +1,16 @@
 import { resolutions, scale } from './types';
 
 function getResolutions(): resolutions {
-  const browserHeight: number = window.innerHeight;
-  const browserWidth: number = window.innerWidth;
-  const screenHeight: number = window.screen.height;
-  const screenWidth: number = window.screen.width;
-  return {
-    sHeight: screenHeight,
-    sWidth: screenWidth,
-    wHeight: browserHeight,
-    wWidth: browserWidth,
-  };
+    const browserHeight: number = window.innerHeight;
+    const browserWidth: number = window.innerWidth;
+    const screenHeight: number = window.screen.height;
+    const screenWidth: number = window.screen.width;
+    return {
+        sHeight: screenHeight,
+        sWidth: screenWidth,
+        wHeight: browserHeight,
+        wWidth: browserWidth,
+    };
 }
 
 /**
@@ -18,22 +18,22 @@ function getResolutions(): resolutions {
  * @returns the width and height scale multiplier.
  */
 function scaleFactor(): scale {
-  const sizes: resolutions = getResolutions();
+    const sizes: resolutions = getResolutions();
 
-  const widthScale: number = (sizes.wWidth / sizes.sWidth) * 10;
-  const heightScale: number = (sizes.wHeight / sizes.sHeight) * 10;
+    const widthScale: number = (sizes.wWidth / sizes.sWidth) * 10;
+    const heightScale: number = (sizes.wHeight / sizes.sHeight) * 10;
 
-  return { width: widthScale, height: heightScale };
+    return { width: widthScale, height: heightScale };
 }
 
 function totalScaleFactor(): number {
-  const sizes: resolutions = getResolutions();
+    const sizes: resolutions = getResolutions();
 
-  const screenResolution: number = sizes.sHeight * sizes.sWidth;
-  const windowResolution: number = sizes.wHeight * sizes.wWidth;
-  const totalScale: number = windowResolution / screenResolution;
+    const screenResolution: number = sizes.sHeight * sizes.sWidth;
+    const windowResolution: number = sizes.wHeight * sizes.wWidth;
+    const totalScale: number = windowResolution / screenResolution;
 
-  return totalScale;
+    return totalScale;
 }
 
 /**
@@ -42,24 +42,21 @@ function totalScaleFactor(): number {
  * @returns returns the new scaled hight and width.
  */
 export function scaleContent(original: scale): scale {
-  const modifier: scale = scaleFactor();
+    const modifier: scale = scaleFactor();
 
-  const newHeight: number = original.height * modifier.height;
-  const newWidth: number = original.width * modifier.width;
-  console.log('here');
+    const newHeight: number = original.height * modifier.height;
+    const newWidth: number = original.width * modifier.width;
 
-  return { height: newHeight, width: newWidth };
+    return { height: newHeight, width: newWidth };
 }
 
 export function scaleText(original: number): number {
-  const modifier: number = totalScaleFactor();
-  let scale: number = original * modifier * 8;
+    const modifier: number = totalScaleFactor();
+    let scale: number = original * modifier * 8;
 
-  console.log('size = ', scale);
-
-  if (scale > 35) {
-    return 35;
-  } else {
-    return scale;
-  }
+    if (scale > 35) {
+        return 35;
+    } else {
+        return scale;
+    }
 }
