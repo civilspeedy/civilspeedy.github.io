@@ -23,32 +23,30 @@ import vscode_icon from '../assets/images/Icons/VSCode.svg';
 import jetbrains_icon from '../assets/images/Icons/Jetbrains.svg';
 import zed_icon from '../assets/images/Icons/Zed.svg';
 
-export function getIcons(name: string): string[] {
-    switch (name) {
-        case 'frameworks':
-            return [
-                bun_icon,
-                node_icon,
-                react_icon,
-                vite_icon,
-                expo_icon,
-                flask_icon,
-                sqlite_icon,
-                tkinter_icon,
-            ];
-        case 'languages':
-            return [
-                python_icon,
-                java_icon,
-                javascript_icon,
-                typescript_icon,
-                html_icon,
-                sql_icon,
-            ];
-        case 'se tools':
-            return [vscode_icon, zed_icon, jetbrains_icon];
-        default:
-            console.error('Err in getImage: Could not find that image/images');
-            return [];
-    }
+export function getIcons(name: string): string {
+  switch (name) {
+    case 'Bun':
+      return bun_icon;
+    case 'Expo':
+      return expo_icon;
+    case 'Flask':
+      return flask_icon;
+    case 'HTML':
+      return html_icon;
+    case 'Java':
+      return java_icon;
+    case 'JavaScript':
+      return javascript_icon;
+    case 'Lightroom':
+      return lightroom_icon;
+    case 'Node':
+      return node_icon;
+    case 'Photoshop':
+      return photoshop_icon;
+    case 'Premiere Pro':
+      return premiere_icon;
+    default:
+      console.error('Err in getImage: Could not find that image/images');
+      return '';
+  }
 }
