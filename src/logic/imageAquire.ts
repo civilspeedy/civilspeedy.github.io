@@ -49,6 +49,7 @@ export function getIcons(name: string): string {
         case 'Python':
             return python_icon;
         case 'React':
+        case 'React-Native':
             return react_icon;
         case 'SQL':
             return sql_icon;

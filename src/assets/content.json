@@ -22,8 +22,7 @@
             "Bun",
             "Sqlite",
             "Flask",
-            "Tkinter",
-            "Swing"
+            "Tkinter"
         ],
         "tools": ["VScode", "Jetbrains Toolbox", "Zed"],
         "projects": [

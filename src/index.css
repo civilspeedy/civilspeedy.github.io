@@ -76,3 +76,7 @@ button:focus-visible {
     margin: 5%;
     margin-bottom: 20px;
 }
+
+#smallDisplay {
+    background-color: white;
+}
