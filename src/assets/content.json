@@ -1,0 +1,200 @@
+[
+    {
+        "name": "home",
+        "h1": "Charlie Slorick"
+    },
+    {
+        "name": "Software Engineering",
+        "h1": "Software Engineering Portfolio",
+        "languages": [
+            "Python",
+            "Java",
+            "JavaScript",
+            "TypeScript",
+            "HTML",
+            "SQL"
+        ],
+        "frameworks": [
+            "React",
+            "React-Native",
+            "Expo",
+            "Node",
+            "Bun",
+            "Sqlite",
+            "Flask",
+            "Tkinter"
+        ],
+        "tools": ["VScode", "Jetbrains Toolbox", "Zed"],
+        "projects": [
+            {
+                "title": "Conversational Interface For Weather",
+                "description": "Dissertation Project. A mobile app along with a webserver to facilitate communication with a LLM for real weather information, a conversational method for information delivery.",
+                "link": [
+                    "https://github.com/civilspeedy/L6-Dissertation-Webserver",
+                    "https://github.com/civilspeedy/L6-Dissertation-App"
+                ],
+                "icons": [
+                    "JavaScript",
+                    "Python",
+                    "React/React-Native",
+                    "Expo",
+                    "Node",
+                    "Flask"
+                ],
+                "images": ["weather chat 1", "weather chat 2"]
+            },
+            {
+                "title": "This Website!",
+                "description": "This website was created not only to showcase my skills but to learn and practice with react and bun.",
+                "link": "https://github.com/civilspeedy/civilspeedy.github.io",
+                "icons": ["JavaScript", "React/React-Native", "Bun", "Vite"],
+                "images": []
+            },
+            {
+                "title": "Todo App",
+                "description": "An Expo mobile app for creating tasks, and upon complete receiving points and motivational messages.",
+                "link": "https://github.com/civilspeedy/ubicomp_assign_2",
+                "icons": ["JavaScript", "React/React-Native", "Expo", "Node"],
+                "images": ["todo 1", "todo 2"]
+            },
+            {
+                "title": "Prototype Trails App",
+                "description": "To learn the basics for react-native and Expo we were with redesigning a trail finding.",
+                "link": "https://github.com/civilspeedy/ubicomp_assign_1",
+                "icons": ["JavaScript", "React/React-Native", "Expo", "Node"],
+                "images": ["hike 5", "hike 7"]
+            },
+            {
+                "title": "Prototype Web-Store",
+                "description": "A prototype web store using flask.",
+                "link": "https://github.com/civilspeedy/Team-5",
+                "icons": ["Python", "HTML", "JavaScript", "Flask"],
+                "images": []
+            },
+            {
+                "title": "Weather Data Entry Site",
+                "description": "A simple flask web site for entering weather data. Was part of my university teaching to learn javascript and flask.",
+                "link": "https://github.com/civilspeedy/Weather-Assignment",
+                "icons": ["Python", "HTML", "JavaScript", "Flask"],
+                "images": ["weather web 1", "weather web 2"]
+            },
+            {
+                "title": "Stocks Trading Simulator",
+                "description": "My A-Level project using tkinter, it gathers real data relating to stocks to allow the simulated buying and selling of these stocks.",
+                "link": "https://github.com/civilspeedy/Merchant-Project",
+                "icons": ["Python", "SQL", "Sqlite", "Tkinter"],
+                "images": []
+            }
+        ]
+    },
+    {
+        "name": "Cinematography",
+        "h1": "Cinematography Portfolio",
+        "tools": ["Adobe Premier Pro", "Vegas Pro 19"],
+        "Projects": [
+            {
+                "title": "Silhouette",
+                "description": "For my final year of A-level Media Studies my team and I were tasked with producing a trailer for a horror film. I was in the position of director of cinematography as well the camera operator.",
+                "link": "qKN8fJVrFjw?si=uL01UF9DC96PvlPe"
+            },
+            {
+                "title": "Duty Calls",
+                "description": "In first year Media Studies A-level we were assigned to produce the first 2 minutes of a film. For this assignment I was a co-director and camera operator.",
+                "link": "SxLXMGrLxJI?si=ewFWwtPzDrntmIKU"
+            },
+            {
+                "title": "Finest Day",
+                "description": "For this assignment we were tasked with conveying native through a table top and objects.",
+                "link": "ownVtozVZYw?si=WKNd5awpcbK8wFcP"
+            },
+            {
+                "title": "The Deal",
+                "description": "In this simple video we were experimenting with camera angles and shots.",
+                "link": "egWbzZ3Pw3s?si=ry8XU633T0Xyxr4m"
+            }
+        ]
+    },
+    {
+        "name": "Graphic Design",
+        "h1": "Graphic Design Portfolio",
+        "tools": ["Affinity Designer 2", "Adobe Photoshop", "Draw.io"],
+        "projects": [
+            {
+                "title": "Personal Creations",
+                "description": "These are designs I have made for my personal enjoyment along with practicing my skills.",
+                "images": ["theEye", "theHand", "wallpaper"]
+            },
+            {
+                "title": "Media Studies A-Level",
+                "description": "",
+                "images": ["A2", "silhouette", "dutyCalls"]
+            },
+            {
+                "title": "Poster Competition",
+                "description": "",
+                "images": ["lockdown"]
+            }
+        ]
+    },
+    {
+        "name": "Photography",
+        "h1": "Photography Portfolio",
+        "tools": ["Affinity Photo 2", "Adobe Lightroom", "Adobe Photoshop"],
+        "images": [
+            "1.jpg",
+            "2.jpg",
+            "3.jpg",
+            "4.jpg",
+            "5.jpg",
+            "6.jpg",
+            "7.jpg",
+            "8.jpg",
+            "9.jpg",
+            "10.jpg",
+            "11.jpg",
+            "12.jpg"
+        ]
+    },
+    {
+        "name": "About Me",
+        "h1": "Charlie Slorick",
+        "contact": [
+            {
+                "name": "Linkedin",
+                "link": "https://www.linkedin.com/in/charlie-slorick-87a758259/"
+            }
+        ],
+        "bio": [
+            "I am a student currently awaiting my dissertation results from Bournemouth University. I am experienced in various programming languages, and keen to learn more. Currently, I am teaching myself Rust to explore the memory safety and performance offered. It is a unique learning experience as most of my programming has been in high-level languages, but ultimately I'm finding the challenge an enjoyable and engaging aspect of the learning process.",
+            "I am also interested in areas outside of software engineering. I have a strong passion for media creation, such as film production, graphic design and photography. I also enjoy travelling and exploring the world and am not one to shy away from physical tasks and getting out of my comfort zone. "
+        ],
+        "education": [
+            {
+                "name": "Bournemouth University",
+                "subjects": [
+                    { "subject": "Computer Science (Ba Hons)", "grade": "2:1" },
+                    {
+                        "subject": "Dissertation 'Weather Data Through Conversation'",
+                        "grade": "1st"
+                    }
+                ]
+            },
+            {
+                "name": "A-Level",
+                "subjects": [
+                    { "subject": "Media Studies", "grade": "A*" },
+                    { "subject": "Computer Science", "grade": "A" },
+                    { "subject": "Photoshop", "grade": "B" }
+                ]
+            }
+        ],
+        "other": [
+            "NICAS - Level 3 (Rock Climbing)",
+            "RYA - Level 4 (Windsurfing)",
+            "NPLQ Lifeguarding",
+            "Young Enterprise (Most Innovative Design)",
+            "Duke Of Edinburgh Award - Bronze",
+            "First Aid Trained"
+        ]
+    }
+]
