@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { homePage, scale } from '../logic/types';
+import { homePage } from '../logic/types';
 import { buttonLabels } from '../logic/contentCreator';
 import useScale from '../logic/consistencyControl';
 

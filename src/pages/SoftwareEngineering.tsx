@@ -1,16 +1,19 @@
 import SmallDisplay from '../components/SmallDisplay';
 import { softwarePage } from '../logic/types';
 import '../index.css';
+import useScale from '../logic/consistencyControl';
 
 type types = { page: softwarePage };
 
 export default function SoftwareEngineeringPage({
   page,
 }: types): React.JSX.Element {
+  const { h1Size, h2Size, pSize } = useScale(false);
+
   return (
     <div className='page-container'>
-      <h1>{page.h1}</h1>
-      <h2>Languages:</h2>
+      <h1 style={{ fontSize: h1Size }}>{page.h1}</h1>
+      <h2 style={{ fontSize: h2Size }}>Languages:</h2>
       <div id='smallDisplayHolder'>
         {page.languages.map((item, index) => (
           <SmallDisplay
@@ -19,7 +22,7 @@ export default function SoftwareEngineeringPage({
           />
         ))}
       </div>
-      <h2>Frameworks:</h2>
+      <h2 style={{ fontSize: h2Size }}>Frameworks:</h2>
       <div id='smallDisplayHolder'>
         {page.frameworks.map((item, index) => (
           <SmallDisplay
@@ -28,7 +31,7 @@ export default function SoftwareEngineeringPage({
           />
         ))}
       </div>
-      <h2>Tools:</h2>
+      <h2 style={{ fontSize: h2Size }}>Tools:</h2>
       <div id='smallDisplayHolder'>
         {page.tools.map((item, index) => (
           <SmallDisplay

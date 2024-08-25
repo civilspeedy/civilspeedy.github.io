@@ -6,50 +6,45 @@ import { useEffect, useState } from 'react';
 import { scaleContent, scaleText } from './contentScaler';
 import { scale } from './types';
 
-type textSizes = {
-  h1Size: number;
-  h2Size: number;
-  pSize: number;
-  btnFontSize?: number;
-  btnSize?: scale;
-};
+const useScale = (item: string): number | scale => {
+  let original: number | scale = 0;
 
-const useScale = (buttons: boolean): textSizes => {
-  const h1Original: number = 10; // won't go any bigger, not sure why
-  const [h1Size, setH1Size] = useState<number>(h1Original);
+  switch (item) {
+    case 'h1':
+      original = 10; // won't go any bigger, not sure why
+      break;
+    case 'h2':
+      original = 8;
+      break;
+    case 'p':
+      original = 2.5;
+      break;
+    case 'btn':
+      original = { height: 20, width: 50 };
+      break;
+    case 'btnFont':
+      original = 10;
+      break;
+    default:
+      console.error('Err in useScale: no case');
+  }
 
-  const h2Original: number = 8;
-  const [h2Size, setH2Size] = useState<number>(h2Original);
-
-  const pOriginal: number = 2.5;
-  const [pSize, setPSize] = useState<number>(pOriginal);
-
-  const btnOriginal: scale = { height: 20, width: 50 };
-  const [btnSize, setBtnSize] = useState<scale>(btnOriginal);
-
-  const btnFontOriginal: number = 10;
-  const [btnFontSize, setBtnFontSize] = useState<number>(btnFontOriginal);
+  const [size, setSize] = useState<number | scale>(original);
 
   useEffect(() => {
-    const scale = () => {
-      setH1Size(scaleText(h1Original));
-      setH2Size(scaleText(h2Original));
-      setPSize(scaleText(pOriginal));
-      setBtnFontSize(scaleText(btnFontOriginal));
-      setBtnSize(scaleContent(btnOriginal));
-      console.log('scaling');
+    const func = () => {
+      if (typeof original === 'number') {
+        setSize(scaleText(original));
+      } else {
+        setSize(scaleContent(original));
+      }
     };
 
-    scale();
-
-    window.addEventListener('resize', scale);
+    window.addEventListener('resize', func);
   }, []);
 
-  if (buttons) {
-    return { h1Size, h2Size, pSize, btnFontSize, btnSize };
-  } else {
-    return { h1Size, h2Size, pSize };
-  }
+  return size;
 };
+// now other files need refactoring
 
 export default useScale;
