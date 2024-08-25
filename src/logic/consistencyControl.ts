@@ -5,41 +5,32 @@
 import { useEffect, useState } from 'react';
 import { scaleContent, scaleText } from './contentScaler';
 import { scale } from './types';
+import defaults from '../assets/json/defaultSizes.json';
 
-const useScale = (item: string): number | scale => {
-  let original: number | scale = 0;
+type FontSizeKey = keyof typeof defaults.fontSizes;
+type ContentSizeKey = keyof typeof defaults.contentSizes;
 
-  switch (item) {
-    case 'h1':
-      original = 10; // won't go any bigger, not sure why
-      break;
-    case 'h2':
-      original = 8;
-      break;
-    case 'p':
-      original = 2.5;
-      break;
-    case 'btn':
-      original = { height: 20, width: 50 };
-      break;
-    case 'btnFont':
-      original = 10;
-      break;
-    default:
-      console.error('Err in useScale: no case');
+/**
+ * A hook for a text font size to scale automatically as window size changes.
+ * @param item the tag or related name of the text size being scaled.
+ * @returns The scaled up font size that will update with screen size.
+ */
+export const useScaleText = (item: FontSizeKey): number => {
+  let original: number = 0;
+
+  try {
+    original = defaults.fontSizes[item];
+  } catch (e) {
+    console.error(e);
+    return 0;
   }
 
-  const [size, setSize] = useState<number | scale>(original);
+  const [size, setSize] = useState<number>(original);
 
   useEffect(() => {
-    const func = () => {
-      if (typeof original === 'number') {
-        setSize(scaleText(original));
-      } else {
-        setSize(scaleContent(original));
-      }
-    };
+    const func = () => setSize(scaleText(original));
 
+    func();
     window.addEventListener('resize', func);
   }, []);
 
@@ -47,4 +38,29 @@ const useScale = (item: string): number | scale => {
 };
 // now other files need refactoring
 
-export default useScale;
+/**
+ * A hook for scaling 2D content with screen size.
+ * @param item The type of content you wish to scale.
+ * @returns The width and height scaled up that will update with screen size.
+ */
+export const useScale2D = (item: ContentSizeKey): scale => {
+  let original: scale = { height: 0, width: 0 };
+
+  try {
+    original = defaults.contentSizes[item];
+  } catch (e) {
+    console.error(e);
+    return { width: 0, height: 0 };
+  }
+
+  const [size, setSize] = useState<scale>(original);
+
+  useEffect(() => {
+    const func = () => setSize(scaleContent(original));
+
+    func();
+    window.addEventListener('resize', func);
+  }, []);
+
+  return size;
+};

@@ -1,14 +1,15 @@
 import SmallDisplay from '../components/SmallDisplay';
 import { softwarePage } from '../logic/types';
 import '../index.css';
-import useScale from '../logic/consistencyControl';
+import { useScaleText } from '../logic/consistencyControl';
 
 type types = { page: softwarePage };
 
 export default function SoftwareEngineeringPage({
   page,
 }: types): React.JSX.Element {
-  const { h1Size, h2Size, pSize } = useScale(false);
+  const h1Size: number = useScaleText('h1');
+  const h2Size: number = useScaleText('h2');
 
   return (
     <div className='page-container'>

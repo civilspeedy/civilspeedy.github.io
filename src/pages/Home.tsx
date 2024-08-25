@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { homePage } from '../logic/types';
+import { homePage, scale } from '../logic/types';
 import { buttonLabels } from '../logic/contentCreator';
-import useScale from '../logic/consistencyControl';
+import { useScale2D, useScaleText } from '../logic/consistencyControl';
 
 type types = { page: homePage };
 
 export default function Home({ page }: types): React.JSX.Element {
   const buttonNames: string[] = buttonLabels();
 
-  const { h1Size, h2Size, pSize, btnFontSize, btnSize } = useScale(true);
+  const h1Size: number = useScaleText('h1');
+  const btnSize: scale = useScale2D('btn');
+  const btnFontSize: number = useScaleText('btnFont');
 
   // btnSize needs undefined handling
 
