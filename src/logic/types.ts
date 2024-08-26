@@ -1,3 +1,4 @@
+// could do with clean up
 export type homePage = {
   h1: string;
   name: string;

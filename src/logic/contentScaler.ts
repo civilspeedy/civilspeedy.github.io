@@ -67,8 +67,8 @@ export function scaleText(original: number): number {
   const modifier: number = totalScaleFactor();
   let scale: number = original * modifier * 8;
 
-  if (scale > 35) {
-    return 35;
+  if (scale > 60) {
+    return 65;
   } else {
     return scale;
   }

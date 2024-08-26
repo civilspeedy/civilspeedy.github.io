@@ -36,7 +36,6 @@ export const useScaleText = (item: FontSizeKey): number => {
 
   return size;
 };
-// now other files need refactoring
 
 /**
  * A hook for scaling 2D content with screen size.
