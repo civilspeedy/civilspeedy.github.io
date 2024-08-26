@@ -1,6 +1,7 @@
 Personal Portfolio Website
 ====
-- Written in TypeScript to show off skills and projects. 
+- To show off skills and projects. 
+- Written in TypeScript.
 - Built in React with Vite using BunJS. 
 - Compiled into HTML with Bun.
 - Check out src directory for code.
