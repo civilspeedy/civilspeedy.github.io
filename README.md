@@ -11,3 +11,4 @@ Personal Portfolio Website
 - [ ] Animated welcome text
 - [ ] Impove image loading
 - [ ] New video source as YouTube is bloated
+- [ ] Mobile Version
