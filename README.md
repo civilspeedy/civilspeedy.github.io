@@ -6,7 +6,7 @@ Personal Portfolio Website
 - Compiled into HTML with Bun.
 - Check out src directory for code.
 
-Todo:
+**Todo:**
 - [ ] Animated transitions
 - [ ] Animated welcome text
 - [ ] Impove image loading
