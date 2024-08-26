@@ -1,0 +1,149 @@
+* {
+  font-family: Helvetica;
+  color: rgba(255, 255, 255, 0.87);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #242424;
+
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  margin: 10px;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: bolder;
+  max-height: 100px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+button:hover {
+  border-color: aqua;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#container {
+  display: flex;
+  align-self: center;
+  justify-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+#sub {
+  display: flex;
+  flex-basis: 100%;
+}
+
+#btnDiv {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 5%;
+  margin-bottom: 20px;
+}
+
+#smallDisplay {
+  background-color: white;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+#smallDisplayHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#videoDisplay {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+#aboutMe {
+  width: 70%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#aboutMe h1 {
+  color: #242424;
+}
+
+#aboutMe h2 {
+  margin-bottom: 0px;
+  color: #242424;
+}
+
+#aboutMe h3 {
+  margin-bottom: 0;
+  text-align: center;
+  color: #242424;
+}
+
+#aboutMe a {
+  color: blue;
+}
+
+#aboutMe p {
+  text-wrap: pretty;
+  margin: 1px;
+  color: #242424;
+}

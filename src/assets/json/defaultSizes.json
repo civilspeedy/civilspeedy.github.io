@@ -1,0 +1,15 @@
+{
+  "fontSizes": {
+    "h1": 20,
+    "h2": 5,
+    "h3": 3,
+    "p": 2.5,
+    "btnFont": 5
+  },
+  "contentSizes": {
+    "btn": { "height": 20, "width": 50 },
+    "smallDisplay": { "height": 16, "width": 12 },
+    "icon": { "height": 8, "width": 8 },
+    "videoDisplay": { "height": 50, "width": 80 }
+  }
+}
