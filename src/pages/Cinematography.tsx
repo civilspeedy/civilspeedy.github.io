@@ -1,15 +1,13 @@
 import SmallDisplay from '../components/SmallDisplay';
+import { H1, H2 } from '../components/Text';
 import VideoDisplay from '../components/VideoDisplay';
-import { useScaleText } from '../logic/consistencyControl';
-import { page, TYPES } from '../logic/types';
+import { TYPES } from '../logic/types';
 
 export default function CinematographyPage({ page }: TYPES): React.JSX.Element {
-  const h1Size = useScaleText('h1');
-  const h2Size = useScaleText('h2');
   return (
-    <>
-      <h1 style={{ fontSize: h1Size }}>{page.h1}</h1>
-      <h2 style={{ textAlign: 'center', fontSize: h2Size }}>Tools:</h2>
+    <div className='page-container'>
+      <H1 text={page.h1} />
+      <H2 text='Tools:' />
       <div id='smallDisplayHolder'>
         {page.tools.map((item, index) => (
           <SmallDisplay
@@ -18,8 +16,13 @@ export default function CinematographyPage({ page }: TYPES): React.JSX.Element {
           />
         ))}
       </div>
-      <h2 style={{ textAlign: 'center', fontSize: h2Size }}>Projects:</h2>
-      <div>
+      <H2 text='Projects:' />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}>
         {page.projects.map((item, index) => (
           <VideoDisplay
             video={item}
@@ -27,6 +30,6 @@ export default function CinematographyPage({ page }: TYPES): React.JSX.Element {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

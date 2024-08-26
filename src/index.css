@@ -110,6 +110,6 @@ button:focus-visible {
   flex-direction: column;
   border-radius: 20px;
   padding: 10px;
-  max-width: fit-content;
   margin-bottom: 20px;
+  align-items: center;
 }

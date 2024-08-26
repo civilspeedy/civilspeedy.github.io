@@ -27,6 +27,13 @@ export type page = {
   projects: project[];
 };
 
+export type GraphicDesignPageT = {
+  name: string;
+  h1: string;
+  tools: string[];
+  projects: string[];
+};
+
 export type aboutMePage = {
   name: string;
   h1: string;
@@ -34,6 +41,10 @@ export type aboutMePage = {
   bio: string[];
   education: education[];
   other: string[];
+};
+
+export type PhotographyPageT = page & {
+  images: string[];
 };
 
 type contact = {

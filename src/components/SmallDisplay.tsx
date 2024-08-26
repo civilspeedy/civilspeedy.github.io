@@ -6,7 +6,7 @@ type types = { text: string };
 
 export default function SmallDisplay({ text }: types): React.JSX.Element {
   const divSize = useScale2D('smallDisplay');
-  const imgSize = useScale2D('img');
+  const imgSize = useScale2D('icon');
   const textSize = useScaleText('p');
 
   return (
@@ -32,6 +32,7 @@ export default function SmallDisplay({ text }: types): React.JSX.Element {
           backgroundColor: 'white',
           color: '#242424',
           textAlign: 'center',
+          marginBottom: 0,
           fontSize: textSize,
         }}>
         {text}

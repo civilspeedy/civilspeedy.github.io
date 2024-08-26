@@ -109,23 +109,20 @@
   {
     "name": "Graphic Design",
     "h1": "Graphic Design Portfolio",
-    "tools": ["Affinity Designer 2", "Adobe Photoshop", "Draw.io"],
+    "tools": [
+      "Affinity Designer 2",
+      "Affinity Publisher 2",
+      "Adobe Photoshop",
+      "Draw.io"
+    ],
     "projects": [
-      {
-        "title": "Personal Creations",
-        "description": "These are designs I have made for my personal enjoyment along with practicing my skills.",
-        "images": ["theEye", "theHand", "wallpaper"]
-      },
-      {
-        "title": "Media Studies A-Level",
-        "description": "",
-        "images": ["A2", "silhouette", "dutyCalls"]
-      },
-      {
-        "title": "Poster Competition",
-        "description": "",
-        "images": ["lockdown"]
-      }
+      "The Eye",
+      "The Hand",
+      "Wallpaper",
+      "A2",
+      "Silhouette",
+      "Duty Calls",
+      "Lockdown"
     ]
   },
   {
@@ -133,18 +130,18 @@
     "h1": "Photography Portfolio",
     "tools": ["Affinity Photo 2", "Adobe Lightroom", "Adobe Photoshop"],
     "images": [
-      "1.jpg",
-      "2.jpg",
-      "3.jpg",
-      "4.jpg",
-      "5.jpg",
-      "6.jpg",
-      "7.jpg",
-      "8.jpg",
-      "9.jpg",
-      "10.jpg",
-      "11.jpg",
-      "12.jpg"
+      "Sunset Beach",
+      "Sunset Surfer",
+      "Ring Splash",
+      "Close-Up Splash",
+      "Contrast Splash",
+      "Purple Splash",
+      "Vibrant Splash",
+      "Orchid 1",
+      "Orchid 2",
+      "Orchid 3",
+      "Skull Roots",
+      "Wood"
     ]
   },
   {
@@ -157,8 +154,8 @@
       }
     ],
     "bio": [
-      "I am a student currently awaiting my dissertation results from Bournemouth University. I am experienced in various programming languages, and keen to learn more. Currently, I am teaching myself Rust to explore the memory safety and performance offered. It is a unique learning experience as most of my programming has been in high-level languages, but ultimately I'm finding the challenge an enjoyable and engaging aspect of the learning process.",
-      "I am also interested in areas outside of software engineering. I have a strong passion for media creation, such as film production, graphic design and photography. I also enjoy travelling and exploring the world and am not one to shy away from physical tasks and getting out of my comfort zone. "
+      "I am currently searching for my first industry job having completed my final year at Bournemouth University for Software Engineering (Ba Hons), with a 2:1 overall and a 1st for my dissertation. During my time at Bournemouth University, I have become familiar with numerous web and software development practices. Units like “Ubiquitous Computing” have given me great experience in designing any application be it web or on-device. I am also able to draw on creative skills learnt during my Media Studies and Photography A-levels, giving me a skill set that is both technical and creative.",
+      "I am also interested in areas outside of software engineering. I have a strong passion for media creation, such as film production, graphic design and photography. I also enjoy travelling and exploring the world and am not one to shy away from physical tasks and getting out of my comfort zone."
     ],
     "education": [
       {

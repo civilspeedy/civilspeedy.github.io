@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { project, scale } from '../logic/types';
+import { useScale2D } from '../logic/consistencyControl';
 
 type types = { video: project };
 
 export default function VideoDisplay({ video }: types): React.JSX.Element {
-  const originalFrameSize: scale = { width: 560, height: 315 };
-  const [frameSize, setFrameSize] = useState<scale>(originalFrameSize);
-  // needs scaling
+  const frameSize: scale = { width: 560, height: 315 };
+  const divSize: scale = useScale2D('videoDisplay');
 
   return (
-    <div id='videoDisplay'>
+    <div
+      id='videoDisplay'
+      style={{ width: divSize.width, height: divSize.height }}>
       <h2 style={{ textAlign: 'center', color: '#242424' }}>{video.title}</h2>
       <iframe
         width={frameSize.width}
@@ -20,7 +22,9 @@ export default function VideoDisplay({ video }: types): React.JSX.Element {
         referrerPolicy='strict-origin-when-cross-origin'
         allowFullScreen
       />
-      <p style={{ color: '#242424', maxWidth: '50%' }}>{video.description}</p>
+      <p style={{ color: '#242424', textWrap: 'pretty' }}>
+        {video.description}
+      </p>
     </div>
   );
 }

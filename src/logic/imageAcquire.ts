@@ -23,64 +23,100 @@ import vscode_icon from '../assets/images/Icons/VSCode.svg';
 import jetbrains_icon from '../assets/images/Icons/Jetbrains.svg';
 import zed_icon from '../assets/images/Icons/Zed.svg';
 import no_img from '../assets/images/noimg.svg';
+import drawio_icon from '../assets/images/Icons/Drawio.svg';
+import a2_img from '../assets/images/GraphicDesign/A2.jpg';
+import duty_calls_img from '../assets/images/GraphicDesign/duty calls.jpg';
+import lockdown_img from '../assets/images/GraphicDesign/lockdown.jpg';
+import silhouette_img from '../assets/images/GraphicDesign/silhouette.jpg';
+import the_eye_img from '../assets/images/GraphicDesign/theEye.jpg';
+import the_hand_img from '../assets/images/GraphicDesign/theHand.jpg';
+import wallpaper_img from '../assets/images/GraphicDesign/wallpaper.jpg';
+import orchid_1_img from '../assets/images/Photography/bw orchid.jpg';
+import orchid_2_img from '../assets/images/Photography/bw orchid 2.jpg';
+import orchid_3_img from '../assets/images/Photography/bw orchid 3.jpg';
+import close_up_splash_img from '../assets/images/Photography/close up splash.jpg';
+import contrast_splash_img from '../assets/images/Photography/contrast splash.jpg';
+import purple_splash_img from '../assets/images/Photography/purple splash.jpg';
+import ring_splash_img from '../assets/images/Photography/ring splash.jpg';
+import skull_roots_img from '../assets/images/Photography/skull roots.jpg';
+import sunset_beach_img from '../assets/images/Photography/sunset beach.jpg';
+import sunset_surfer_img from '../assets/images/Photography/sunset surfer.jpg';
+import vibrant_splash_img from '../assets/images/Photography/vibrant drop.jpg';
+import wood_img from '../assets/images/Photography/wood.jpg';
+
+const icons: object = {
+  Bun: bun_icon,
+  Expo: expo_icon,
+  Flask: flask_icon,
+  HTML: html_icon,
+  Java: java_icon,
+  JavaScript: javascript_icon,
+  Lightroom: lightroom_icon,
+  Node: node_icon,
+  'Adobe Photoshop': photoshop_icon,
+  'Adobe Premier Pro': premiere_icon,
+  Python: python_icon,
+  'React & React-Native': react_icon,
+  SQL: sql_icon,
+  Sqlite: sqlite_icon,
+  Tkinter: tkinter_icon,
+  'Vegas Pro 19': vegas_icon,
+  Vite: vite_icon,
+  'Affinity Publisher 2': publisher_icon,
+  'Affinity Photo 2': photo_icon,
+  'Affinity Designer 2': designer_icon,
+  TypeScript: typescript_icon,
+  VScode: vscode_icon,
+  'Jetbrains Toolbox': jetbrains_icon,
+  Zed: zed_icon,
+  'Draw.io': drawio_icon,
+};
+
+type IconKey = keyof typeof icons;
 
 /**
  * Returns image string based on provided name.
  * @param name The name of icon be searched for.
  * @returns A string referencing the icon image.
  */
-export function getIcons(name: string): string {
-  switch (name) {
-    case 'Bun':
-      return bun_icon;
-    case 'Expo':
-      return expo_icon;
-    case 'Flask':
-      return flask_icon;
-    case 'HTML':
-      return html_icon;
-    case 'Java':
-      return java_icon;
-    case 'JavaScript':
-      return javascript_icon;
-    case 'Lightroom':
-      return lightroom_icon;
-    case 'Node':
-      return node_icon;
-    case 'Photoshop':
-      return photoshop_icon;
-    case 'Adobe Premier Pro':
-      return premiere_icon;
-    case 'Python':
-      return python_icon;
-    case 'React & React-Native':
-      return react_icon;
-    case 'SQL':
-      return sql_icon;
-    case 'Sqlite':
-      return sqlite_icon;
-    case 'Tkinter':
-      return tkinter_icon;
-    case 'Vegas Pro 19':
-      return vegas_icon;
-    case 'Vite':
-      return vite_icon;
-    case 'Affinity Publisher':
-      return publisher_icon;
-    case 'Affinity Photo':
-      return photo_icon;
-    case 'Affinity Designer':
-      return designer_icon;
-    case 'TypeScript':
-      return typescript_icon;
-    case 'VScode':
-      return vscode_icon;
-    case 'Jetbrains Toolbox':
-      return jetbrains_icon;
-    case 'Zed':
-      return zed_icon;
-    default:
-      console.error('Err in getIcons: Could not find that image/images');
-      return no_img;
+export function getIcons(name: IconKey): string {
+  try {
+    return icons[name];
+  } catch (e) {
+    console.error('Err in getIcons: ', e);
+    return no_img;
+  }
+}
+
+const images: object = {
+  A2: a2_img,
+  'Duty Calls': duty_calls_img,
+  Lockdown: lockdown_img,
+  Silhouette: silhouette_img,
+  'The Eye': the_eye_img,
+  'The Hand': the_hand_img,
+  Wallpaper: wallpaper_img,
+  'Sunset Beach': sunset_beach_img,
+  'Sunset Surfer': sunset_surfer_img,
+  'Close-Up Splash': close_up_splash_img,
+  'Ring Splash': ring_splash_img,
+  'Contrast Splash': contrast_splash_img,
+  'Purple Splash': purple_splash_img,
+  'Vibrant Splash': vibrant_splash_img,
+  'Orchid 1': orchid_1_img,
+  'Orchid 2': orchid_2_img,
+  'Orchid 3': orchid_3_img,
+  'Skull Roots': skull_roots_img,
+  Wood: wood_img,
+};
+
+type ImageKey = keyof typeof images;
+
+export function getImages(name: ImageKey): string {
+  try {
+    return images[name];
+  } catch (e) {
+    console.error(e);
+    return no_img;
   }
 }
