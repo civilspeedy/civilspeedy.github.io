@@ -12,3 +12,8 @@ Personal Portfolio Website
 - [ ] Impove image loading
 - [ ] New video source as YouTube is bloated
 - [ ] Mobile Version
+- [ ] Nav-Bar
+- [ ] Bring about me to left of home page
+- [ ] Remove redundant headings
+- [ ] direct links to pages don't work
+- [ ] images need resizing 
