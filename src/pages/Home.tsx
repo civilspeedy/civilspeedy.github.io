@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { homePage, scale } from '../logic/types';
+import { PageBasic, scale } from '../logic/types';
 import { buttonLabels } from '../logic/contentCreator';
 import { useScale2D, useScaleText } from '../logic/consistencyControl';
 import { H1 } from '../components/Text';
 
-type types = { page: homePage };
+type types = { page: PageBasic };
 
 export default function Home({ page }: types): React.JSX.Element {
   const buttonNames: string[] = buttonLabels();
