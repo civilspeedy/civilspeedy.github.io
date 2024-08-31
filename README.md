@@ -15,6 +15,6 @@ Personal Portfolio Website
 - [x] Nav-Bar
 - [x] Bring about me to left of home page
 - [x] Remove redundant headings
-- [ ] direct links to pages don't work (not sure this is achievable with github pages)
+- [ ] direct links or refreshing causes error (not sure this is achievable with github pages)
 - [x] images need resizing
 - [ ] Text on video display too wide
