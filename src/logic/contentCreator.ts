@@ -6,8 +6,9 @@ import content from '../assets/json/content.json';
  */
 export const buttonLabels = (): string[] => {
   const array: string[] = [];
+
   for (let page of content) {
-    if (page.name !== 'home') {
+    if (page.name !== 'home' && page.name !== 'About Me') {
       array.push(page.name);
     }
   }
@@ -21,9 +22,7 @@ export const buttonLabels = (): string[] => {
  */
 export const getPage = (name: string): any => {
   for (let page of content) {
-    if (page.name === name) {
-      return page;
-    }
+    if (page.name === name) return page;
   }
   return {};
 };

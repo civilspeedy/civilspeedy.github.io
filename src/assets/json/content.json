@@ -5,7 +5,7 @@
   },
   {
     "name": "Software Engineering",
-    "h1": "Software Engineering Portfolio",
+    "h1": "Software Engineering",
     "languages": ["Python", "Java", "JavaScript", "TypeScript", "HTML", "SQL"],
     "frameworks": [
       "React & React-Native",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Video Production",
-    "h1": "Video Production Portfolio",
+    "h1": "Video Production",
     "tools": ["Adobe Premier Pro", "Vegas Pro 19"],
     "projects": [
       {
@@ -108,7 +108,7 @@
   },
   {
     "name": "Graphic Design",
-    "h1": "Graphic Design Portfolio",
+    "h1": "Graphic Design",
     "tools": [
       "Affinity Designer 2",
       "Affinity Publisher 2",
@@ -127,7 +127,7 @@
   },
   {
     "name": "Photography",
-    "h1": "Photography Portfolio",
+    "h1": "Photography",
     "tools": ["Affinity Photo 2", "Adobe Lightroom", "Adobe Photoshop"],
     "images": [
       "Sunset Beach",
@@ -147,23 +147,19 @@
   {
     "name": "About Me",
     "h1": "Charlie Slorick",
-    "contact": [
-      {
-        "name": "Linkedin",
-        "link": "https://www.linkedin.com/in/charlie-slorick-87a758259/"
-      }
-    ],
-    "bio": [
-      "I am currently searching for my first industry job having completed my final year at Bournemouth University for Software Engineering (Ba Hons), with a 2:1 overall and a 1st for my dissertation. During my time at Bournemouth University, I have become familiar with numerous web and software development practices. Units like “Ubiquitous Computing” have given me great experience in designing any application be it web or on-device. I am also able to draw on creative skills learnt during my Media Studies and Photography A-levels, giving me a skill set that is both technical and creative.",
-      "I am also interested in areas outside of software engineering. I have a strong passion for media creation, such as film production, graphic design and photography. I also enjoy travelling and exploring the world and am not one to shy away from physical tasks and getting out of my comfort zone."
-    ],
+    "linkedin": "https://www.linkedin.com/in/charlie-slorick-87a758259/",
+    "email": "Y2hhcmxpZXNsb3JpY2tAb3V0bG9vay5jb20=",
+    "bio": "Bournemouth University graduate, with experience in a range of languages and frameworks. I also have skills in other areas, such as media, photography, and graphic design. Keen learner using personal projects to practice and leveraging online resources. Currently practising C to get to grips with a low-level language.",
     "education": [
       {
-        "name": "Bournemouth University",
+        "name": "Bachelors of Science (With Honors)",
         "subjects": [
-          { "subject": "Computer Science (Ba Hons)", "grade": "2:1" },
           {
-            "subject": "Dissertation 'Weather Data Through Conversation'",
+            "subject": "Computer Science (Software Engineering)",
+            "grade": "2:1"
+          },
+          {
+            "subject": "Dissertation: 'Weather Data Through Conversation'",
             "grade": "1st"
           }
         ]
@@ -173,7 +169,7 @@
         "subjects": [
           { "subject": "Media Studies", "grade": "A*" },
           { "subject": "Computer Science", "grade": "A" },
-          { "subject": "Photoshop", "grade": "B" }
+          { "subject": "Photography", "grade": "B" }
         ]
       }
     ],

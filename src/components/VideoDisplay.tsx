@@ -1,6 +1,8 @@
 import React from 'react';
 import { project, scale } from '../logic/types';
 import { useScale2D } from '../logic/consistencyControl';
+import ReactPlayer from 'react-player';
+import { getVideo } from '../logic/VideoAquire';
 
 type types = { video: project };
 
@@ -13,14 +15,11 @@ export default function VideoDisplay({ video }: types): React.JSX.Element {
       id='videoDisplay'
       style={{ width: divSize.width, height: divSize.height }}>
       <h2 style={{ textAlign: 'center', color: '#242424' }}>{video.title}</h2>
-      <iframe
+      <ReactPlayer
+        url={getVideo(video.title)}
+        controls={true}
         width={frameSize.width}
         height={frameSize.height}
-        src={'https://www.youtube-nocookie.com/embed/' + video.link}
-        title={video.title}
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-        referrerPolicy='strict-origin-when-cross-origin'
-        allowFullScreen
       />
       <p style={{ color: '#242424', textWrap: 'pretty' }}>
         {video.description}

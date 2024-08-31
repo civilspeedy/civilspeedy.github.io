@@ -18,6 +18,11 @@ export const H3 = ({ text }: Text): React.JSX.Element => {
   return <h3 style={{ fontSize: size }}>{text}</h3>;
 };
 
+export const H4 = ({ text }: Text): React.JSX.Element => {
+  const size: number = useScaleText('h4');
+  return <h4 style={{ fontSize: size }}>{text}</h4>;
+};
+
 export const P = ({ text }: Text): React.JSX.Element => {
   const size: number = useScaleText('p');
   return <p style={{ fontSize: size }}>{text}</p>;

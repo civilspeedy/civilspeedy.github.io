@@ -6,13 +6,13 @@ export default function ImageDisplay({ image }: Type): React.JSX.Element {
   return (
     <img
       style={{
-        width: '50%',
+        width: '35%',
         height: 'auto',
         marginBottom: 10,
         alignSelf: 'center',
       }}
       src={getImages(image)}
-      loading='eager'
+      loading='lazy'
       alt={image}
     />
   );

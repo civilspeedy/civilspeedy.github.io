@@ -1,12 +1,9 @@
-// could do with clean up
-export type homePage = {
+export type PageBasic = {
   h1: string;
   name: string;
 };
 
-export type softwarePage = {
-  name: string;
-  h1: string;
+export type softwarePage = PageBasic & {
   languages: string[];
   frameworks: string[];
   tools: string[];
@@ -21,36 +18,26 @@ export type project = {
   images: string[];
 };
 
-export type page = {
-  name: string;
-  h1: string;
-  tools: string[];
-  projects: project[];
-};
-
-export type GraphicDesignPageT = {
-  name: string;
-  h1: string;
+export type PortfolioPage = PageBasic & {
   tools: string[];
   projects: string[];
 };
 
-export type aboutMePage = {
-  name: string;
-  h1: string;
-  contact: contact[];
-  bio: string[];
+export type CinemaPage = PageBasic & {
+  tools: string[];
+  projects: project[];
+};
+
+export type aboutMePage = PageBasic & {
+  linkedin: string;
+  email: string;
+  bio: string;
   education: education[];
   other: string[];
 };
 
-export type PhotographyPageT = page & {
+export type PhotographyPageT = PageBasic & {
   images: string[];
-};
-
-type contact = {
-  name: string;
-  link: string;
 };
 
 type education = {
@@ -63,7 +50,7 @@ type subject = {
   grade: string;
 };
 
-export type TYPES = { page: page };
+export type TYPES = { page: PortfolioPage };
 
 export type scale = { width: number; height: number };
 
