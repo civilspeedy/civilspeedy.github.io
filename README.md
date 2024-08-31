@@ -9,11 +9,12 @@ Personal Portfolio Website
 **Todo:**
 - [ ] Animated transitions
 - [ ] Animated welcome text
-- [ ] Impove image loading
-- [ ] New video source as YouTube is bloated
+- [ ] Impove image loading (maybe fixed)
+- [x] New video source as YouTube is bloated
+  - Quality isn't too great
 - [ ] Mobile Version
-- [ ] Nav-Bar
-- [ ] Bring about me to left of home page
-- [ ] Remove redundant headings
-- [ ] direct links to pages don't work
-- [ ] images need resizing 
+- [x] Nav-Bar
+- [x] Bring about me to left of home page
+- [x] Remove redundant headings
+- [ ] direct links to pages don't work (not sure this is achievable with github pages)
+- [x] images need resizing 
