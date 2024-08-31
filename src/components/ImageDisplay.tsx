@@ -12,7 +12,7 @@ export default function ImageDisplay({ image }: Type): React.JSX.Element {
         alignSelf: 'center',
       }}
       src={getImages(image)}
-      loading='eager'
+      loading='lazy'
       alt={image}
     />
   );

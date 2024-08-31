@@ -1,4 +1,3 @@
-// could do with clean up
 export type PageBasic = {
   h1: string;
   name: string;
@@ -30,19 +29,15 @@ export type CinemaPage = PageBasic & {
 };
 
 export type aboutMePage = PageBasic & {
-  contact: contact[];
-  bio: string[];
+  linkedin: string;
+  email: string;
+  bio: string;
   education: education[];
   other: string[];
 };
 
 export type PhotographyPageT = PageBasic & {
   images: string[];
-};
-
-type contact = {
-  name: string;
-  link: string;
 };
 
 type education = {

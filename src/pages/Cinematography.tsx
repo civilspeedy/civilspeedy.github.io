@@ -1,3 +1,4 @@
+import Navbar from '../components/Navbar';
 import SmallDisplay from '../components/SmallDisplay';
 import { H1, H2 } from '../components/Text';
 import VideoDisplay from '../components/VideoDisplay';
@@ -8,6 +9,7 @@ type Type = { page: CinemaPage };
 export default function CinematographyPage({ page }: Type): React.JSX.Element {
   return (
     <div className='page-container'>
+      <Navbar page='Video Production' />
       <H1 text={page.h1} />
       <H2 text='Tools:' />
       <div id='smallDisplayHolder'>
