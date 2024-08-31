@@ -8,7 +8,6 @@ Personal Portfolio Website
 
 **Todo:**
 - [ ] Animated transitions
-- [ ] Animated welcome text
 - [ ] Impove image loading (maybe fixed)
 - [x] New video source as YouTube is bloated
   - Quality isn't too great
@@ -17,4 +16,5 @@ Personal Portfolio Website
 - [x] Bring about me to left of home page
 - [x] Remove redundant headings
 - [ ] direct links to pages don't work (not sure this is achievable with github pages)
-- [x] images need resizing 
+- [x] images need resizing
+- [ ] Text on video display too wide
