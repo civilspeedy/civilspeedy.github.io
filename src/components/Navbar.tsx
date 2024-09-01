@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { buttonLabels } from '../logic/contentCreator';
 import { Link } from 'react-router-dom';
 
 type Type = { page: string };
 
 export default function Navbar({ page }: Type): React.JSX.Element {
-  const [state, setState] = useState(false);
   const pages: string[] = buttonLabels();
   const pageWithoutCurrent: string[] = [];
 
