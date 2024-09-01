@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 import SmallDisplay from '../components/SmallDisplay';
-import { H1, H2 } from '../components/Text';
+import ScalingText from '../components/ScalingText';
 import VideoDisplay from '../components/VideoDisplay';
 import { CinemaPage } from '../logic/types';
 
@@ -10,8 +10,14 @@ export default function CinematographyPage({ page }: Type): React.JSX.Element {
   return (
     <div className='page-container'>
       <Navbar page='Video Production' />
-      <H1 text={page.h1} />
-      <H2 text='Tools:' />
+      <ScalingText
+        type='h1'
+        text={page.h1}
+      />
+      <ScalingText
+        type='h2'
+        text='Tools:'
+      />
       <div id='smallDisplayHolder'>
         {page.tools.map((item, index) => (
           <SmallDisplay
@@ -20,7 +26,10 @@ export default function CinematographyPage({ page }: Type): React.JSX.Element {
           />
         ))}
       </div>
-      <H2 text='Projects:' />
+      <ScalingText
+        type='h2'
+        text='Projects:'
+      />
       <div
         style={{
           display: 'flex',

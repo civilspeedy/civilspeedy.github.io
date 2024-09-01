@@ -7,8 +7,22 @@
     "p": 2.5,
     "btnFont": 5
   },
+  "mobileFont": {
+    "h1": 8,
+    "h2": 3.5,
+    "h3": 2.5,
+    "h4": 1.25,
+    "p": 2,
+    "btnFont": 3.5
+  },
   "contentSizes": {
     "btn": { "height": 20, "width": 50 },
+    "smallDisplay": { "height": 16, "width": 12 },
+    "icon": { "height": 8, "width": 8 },
+    "videoDisplay": { "height": 50, "width": 80 }
+  },
+  "mobileContent": {
+    "btn": { "height": 10, "width": 25 },
     "smallDisplay": { "height": 16, "width": 12 },
     "icon": { "height": 8, "width": 8 },
     "videoDisplay": { "height": 50, "width": 80 }

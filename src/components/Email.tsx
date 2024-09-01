@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { P } from './Text';
+import ScalingText from './ScalingText';
 
 type Type = { based: string };
 
@@ -16,7 +16,10 @@ export default function Email({ based }: Type): React.JSX.Element {
     <Link
       to={'mailto:' + email}
       onClick={handleClick}>
-      <P text='Email' />
+      <ScalingText
+        type='p'
+        text='Email'
+      />
     </Link>
   );
 }
