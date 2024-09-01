@@ -6,8 +6,9 @@ import { useEffect, useState } from 'react';
 import { scaleContent, scaleText } from './contentScaler';
 import { scale } from './types';
 import defaults from '../assets/json/defaultSizes.json';
+import { isMobile } from 'react-device-detect';
 
-type FontSizeKey = keyof typeof defaults.fontSizes;
+export type FontSizeKey = keyof typeof defaults.fontSizes;
 type ContentSizeKey = keyof typeof defaults.contentSizes;
 
 /**
@@ -17,9 +18,12 @@ type ContentSizeKey = keyof typeof defaults.contentSizes;
  */
 export const useScaleText = (item: FontSizeKey): number => {
   let original: number = 0;
-
   try {
-    original = defaults.fontSizes[item];
+    if (isMobile) {
+      original = defaults.mobileFont[item];
+    } else {
+      original = defaults.fontSizes[item];
+    }
   } catch (e) {
     console.error(e);
     return 0;

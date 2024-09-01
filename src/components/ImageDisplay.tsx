@@ -1,7 +1,7 @@
 import React from 'react';
 import { getImages } from '../logic/imageAcquire';
 
-type Type = { image: string };
+type Type = { image: string }; // type needs fixing
 export default function ImageDisplay({ image }: Type): React.JSX.Element {
   return (
     <img

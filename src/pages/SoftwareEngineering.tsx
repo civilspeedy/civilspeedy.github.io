@@ -1,7 +1,7 @@
 import SmallDisplay from '../components/SmallDisplay';
 import { softwarePage } from '../logic/types';
 import '../index.css';
-import { H1, H2 } from '../components/Text';
+import ScalingText from '../components/ScalingText';
 import Navbar from '../components/Navbar';
 
 type types = { page: softwarePage };
@@ -12,9 +12,15 @@ export default function SoftwareEngineeringPage({
   return (
     <div className='page-container'>
       <Navbar page='Software Engineering' />
-      <H1 text={page.h1} />
+      <ScalingText
+        type='h1'
+        text={page.h1}
+      />
       <a href='https://github.com/civilspeedy'>Github</a>
-      <H2 text='Languages:' />
+      <ScalingText
+        type='h2'
+        text='Languages:'
+      />
       <div id='smallDisplayHolder'>
         {page.languages.map((item, index) => (
           <SmallDisplay
@@ -23,7 +29,10 @@ export default function SoftwareEngineeringPage({
           />
         ))}
       </div>
-      <H2 text='Frameworks:' />
+      <ScalingText
+        type='h2'
+        text='Frameworks:'
+      />
       <div id='smallDisplayHolder'>
         {page.frameworks.map((item, index) => (
           <SmallDisplay
@@ -32,7 +41,10 @@ export default function SoftwareEngineeringPage({
           />
         ))}
       </div>
-      <H2 text='Tools:' />
+      <ScalingText
+        type='h2'
+        text='Tools:'
+      />
       <div id='smallDisplayHolder'>
         {page.tools.map((item, index) => (
           <SmallDisplay
