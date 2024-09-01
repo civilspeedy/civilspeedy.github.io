@@ -50,10 +50,14 @@ export const useScale2D = (item: ContentSizeKey): scale => {
   let original: scale = { height: 0, width: 0 };
 
   try {
-    original = defaults.contentSizes[item];
+    if (isMobile) {
+      original = defaults.mobileContent[item];
+    } else {
+      original = defaults.contentSizes[item];
+    }
   } catch (e) {
     console.error(e);
-    return { width: 0, height: 0 };
+    return original;
   }
 
   const [size, setSize] = useState<scale>(original);

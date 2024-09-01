@@ -2,8 +2,8 @@ import React from 'react';
 import { project, scale } from '../logic/types';
 import { useScale2D } from '../logic/consistencyControl';
 import ReactPlayer from 'react-player';
-import { getVideo } from '../logic/VideoAcquire';
 import ScalingText from './ScalingText';
+import { getVideo } from '../logic/VideoAcquire';
 
 type types = { video: project };
 

@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { aboutMePage, PageBasic, scale } from '../logic/types';
 import { useScale2D, useScaleText } from '../logic/consistencyControl';
 import ScalingText from '../components/ScalingText';
 import Email from '../components/Email';
-import { isMobile } from 'react-device-detect';
+import { isBrowser } from 'react-device-detect';
 
 type types = {
   page: PageBasic;
@@ -22,12 +22,6 @@ export default function Home({
   let btnFontSize: number = useScaleText('btnFont');
   let aboutMe: aboutMePage = getPage('About Me');
 
-  useEffect(() => {
-    if (isMobile) {
-      btnSize = useScale2D('btnM');
-    }
-  }, []);
-
   return (
     <>
       <div>
@@ -36,41 +30,48 @@ export default function Home({
           text={page.h1}
         />
         <div id='container'>
-          <div id='sub'>
-            <div id='aboutMe'>
-              <div
-                style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
-                <Link to={aboutMe.linkedin}>
-                  <ScalingText
-                    type='p'
-                    text='LinkedIn'
-                  />
-                </Link>
-                <Email based={aboutMe.email} />
-              </div>
-              <ScalingText
-                type='p'
-                text={aboutMe.bio}
-              />
-              {aboutMe.education.map((item, index) => (
+          {isBrowser && (
+            <div id='sub'>
+              <div id='aboutMe'>
                 <div
-                  key={index}
-                  style={{ marginBottom: '10px' }}>
-                  <ScalingText
-                    type='h4'
-                    text={item.name}
-                  />
-                  {item.subjects.map((subItem, subDex) => (
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    gap: '10px',
+                  }}>
+                  <Link to={aboutMe.linkedin}>
                     <ScalingText
                       type='p'
-                      text={subItem.subject + ' - ' + subItem.grade}
-                      key={subDex}
+                      text='LinkedIn'
                     />
-                  ))}
+                  </Link>
+                  <Email based={aboutMe.email} />
                 </div>
-              ))}
+                <ScalingText
+                  type='p'
+                  text={aboutMe.bio}
+                />
+                {aboutMe.education.map((item, index) => (
+                  <div
+                    key={index}
+                    style={{ marginBottom: '10px' }}>
+                    <ScalingText
+                      type='h4'
+                      text={item.name}
+                    />
+                    {item.subjects.map((subItem, subDex) => (
+                      <ScalingText
+                        type='p'
+                        text={subItem.subject + ' - ' + subItem.grade}
+                        key={subDex}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
           <div id='sub'>
             <div id='btnDiv'>
               {buttonNames.map((item, index) => (
