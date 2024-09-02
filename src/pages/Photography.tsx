@@ -1,4 +1,4 @@
-import ImageDisplay from '../components/ImageDisplay';
+import ImageModal from '../components/ImageModal';
 import Navbar from '../components/Navbar';
 import ScalingText from '../components/ScalingText';
 import { PhotographyPageT } from '../logic/types';
@@ -12,8 +12,9 @@ export default function PhotographyPage({ page }: Type): React.JSX.Element {
         type='h1'
         text={page.h1}
       />
+
       {page.images.map((item, index) => (
-        <ImageDisplay
+        <ImageModal
           image={item}
           key={index}
         />
