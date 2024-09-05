@@ -20,3 +20,4 @@ Personal Portfolio Website
 - [x] images need resizing
 - [x] Text on video display too wide
 - [ ] Images clickable and expandable
+- [ ] Scaling needs improving for large/hi-res screens
