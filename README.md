@@ -21,3 +21,4 @@ Personal Portfolio Website
 - [x] Text on video display too wide
 - [ ] Images clickable and expandable
 - [ ] Scaling needs improving for large/hi-res screens
+- [ ] move to PReact
