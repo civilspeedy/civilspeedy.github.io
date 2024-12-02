@@ -1,0 +1,16 @@
+#linkBtn {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+#aboutMeDiv {
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    top: 25%;
+    gap: 30px;
+}

@@ -1,0 +1,16 @@
+#pageButton {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#themeButton {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 20px;
+}

@@ -1,40 +1,32 @@
 import { useState } from 'preact/hooks';
-import { Theme } from '../..';
+import { bgColour, invBgColour, Theme } from '../..';
 import text from '../../assets/json/aboutMe.json';
 import React from 'preact/compat';
+import './displayStyles.css';
 
 export default function AboutMe(): React.JSX.Element {
     const [email, setEmail] = useState<string>(text.email);
 
     const linkBtnStyle: React.JSX.CSSProperties = {
-        backgroundColor: Theme.value ? 'white' : 'black',
-        color: Theme.value ? 'black' : 'white',
-        padding: 10,
-        borderRadius: 20,
-        margin: 10,
-        textDecoration: 'none',
+        backgroundColor: invBgColour,
+        color: bgColour,
     };
     return (
         <div
             style={{
-                backgroundColor: Theme.value ? 'black' : 'white',
-                color: Theme.value ? 'white' : 'black',
-                padding: 10,
-                borderRadius: 20,
-                position: 'absolute',
-                width: '40%',
-                left: '10%',
-                top: '25%',
-                gap: 30,
+                backgroundColor: bgColour,
+                color: invBgColour,
             }}
+            id='aboutMeDiv'
         >
-            <a href={text.linkedin} style={linkBtnStyle}>
+            <a href={text.linkedin} style={linkBtnStyle} id='linkBtn'>
                 Linkedin
             </a>
             <a
                 href={'mailto:' + email}
                 style={linkBtnStyle}
                 onClick={() => setEmail(atob(text.email))}
+                id='linkBtn'
             >
                 Email
             </a>

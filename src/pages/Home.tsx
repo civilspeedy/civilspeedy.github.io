@@ -1,7 +1,7 @@
 import React from 'preact/compat';
-import ThemeButton from '../../components/buttons/ThemeButton';
-import PageButton from '../../components/buttons/PageButton';
-import AboutMe from '../../components/displays/AboutMe';
+import ThemeButton from '../components/buttons/ThemeButton';
+import PageButton from '../components/buttons/PageButton';
+import AboutMe from '../components/displays/AboutMe';
 
 export default function Home(): React.JSX.Element {
     const labels: readonly string[] = [

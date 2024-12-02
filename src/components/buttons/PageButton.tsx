@@ -1,22 +1,23 @@
 import React from 'preact/compat';
-import { Theme } from '../..';
+import { bgColour, invBgColour } from '../..';
+import './buttonStyles.css';
 
 type Props = { text: string };
 export default function PageButton({ text }: Props): React.JSX.Element {
     const btnStyle: React.JSX.CSSProperties = {
-        backgroundColor: Theme.value ? 'black' : 'white',
-        padding: 15,
-        borderRadius: 20,
-        color: Theme.value ? 'white' : 'black',
-        textDecoration: 'none',
-        fontSize: 30,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        width: 'fit-content',
+        backgroundColor: bgColour,
+        color: invBgColour,
+    };
+
+    const links = {
+        'Software Engineering': 'SE',
+        'Video Production': 'VP',
+        'Graphic Design': 'GD',
+        Photography: 'PH',
     };
 
     return (
-        <a href={'/' + text} style={btnStyle}>
+        <a href={'/' + links[text]} style={btnStyle} id='pageButton'>
             {text}
         </a>
     );
