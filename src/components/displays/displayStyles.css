@@ -14,3 +14,13 @@
     top: 25%;
     gap: 30px;
 }
+
+#languageDisplay {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 20px;
+    align-items: center;
+}

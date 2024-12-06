@@ -12,7 +12,7 @@ import Home from './pages/Home.js';
 import { signal } from '@preact/signals';
 import SoftwareEngineeringPage from './pages/SE.js';
 
-export const Theme = signal(false);
+export const Theme = signal(false); //no longer working
 
 /**
  * Returns 'black' if Theme true, 'white' if false
@@ -25,18 +25,15 @@ export const bgColour = Theme.value ? 'black' : 'white';
 export const invBgColour = Theme.value ? 'white' : 'black';
 
 export function App() {
-    document.body.style.backgroundColor = Theme.value ? 'white' : 'black';
-    document.body.style.color = Theme.value ? 'black' : 'white';
+    document.body.style.backgroundColor = invBgColour;
+    document.body.style.color = bgColour;
 
     return (
         <LocationProvider>
             <main>
                 <Router>
                     <Route path='/' component={Home} />
-                    <Route
-                        path='/SE'
-                        component={SoftwareEngineeringPage} // something going wrong
-                    />
+                    <Route path='/SE' component={SoftwareEngineeringPage} />
                     <Route default component={NotFound} />
                 </Router>
             </main>
