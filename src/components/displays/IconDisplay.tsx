@@ -1,17 +1,20 @@
 import React from 'preact/compat';
 import { bgColour, invBgColour } from '../..';
-import { getIcon } from '../../logic/assetManagement';
+import { getIcon, getLink } from '../../logic/assetManagement';
 import './displayStyles.css';
 
 type Props = { text: string };
-export default function LanguageDisplay({ text }: Props): React.JSX.Element {
+export default function IconDisplay({ text }: Props): React.JSX.Element {
     return (
         <a
             id='languageDisplay'
             style={{
                 backgroundColor: bgColour,
                 color: invBgColour,
+                textDecoration: 'none',
             }}
+            href={getLink(text)}
+            target='_blank'
         >
             <img
                 src={getIcon(text)}

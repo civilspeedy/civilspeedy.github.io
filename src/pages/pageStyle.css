@@ -1,0 +1,14 @@
+#btnDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10;
+    position: absolute;
+    right: 20%;
+    top: 30%;
+}
+
+#iconDiv {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+}

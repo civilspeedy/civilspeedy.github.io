@@ -2,6 +2,7 @@
     "languages": ["Type/JavaScript", "Python", "Java", "HTML", "SQL"],
     "frameworks": [
         "React & React-Native",
+        "Preact",
         "Expo",
         "Node",
         "Bun",
@@ -9,7 +10,7 @@
         "Flask",
         "Tkinter"
     ],
-    "tools": ["VScode", "Jetbrains Toolbox", "Zed"],
+    "tools": ["VScode", "Jetbrains Toolbox", "Zed", "Git", "GitHub"],
     "projects": [
         {
             "title": "Conversational Interface For Weather",
