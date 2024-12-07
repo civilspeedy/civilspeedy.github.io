@@ -1,7 +1,8 @@
 import React from 'preact/compat';
-import { bgColour, invBgColour } from '../..';
 import { getIcon, getLink } from '../../logic/assetManagement';
 import './displayStyles.css';
+import { themeSwitch } from '../../logic/styleManagement';
+import { Theme } from '../..';
 
 type Props = { text: string };
 export default function IconDisplay({ text }: Props): React.JSX.Element {
@@ -9,8 +10,8 @@ export default function IconDisplay({ text }: Props): React.JSX.Element {
         <a
             id='languageDisplay'
             style={{
-                backgroundColor: bgColour,
-                color: invBgColour,
+                backgroundColor: themeSwitch(!Theme.value),
+                color: themeSwitch(Theme.value),
                 textDecoration: 'none',
             }}
             href={getLink(text)}

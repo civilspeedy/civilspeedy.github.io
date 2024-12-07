@@ -17,8 +17,25 @@ import Jetbrains from '../assets/icons/toolIcons/jetbrains-svgrepo-com.svg';
 import VScode from '../assets/icons/toolIcons/vscode-svgrepo-com.svg';
 import Git from '../assets/icons/toolIcons/git-svgrepo-com.svg';
 import GitHub from '../assets/icons/toolIcons/github-142-svgrepo-com.svg';
+import GitHubLight from '../assets/icons/toolIcons/github-light.svg';
+import ExpoLight from '../assets/icons/frameworkIcons/expo-light.svg';
+import FlaskLight from '../assets/icons/frameworkIcons/flask-light.svg';
+import JetbrainsLight from '../assets/icons/toolIcons/jetbrains-light.svg';
+import { Theme } from '..';
 
 export function getIcon(name: string): string {
+    let gitHubIcon = GitHub;
+    let expoIcon = Expo;
+    let flaskIcon = Flask;
+    let jetbrainsIcon = Jetbrains;
+
+    if (Theme.value) {
+        gitHubIcon = GitHubLight;
+        expoIcon = ExpoLight;
+        flaskIcon = FlaskLight;
+        jetbrainsIcon = JetbrainsLight;
+    }
+
     const icons = {
         'Type/JavaScript': JavaScript,
         CSS,
@@ -27,18 +44,18 @@ export function getIcon(name: string): string {
         SQL,
         Python,
         Bun,
-        Expo,
-        Flask,
+        Expo: expoIcon,
+        Flask: flaskIcon,
         Node,
         Preact,
         'React & React-Native': React,
         Sqlite,
         Tkinter: Python,
         Zed,
-        'Jetbrains Toolbox': Jetbrains,
+        'Jetbrains Toolbox': jetbrainsIcon,
         VScode,
         Git,
-        GitHub,
+        GitHub: gitHubIcon,
     };
     return icons[name];
 }

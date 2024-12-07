@@ -1,10 +1,12 @@
 import React from 'preact/compat';
 import text from '../assets/json/se.json';
 import IconDisplay from '../components/displays/IconDisplay';
+import ThemeButton from '../components/buttons/ThemeButton';
 
 export default function SoftwareEngineeringPage(): React.JSX.Element {
     return (
         <>
+            <ThemeButton />
             <h2>Languages</h2>
             <div id='iconDiv'>
                 {text.languages.map((lang, index) => (

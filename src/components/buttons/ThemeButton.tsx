@@ -1,7 +1,7 @@
 import React from 'preact/compat';
 import sun from '../../assets/icons/sun-svgrepo-com.svg';
 import moon from '../../assets/icons/moon-svgrepo-com.svg';
-import { bgColour, Theme } from '../..';
+import { Theme } from '../..';
 import './buttonStyles.css';
 
 export default function ThemeButton(): React.JSX.Element {
@@ -14,7 +14,7 @@ export default function ThemeButton(): React.JSX.Element {
                 id='themeButton'
                 src={Theme.value ? moon : sun}
                 style={{
-                    backgroundColor: bgColour,
+                    backgroundColor: Theme.value ? 'black' : 'white',
                 }}
             />
         </a>

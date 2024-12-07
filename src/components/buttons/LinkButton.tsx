@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'preact/compat';
-import './buttonStyles.css';
 import { themeSwitch } from '../../logic/styleManagement';
 import { Theme } from '../..';
+import './buttonStyles.css';
 
-type Props = { text: string };
-export default function PageButton({ text }: Props): React.JSX.Element {
+type Props = { text: string; link: string };
+export default function LinkButton({ text, link }: Props): React.JSX.Element {
     const [backgroundColor, setBackgroundColor] = useState<string>(
         themeSwitch(Theme.value)
     );
@@ -21,25 +21,20 @@ export default function PageButton({ text }: Props): React.JSX.Element {
         setColor(themeSwitch(!Theme.value));
     };
 
+    const getLink = () => (text === 'Email' ? 'mailto:' + atob(link) : link);
+
     useEffect(() => onLeave(), [Theme.value]);
 
-    const btnStyle: React.JSX.CSSProperties = {
+    const linkBtnStyle: React.JSX.CSSProperties = {
         backgroundColor,
         color,
     };
 
-    const links = {
-        'Software Engineering': 'SE',
-        'Video Production': 'VP',
-        'Graphic Design': 'GD',
-        Photography: 'PH',
-    };
-
     return (
         <a
-            href={'/' + links[text]}
-            style={btnStyle}
-            id='pageButton'
+            href={getLink()}
+            style={linkBtnStyle}
+            id='linkBtn'
             onMouseEnter={onEnter}
             onMouseLeave={onLeave}
         >

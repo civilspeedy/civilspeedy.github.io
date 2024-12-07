@@ -1,35 +1,27 @@
-import { useState } from 'preact/hooks';
-import { bgColour, invBgColour, Theme } from '../..';
+import { Theme } from '../..';
 import text from '../../assets/json/aboutMe.json';
 import React from 'preact/compat';
 import './displayStyles.css';
+import { themeSwitch } from '../../logic/styleManagement';
+import LinkButton from '../buttons/LinkButton';
 
 export default function AboutMe(): React.JSX.Element {
-    const [email, setEmail] = useState<string>(text.email);
-
-    const linkBtnStyle: React.JSX.CSSProperties = {
-        backgroundColor: invBgColour,
-        color: bgColour,
-    };
     return (
         <div
             style={{
-                backgroundColor: bgColour,
-                color: invBgColour,
+                backgroundColor: themeSwitch(Theme.value),
+                color: themeSwitch(!Theme.value),
             }}
             id='aboutMeDiv'
         >
-            <a href={text.linkedin} style={linkBtnStyle} id='linkBtn'>
-                Linkedin
-            </a>
-            <a
-                href={'mailto:' + email}
-                style={linkBtnStyle}
-                onClick={() => setEmail(atob(text.email))}
-                id='linkBtn'
-            >
-                Email
-            </a>
+            <LinkButton
+                text='Linkedin'
+                link={text.linkedin}
+            />
+            <LinkButton
+                text='Email'
+                link={text.email}
+            />
 
             <p style={{ textWrap: 'pretty' }}>{text.bio}</p>
 
