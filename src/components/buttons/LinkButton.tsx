@@ -33,6 +33,7 @@ export default function LinkButton({ text, link }: Props): React.JSX.Element {
     return (
         <a
             href={getLink()}
+            target='_blank'
             style={linkBtnStyle}
             id='linkBtn'
             onMouseEnter={onEnter}

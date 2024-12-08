@@ -11,6 +11,7 @@ import './style.css';
 import Home from './pages/Home.js';
 import { signal } from '@preact/signals';
 import SoftwareEngineeringPage from './pages/SE.js';
+import VideoProductionPage from './pages/VP.js';
 
 export const Theme = signal(false); //no longer working
 
@@ -22,18 +23,10 @@ export function App() {
         <LocationProvider>
             <main>
                 <Router>
-                    <Route
-                        path='/'
-                        component={Home}
-                    />
-                    <Route
-                        path='/SE'
-                        component={SoftwareEngineeringPage}
-                    />
-                    <Route
-                        default
-                        component={NotFound}
-                    />
+                    <Route path='/' component={Home} />
+                    <Route path='/SE' component={SoftwareEngineeringPage} />
+                    <Route path='/VP' component={VideoProductionPage} />
+                    <Route default component={NotFound} />
                 </Router>
             </main>
         </LocationProvider>

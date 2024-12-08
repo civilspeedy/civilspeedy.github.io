@@ -1,41 +1,32 @@
-import CSS from '../assets/icons/languageIcons/css3-svgrepo-com.svg';
-import HTML from '../assets/icons/languageIcons/html-5-svgrepo-com.svg';
-import Java from '../assets/icons/languageIcons/java-svgrepo-com.svg';
-import JavaScript from '../assets/icons/languageIcons/javascript-logo-svgrepo-com.svg';
-import TypeScript from '../assets/icons/languageIcons/typescript-icon-svgrepo-com.svg';
-import SQL from '../assets/icons/languageIcons/sql-svgrepo-com.svg';
-import Python from '../assets/icons/languageIcons/python-svgrepo-com.svg';
-import Bun from '../assets/icons/frameworkIcons/bun.svg';
-import Expo from '../assets/icons/frameworkIcons/expo-icon-svgrepo-com.svg';
-import Flask from '../assets/icons/frameworkIcons/flask-svgrepo-com.svg';
-import Node from '../assets/icons/frameworkIcons/node-svgrepo-com.svg';
-import Preact from '../assets/icons/frameworkIcons/preact-svgrepo-com.svg';
-import React from '../assets/icons/frameworkIcons/react-svgrepo-com.svg';
-import Sqlite from '../assets/icons/frameworkIcons/sqlite-svgrepo-com.svg';
-import Zed from '../assets/icons/toolIcons/stable-app-logo.9b5f959f.svg';
-import Jetbrains from '../assets/icons/toolIcons/jetbrains-svgrepo-com.svg';
-import VScode from '../assets/icons/toolIcons/vscode-svgrepo-com.svg';
-import Git from '../assets/icons/toolIcons/git-svgrepo-com.svg';
-import GitHub from '../assets/icons/toolIcons/github-142-svgrepo-com.svg';
-import GitHubLight from '../assets/icons/toolIcons/github-light.svg';
-import ExpoLight from '../assets/icons/frameworkIcons/expo-light.svg';
-import FlaskLight from '../assets/icons/frameworkIcons/flask-light.svg';
-import JetbrainsLight from '../assets/icons/toolIcons/jetbrains-light.svg';
+import CSS from '../assets/icons/seIcons/languageIcons/css3-svgrepo-com.svg';
+import HTML from '../assets/icons/seIcons/languageIcons/html-5-svgrepo-com.svg';
+import Java from '../assets/icons/seIcons/languageIcons/java-svgrepo-com.svg';
+import JavaScript from '../assets/icons/seIcons/languageIcons/javascript-logo-svgrepo-com.svg';
+import TypeScript from '../assets/icons/seIcons/languageIcons/typescript-icon-svgrepo-com.svg';
+import SQL from '../assets/icons/seIcons/languageIcons/sql-svgrepo-com.svg';
+import Python from '../assets/icons/seIcons/languageIcons/python-svgrepo-com.svg';
+import Bun from '../assets/icons/seIcons/frameworkIcons/bun.svg';
+import Expo from '../assets/icons/seIcons/frameworkIcons/expo-icon-svgrepo-com.svg';
+import Flask from '../assets/icons/seIcons/frameworkIcons/flask-svgrepo-com.svg';
+import Node from '../assets/icons/seIcons/frameworkIcons/node-svgrepo-com.svg';
+import Preact from '../assets/icons/seIcons/frameworkIcons/preact-svgrepo-com.svg';
+import React from '../assets/icons/seIcons/frameworkIcons/react-svgrepo-com.svg';
+import Sqlite from '../assets/icons/seIcons/frameworkIcons/sqlite-svgrepo-com.svg';
+import Zed from '../assets/icons/seIcons/toolIcons/stable-app-logo.9b5f959f.svg';
+import Jetbrains from '../assets/icons/seIcons/toolIcons/jetbrains-svgrepo-com.svg';
+import VScode from '../assets/icons/seIcons/toolIcons/vscode-svgrepo-com.svg';
+import Git from '../assets/icons/seIcons/toolIcons/git-svgrepo-com.svg';
+import GitHub from '../assets/icons/seIcons/toolIcons/github-142-svgrepo-com.svg';
+import GitHubLight from '../assets/icons/seIcons/toolIcons/github-light.svg';
+import ExpoLight from '../assets/icons/seIcons/frameworkIcons/expo-light.svg';
+import FlaskLight from '../assets/icons/seIcons/frameworkIcons/flask-light.svg';
+import JetbrainsLight from '../assets/icons/seIcons/toolIcons/jetbrains-light.svg';
 import { Theme } from '..';
+import PremierPro from '../assets/icons/vpIcons/adobepremierepro-svgrepo-com.svg';
+import PremierProLight from '../assets/icons/vpIcons/adobepremierepro-lite.svg';
+import Vegas from '../assets/icons/vpIcons/Vegas_Pro_19_Icon_V2.svg';
 
 export function getIcon(name: string): string {
-    let gitHubIcon = GitHub;
-    let expoIcon = Expo;
-    let flaskIcon = Flask;
-    let jetbrainsIcon = Jetbrains;
-
-    if (Theme.value) {
-        gitHubIcon = GitHubLight;
-        expoIcon = ExpoLight;
-        flaskIcon = FlaskLight;
-        jetbrainsIcon = JetbrainsLight;
-    }
-
     const icons = {
         'Type/JavaScript': JavaScript,
         CSS,
@@ -44,18 +35,20 @@ export function getIcon(name: string): string {
         SQL,
         Python,
         Bun,
-        Expo: expoIcon,
-        Flask: flaskIcon,
+        Expo: Theme.value ? ExpoLight : Expo,
+        Flask: Theme.value ? FlaskLight : Flask,
         Node,
         Preact,
         'React & React-Native': React,
         Sqlite,
         Tkinter: Python,
         Zed,
-        'Jetbrains Toolbox': jetbrainsIcon,
+        'Jetbrains Toolbox': Theme.value ? JetbrainsLight : Jetbrains,
         VScode,
         Git,
-        GitHub: gitHubIcon,
+        GitHub: Theme.value ? GitHubLight : GitHub,
+        'Adobe Premier Pro': Theme.value ? PremierProLight : PremierPro,
+        'Vegas Pro 19': Vegas,
     };
     return icons[name];
 }
