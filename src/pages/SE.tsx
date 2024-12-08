@@ -5,6 +5,7 @@ import ThemeButton from '../components/buttons/ThemeButton';
 import LinkButton from '../components/buttons/LinkButton';
 
 export default function SoftwareEngineeringPage(): React.JSX.Element {
+    // for some reason frameworks have wrong size
     return (
         <>
             <ThemeButton />
