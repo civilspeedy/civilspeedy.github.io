@@ -43,6 +43,18 @@ import TheHand from '../assets/images/gdImages/theHand.jpg';
 import Wallpaper from '../assets/images/gdImages/wallpaper.jpg';
 import Lightroom from '../assets/icons/phIcons/lightroom-svgrepo-com.svg';
 import LightroomLight from '../assets/icons/phIcons/lightroom-light.svg';
+import Orchid1 from '../assets/images/pImages/bw orchid.jpg';
+import Orchid2 from '../assets/images/pImages/bw orchid 2.jpg';
+import Orchid3 from '../assets/images/pImages/bw orchid 3.jpg';
+import CloseUp from '../assets/images/pImages/close up splash.jpg';
+import Contrast from '../assets/images/pImages/contrast splash.jpg';
+import Purple from '../assets/images/pImages/purple splash.jpg';
+import Ring from '../assets/images/pImages/ring splash.jpg';
+import Skull from '../assets/images/pImages/skull roots.jpg';
+import Sunset from '../assets/images/pImages/sunset beach.jpg';
+import Surfer from '../assets/images/pImages/sunset surfer.jpg';
+import Vibrant from '../assets/images/pImages/vibrant drop.jpg';
+import Wood from '../assets/images/pImages/wood.jpg';
 
 export function getIcon(name: string): string {
     const icons = {
@@ -77,48 +89,59 @@ export function getIcon(name: string): string {
     return icons[name];
 }
 
-export function getLink(name: string): string {
-    const links = {
-        'Type/JavaScript':
-            'https://developer.mozilla.org/en-US/docs/Learn/JavaScript',
-        CSS: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-        HTML: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-        Java: 'https://docs.oracle.com/en/java/',
-        SQL: 'https://www.sqlite.org/docs.html',
-        Python: 'https://www.python.org/',
-        Bun: 'https://bun.sh/',
-        Expo: 'https://expo.dev/',
-        Flask: 'https://flask.palletsprojects.com/en/stable/',
-        Node: 'https://nodejs.org/en',
-        Preact: 'https://preactjs.com/',
-        'React & React-Native': 'https://react.dev/',
-        Sqlite: 'https://www.sqlite.org',
-        Tkinter: 'https://docs.python.org/3/library/tkinter.html',
-        Zed: 'https://zed.dev/',
-        'Jetbrains Toolbox': 'https://www.jetbrains.com/',
-        VScode: 'https://code.visualstudio.com/',
-        Git: 'https://git-scm.com/',
-        GitHub: 'https://github.com/',
-        'Adobe Premier Pro': 'https://www.adobe.com/uk/products/premiere.html',
-        'Vegas Pro 19': 'https://www.vegascreativesoftware.com/gb/vegas-pro/',
-    };
+const links = {
+    'Type/JavaScript':
+        'https://developer.mozilla.org/en-US/docs/Learn/JavaScript',
+    CSS: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+    HTML: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+    Java: 'https://docs.oracle.com/en/java/',
+    SQL: 'https://www.sqlite.org/docs.html',
+    Python: 'https://www.python.org/',
+    Bun: 'https://bun.sh/',
+    Expo: 'https://expo.dev/',
+    Flask: 'https://flask.palletsprojects.com/en/stable/',
+    Node: 'https://nodejs.org/en',
+    Preact: 'https://preactjs.com/',
+    'React & React-Native': 'https://react.dev/',
+    Sqlite: 'https://www.sqlite.org',
+    Tkinter: 'https://docs.python.org/3/library/tkinter.html',
+    Zed: 'https://zed.dev/',
+    'Jetbrains Toolbox': 'https://www.jetbrains.com/',
+    VScode: 'https://code.visualstudio.com/',
+    Git: 'https://git-scm.com/',
+    GitHub: 'https://github.com/',
+    'Adobe Premier Pro': 'https://www.adobe.com/uk/products/premiere.html',
+    'Vegas Pro 19': 'https://www.vegascreativesoftware.com/gb/vegas-pro/',
+};
 
-    return links[name];
-}
+export const getLink = (name: string): string => links[name];
+
+const graphicDesignImages: readonly string[] = [
+    A2,
+    DutyCalls,
+    Lockdown,
+    Silhouette,
+    TheEye,
+    TheHand,
+    Wallpaper,
+];
+
+const photographyImages: readonly string[] = [
+    Orchid1,
+    Orchid2,
+    Orchid3,
+    CloseUp,
+    Contrast,
+    Purple,
+    Ring,
+    Skull,
+    Sunset,
+    Surfer,
+    Vibrant,
+    Wood,
+];
 
 export function getImages(group: string): readonly string[] {
-    const graphicDesignImages: readonly string[] = [
-        A2,
-        DutyCalls,
-        Lockdown,
-        Silhouette,
-        TheEye,
-        TheHand,
-        Wallpaper,
-    ];
-
-    const photographyImages: readonly string[] = [];
-
     switch (group) {
         case 'gd':
             return graphicDesignImages;
