@@ -7,12 +7,13 @@ import './pageStyle.css';
 export default function VideoProductionPage(): React.JSX.Element {
     return (
         <div id='page'>
+            <h2>Tools</h2>
             <div id='iconDiv'>
-                <h2>Tools</h2>
                 {text.tools.map((tool, index) => (
                     <IconDisplay text={tool} key={index} />
                 ))}
             </div>
+            <h2>Projects</h2>
             <div id='videoDiv'>
                 {text.projects.map((proj, index) => (
                     <VideoDisplay link={proj.link} key={index} />

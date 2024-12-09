@@ -7,7 +7,7 @@ import LinkButton from '../components/buttons/LinkButton';
 export default function SoftwareEngineeringPage(): React.JSX.Element {
     // for some reason frameworks have wrong size
     return (
-        <>
+        <div id='page'>
             <ThemeButton />
             <LinkButton text='Github' link='https://github.com/civilspeedy' />
             <h2>Languages</h2>
@@ -28,6 +28,6 @@ export default function SoftwareEngineeringPage(): React.JSX.Element {
                     <IconDisplay text={tool} key={index} />
                 ))}
             </div>
-        </>
+        </div>
     );
 }

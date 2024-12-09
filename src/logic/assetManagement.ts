@@ -75,6 +75,8 @@ export function getLink(name: string): string {
         VScode: 'https://code.visualstudio.com/',
         Git: 'https://git-scm.com/',
         GitHub: 'https://github.com/',
+        'Adobe Premier Pro': 'https://www.adobe.com/uk/products/premiere.html',
+        'Vegas Pro 19': 'https://www.vegascreativesoftware.com/gb/vegas-pro/',
     };
 
     return links[name];
