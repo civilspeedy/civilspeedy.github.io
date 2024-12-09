@@ -25,6 +25,24 @@ import { Theme } from '..';
 import PremierPro from '../assets/icons/vpIcons/adobepremierepro-svgrepo-com.svg';
 import PremierProLight from '../assets/icons/vpIcons/adobepremierepro-lite.svg';
 import Vegas from '../assets/icons/vpIcons/Vegas_Pro_19_Icon_V2.svg';
+import Designer from '../assets/icons/gdIcons/affinity-designer-svgrepo-com.svg';
+import DesignerLight from '../assets/icons/gdIcons/affinity-designer-light.svg';
+import Photo from '../assets/icons/phIcons/affinity-photo-svgrepo-com.svg';
+import PhotoLight from '../assets/icons/phIcons/affinity-photo-light.svg';
+import Publisher from '../assets/icons/gdIcons/affinity-publisher-svgrepo-com.svg';
+import PublisherLight from '../assets/icons/gdIcons/affinity-publisher-light.svg';
+import PhotoShop from '../assets/icons/gdIcons/photoshop-svgrepo-com.svg';
+import PhotoShopLight from '../assets/icons/gdIcons/photoshop-light.svg';
+import DrawIO from '../assets/icons/gdIcons/drawio-svgrepo-com.svg';
+import A2 from '../assets/images/gdImages/A2.jpg';
+import DutyCalls from '../assets/images/gdImages/duty calls.jpg';
+import Lockdown from '../assets/images/gdImages/lockdown.jpg';
+import Silhouette from '../assets/images/gdImages/silhouette.jpg';
+import TheEye from '../assets/images/gdImages/theEye.jpg';
+import TheHand from '../assets/images/gdImages/theHand.jpg';
+import Wallpaper from '../assets/images/gdImages/wallpaper.jpg';
+import Lightroom from '../assets/icons/phIcons/lightroom-svgrepo-com.svg';
+import LightroomLight from '../assets/icons/phIcons/lightroom-light.svg';
 
 export function getIcon(name: string): string {
     const icons = {
@@ -35,8 +53,8 @@ export function getIcon(name: string): string {
         SQL,
         Python,
         Bun,
-        Expo: Theme.value ? ExpoLight : Expo,
-        Flask: Theme.value ? FlaskLight : Flask,
+        Expo: !Theme.value ? ExpoLight : Expo,
+        Flask: !Theme.value ? FlaskLight : Flask,
         Node,
         Preact,
         'React & React-Native': React,
@@ -46,9 +64,15 @@ export function getIcon(name: string): string {
         'Jetbrains Toolbox': Theme.value ? JetbrainsLight : Jetbrains,
         VScode,
         Git,
-        GitHub: Theme.value ? GitHubLight : GitHub,
+        GitHub: !Theme.value ? GitHubLight : GitHub,
         'Adobe Premier Pro': Theme.value ? PremierProLight : PremierPro,
         'Vegas Pro 19': Vegas,
+        'Affinity Designer 2': Theme.value ? Designer : DesignerLight,
+        'Affinity Publisher 2': Theme.value ? Publisher : PublisherLight,
+        'Adobe Photoshop': Theme.value ? PhotoShopLight : PhotoShop,
+        'Draw.io': DrawIO,
+        'Affinity Photo 2': Theme.value ? Photo : PhotoLight,
+        'Adobe Lightroom': Theme.value ? LightroomLight : Lightroom,
     };
     return icons[name];
 }
@@ -80,4 +104,25 @@ export function getLink(name: string): string {
     };
 
     return links[name];
+}
+
+export function getImages(group: string): readonly string[] {
+    const graphicDesignImages: readonly string[] = [
+        A2,
+        DutyCalls,
+        Lockdown,
+        Silhouette,
+        TheEye,
+        TheHand,
+        Wallpaper,
+    ];
+
+    const photographyImages: readonly string[] = [];
+
+    switch (group) {
+        case 'gd':
+            return graphicDesignImages;
+        case 'p':
+            return photographyImages;
+    }
 }

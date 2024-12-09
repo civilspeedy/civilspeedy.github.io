@@ -6,9 +6,19 @@ import { Theme } from '../..';
 
 type Props = { text: string };
 export default function IconDisplay({ text }: Props): React.JSX.Element {
+    const isBox: boolean = [
+        'Type/JavaScript',
+        'Zed',
+        'Jetbrains Toolbox',
+        'Adobe Premier Pro',
+        'Adobe Photoshop',
+        'Draw.io',
+        'Adobe Lightroom',
+    ].includes(text);
+
     return (
         <a
-            id='languageDisplay'
+            id='iconDisplay'
             style={{
                 backgroundColor: themeSwitch(!Theme.value),
                 color: themeSwitch(Theme.value),
@@ -19,8 +29,12 @@ export default function IconDisplay({ text }: Props): React.JSX.Element {
         >
             <img
                 src={getIcon(text)}
+                id='iconImg'
                 loading='eager'
-                style={{ width: 100, height: 100 }}
+                style={{
+                    backgroundColor: isBox ? 'none' : themeSwitch(Theme.value),
+                    padding: isBox ? 0 : 5,
+                }}
             />
             {text}
         </a>

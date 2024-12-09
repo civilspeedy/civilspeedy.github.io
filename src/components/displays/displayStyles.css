@@ -8,12 +8,12 @@
     gap: 30px;
 }
 
-#languageDisplay {
+#iconDisplay {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    height: fit-content;
-    padding: 10px;
+    height: 120px;
+    padding: 20px;
     border-radius: 20px;
     align-items: center;
 }
@@ -26,4 +26,10 @@
     padding: 20px;
     width: fit-content;
     border-radius: 20px;
+}
+
+#iconImg {
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
 }

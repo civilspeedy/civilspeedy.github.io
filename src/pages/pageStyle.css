@@ -17,9 +17,7 @@
 #iconDiv {
     gap: 20px;
     display: flex;
-    max-width: 90%;
     width: fit-content;
-    overflow-x: scroll;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -38,4 +36,18 @@
     overflow-x: scroll;
     scrollbar-color: white;
     border-radius: 20px;
+}
+
+#imageDiv {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    height: fit-content;
+    gap: 20px;
+}
+
+#image {
+    height: 500px;
+    width: auto;
 }
