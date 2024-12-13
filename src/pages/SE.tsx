@@ -2,11 +2,17 @@ import React from 'preact/compat';
 import text from '../assets/json/se.json';
 import IconDisplay from '../components/displays/IconDisplay';
 import LinkButton from '../components/buttons/LinkButton';
+import { motion } from 'motion/react';
+import { beforePageOpen, pageOpen } from '../logic/animations';
 
 export default function SoftwareEngineeringPage(): React.JSX.Element {
     // for some reason frameworks have wrong size
     return (
-        <div id='page'>
+        <motion.div
+            id='page'
+            initial={beforePageOpen}
+            animate={pageOpen}
+        >
             <LinkButton
                 text='Github'
                 link='https://github.com/civilspeedy'
@@ -38,6 +44,6 @@ export default function SoftwareEngineeringPage(): React.JSX.Element {
                     />
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }

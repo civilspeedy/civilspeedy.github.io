@@ -3,12 +3,18 @@ import text from '../assets/json/gd.json';
 import IconDisplay from '../components/displays/IconDisplay';
 import './pageStyle.css';
 import { getImages } from '../logic/assetManagement';
+import { motion } from 'motion/react';
+import { beforePageOpen, pageOpen } from '../logic/animations';
 
 export default function GraphicDesignPage(): React.JSX.Element {
     const images = getImages('gd');
 
     return (
-        <div id='page'>
+        <motion.div
+            id='page'
+            initial={beforePageOpen}
+            animate={pageOpen}
+        >
             <h2>Tools</h2>
             <div id='iconDiv'>
                 {text.tools.map((tool, index) => (
@@ -29,6 +35,6 @@ export default function GraphicDesignPage(): React.JSX.Element {
                     />
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }

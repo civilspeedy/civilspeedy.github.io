@@ -3,11 +3,17 @@ import './pageStyle.css';
 import text from '../assets/json/ph.json';
 import IconDisplay from '../components/displays/IconDisplay';
 import { getImages } from '../logic/assetManagement';
+import { motion } from 'motion/react';
+import { beforePageOpen, pageOpen } from '../logic/animations';
 
 export function PhotographyPage(): React.JSX.Element {
     const images = getImages('p');
     return (
-        <div id='page'>
+        <motion.div
+            id='page'
+            initial={beforePageOpen}
+            animate={pageOpen}
+        >
             <h2>Tools</h2>
             <div id='iconDiv'>
                 {text.tools.map((tool, index) => (
@@ -27,6 +33,6 @@ export function PhotographyPage(): React.JSX.Element {
                     />
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }

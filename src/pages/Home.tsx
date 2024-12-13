@@ -1,7 +1,9 @@
 import React from 'preact/compat';
-import PageButton from '../components/buttons/PageButton';
+import { motion } from 'motion/react';
 import AboutMe from '../components/displays/AboutMe';
 import './pageStyle.css';
+import PageButton from '../components/buttons/PageButton';
+import { beforePageOpen, pageOpen } from '../logic/animations';
 
 export default function Home(): React.JSX.Element {
     const labels: readonly string[] = [
@@ -12,7 +14,11 @@ export default function Home(): React.JSX.Element {
     ];
     return (
         <>
-            <div>
+            <motion.div
+                id='page'
+                initial={beforePageOpen}
+                animate={pageOpen}
+            >
                 <h1>Charlie Slorick</h1>
                 <div id='btnDiv'>
                     {labels.map((item, key) => (
@@ -23,7 +29,7 @@ export default function Home(): React.JSX.Element {
                     ))}
                 </div>
                 <AboutMe />
-            </div>
+            </motion.div>
         </>
     );
 }

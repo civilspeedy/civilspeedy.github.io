@@ -3,13 +3,19 @@ import text from '../assets/json/vp.json';
 import IconDisplay from '../components/displays/IconDisplay';
 import VideoDisplay from '../components/displays/VideoDisplay';
 import './pageStyle.css';
+import { motion } from 'motion/react';
+import { beforePageOpen, pageOpen } from '../logic/animations';
 
 export default function VideoProductionPage(): React.JSX.Element {
     // need onscroll for windows users
 
     addEventListener('scroll', () => console.log('scroll'));
     return (
-        <div id='page'>
+        <motion.div
+            id='page'
+            initial={beforePageOpen}
+            animate={pageOpen}
+        >
             <h2>Tools</h2>
             <div id='iconDiv'>
                 {text.tools.map((tool, index) => (
@@ -28,6 +34,6 @@ export default function VideoProductionPage(): React.JSX.Element {
                     />
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 }
