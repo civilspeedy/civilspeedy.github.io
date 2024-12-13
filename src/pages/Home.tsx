@@ -13,23 +13,14 @@ export default function Home(): React.JSX.Element {
         'Photography',
     ];
     return (
-        <>
-            <motion.div
-                id='page'
-                initial={beforePageOpen}
-                animate={pageOpen}
-            >
-                <h1>Charlie Slorick</h1>
-                <div id='btnDiv'>
-                    {labels.map((item, key) => (
-                        <PageButton
-                            text={item}
-                            key={key}
-                        />
-                    ))}
-                </div>
-                <AboutMe />
+        <motion.div id='page' initial={beforePageOpen} animate={pageOpen}>
+            <h1>Charlie Slorick</h1>
+            <motion.div animate={{ x: '80%', y: '50%' }} id='btnDiv'>
+                {labels.map((item, key) => (
+                    <PageButton text={item} key={key} />
+                ))}
             </motion.div>
-        </>
+            <AboutMe />
+        </motion.div>
     );
 }

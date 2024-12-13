@@ -3,6 +3,7 @@ import { getIcon, getLink } from '../../logic/assetManagement';
 import './displayStyles.css';
 import { themeSwitch } from '../../logic/styleManagement';
 import { Theme } from '../..';
+import { motion } from 'motion/react';
 
 type Props = { text: string };
 export default function IconDisplay({ text }: Props): React.JSX.Element {
@@ -17,7 +18,7 @@ export default function IconDisplay({ text }: Props): React.JSX.Element {
     ].includes(text);
 
     return (
-        <a
+        <motion.a
             id='iconDisplay'
             style={{
                 backgroundColor: themeSwitch(!Theme.value),
@@ -26,6 +27,7 @@ export default function IconDisplay({ text }: Props): React.JSX.Element {
             }}
             href={getLink(text)}
             target='_blank'
+            whileHover={{ scale: 1.2 }}
         >
             <img
                 src={getIcon(text)}
@@ -37,6 +39,6 @@ export default function IconDisplay({ text }: Props): React.JSX.Element {
                 }}
             />
             {text}
-        </a>
+        </motion.a>
     );
 }

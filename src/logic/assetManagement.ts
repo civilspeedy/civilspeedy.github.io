@@ -55,6 +55,7 @@ import Sunset from '../assets/images/pImages/sunset beach.jpg';
 import Surfer from '../assets/images/pImages/sunset surfer.jpg';
 import Vibrant from '../assets/images/pImages/vibrant drop.jpg';
 import Wood from '../assets/images/pImages/wood.jpg';
+import links from '../assets/json/links.json';
 
 export function getIcon(name: string): string {
     const icons = {
@@ -88,31 +89,6 @@ export function getIcon(name: string): string {
     };
     return icons[name];
 }
-
-const links = {
-    'Type/JavaScript':
-        'https://developer.mozilla.org/en-US/docs/Learn/JavaScript',
-    CSS: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-    HTML: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-    Java: 'https://docs.oracle.com/en/java/',
-    SQL: 'https://www.sqlite.org/docs.html',
-    Python: 'https://www.python.org/',
-    Bun: 'https://bun.sh/',
-    Expo: 'https://expo.dev/',
-    Flask: 'https://flask.palletsprojects.com/en/stable/',
-    Node: 'https://nodejs.org/en',
-    Preact: 'https://preactjs.com/',
-    'React & React-Native': 'https://react.dev/',
-    Sqlite: 'https://www.sqlite.org',
-    Tkinter: 'https://docs.python.org/3/library/tkinter.html',
-    Zed: 'https://zed.dev/',
-    'Jetbrains Toolbox': 'https://www.jetbrains.com/',
-    VScode: 'https://code.visualstudio.com/',
-    Git: 'https://git-scm.com/',
-    GitHub: 'https://github.com/',
-    'Adobe Premier Pro': 'https://www.adobe.com/uk/products/premiere.html',
-    'Vegas Pro 19': 'https://www.vegascreativesoftware.com/gb/vegas-pro/',
-};
 
 export const getLink = (name: string): string => links[name];
 
