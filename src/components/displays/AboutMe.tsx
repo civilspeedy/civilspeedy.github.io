@@ -9,8 +9,7 @@ import { motion } from 'motion/react';
 export default function AboutMe(): React.JSX.Element {
     return (
         <motion.div
-            initial={{ x: '-100%', y: '-100%' }}
-            animate={{ x: '-50%', y: '-50%' }}
+            initial={{ x: '-50%', y: '-50%' }}
             style={{
                 backgroundColor: themeSwitch(Theme.value),
                 color: themeSwitch(!Theme.value),

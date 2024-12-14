@@ -15,7 +15,7 @@ export default function Home(): React.JSX.Element {
     return (
         <motion.div id='page' initial={beforePageOpen} animate={pageOpen}>
             <h1>Charlie Slorick</h1>
-            <motion.div animate={{ x: '80%', y: '50%' }} id='btnDiv'>
+            <motion.div initial={{ x: '80%', y: '50%' }} id='btnDiv'>
                 {labels.map((item, key) => (
                     <PageButton text={item} key={key} />
                 ))}

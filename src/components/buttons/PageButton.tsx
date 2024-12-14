@@ -18,8 +18,6 @@ export default function PageButton({ text }: Props): React.JSX.Element {
             href={'/' + links[text]}
             style={{ color: themeSwitch(!Theme.value) }}
             id='pageButton'
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
             whileHover={{ scale: 1.2 }}
         >
             {text}

@@ -24,3 +24,12 @@ h1 {
 h2 {
     font-size: 35px;
 }
+
+#cornerDiv {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 10px;
+    right: 10px;
+    gap: 10px;
+}
