@@ -9,6 +9,7 @@ export default function ThemeButton(): React.JSX.Element {
     return (
         <motion.img
             whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             id='themeButton'
             onClick={() => (Theme.value = !Theme.value)}
             src={Theme.value ? moon : sun}

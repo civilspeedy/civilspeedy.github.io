@@ -1,7 +1,9 @@
 export const pageOpen = {
-    opacity: 1,
+    y: 0,
 };
 
+//might be too fast
+
 export const beforePageOpen = {
-    opacity: 0,
+    y: '-40%',
 };

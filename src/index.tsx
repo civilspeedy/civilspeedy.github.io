@@ -15,10 +15,11 @@ import GraphicDesignPage from './pages/GD.js';
 import ThemeButton from './components/buttons/ThemeButton.js';
 import PhotographyPage from './pages/P.js';
 import MenuButton from './components/buttons/MenuButton.js';
+import React from 'preact/compat';
 
 export const Theme = signal(false);
 
-export function App() {
+export function App(): React.JSX.Element {
     document.body.style.backgroundColor = Theme.value ? 'white' : 'black';
     document.body.style.color = Theme.value ? 'black' : 'white';
 

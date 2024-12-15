@@ -125,3 +125,17 @@ export function getImages(group: string): readonly string[] {
             return photographyImages;
     }
 }
+
+export const pages: readonly string[] = [
+    'Software Engineering',
+    'Video Production',
+    'Graphic Design',
+    'Photography',
+];
+
+export const pageLinks = {
+    'Software Engineering': 'SE',
+    'Video Production': 'VP',
+    'Graphic Design': 'GD',
+    Photography: 'PH',
+};
