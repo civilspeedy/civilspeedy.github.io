@@ -16,6 +16,7 @@ export default function Menu({ state }: Props): React.JSX.Element {
     return (
         <motion.div
             id="sideMenu"
+            initial={{ x: "100%", opacity: 0 }}
             style={{
                 backgroundColor: Theme.value ? "black" : "white",
             }}

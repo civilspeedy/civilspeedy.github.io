@@ -15,6 +15,7 @@ export default function AboutMe(): React.JSX.Element {
             }}
             id="aboutMeDiv"
         >
+            <h2>About Me</h2>
             <p style={{ textWrap: "pretty" }}>{text.bio}</p>
 
             {text.education.map((edu, index) => (

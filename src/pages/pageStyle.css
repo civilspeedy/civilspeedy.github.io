@@ -5,6 +5,11 @@
     max-height: 95%;
 }
 
+#mobilePage {
+    display: flex;
+    flex-direction: column;
+}
+
 #btnDiv {
     display: flex;
     flex-direction: column;
@@ -47,4 +52,13 @@
 #image {
     height: 500px;
     width: auto;
+}
+
+#mobileHomeDiv {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
 }
