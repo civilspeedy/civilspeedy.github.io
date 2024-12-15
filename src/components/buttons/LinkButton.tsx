@@ -1,45 +1,28 @@
-import React, { useEffect, useState } from 'preact/compat';
-import { themeSwitch } from '../../logic/styleManagement';
-import { Theme } from '../..';
-import './buttonStyles.css';
+import React from "preact/compat";
+import { motion } from "motion/react";
+import { Theme } from "../..";
+import menuLinks from "../../assets/json/pageLinks.json";
 
-type Props = { text: string; link: string };
-export default function LinkButton({ text, link }: Props): React.JSX.Element {
-    const [backgroundColor, setBackgroundColor] = useState<string>(
-        themeSwitch(Theme.value)
-    );
+type Props = { text: string };
 
-    const [color, setColor] = useState<string>(themeSwitch(!Theme.value));
+export default function LinkButton({ text }: Props): React.JSX.Element {
+    const link =
+        text === "Email" ? "mailto:" + atob(menuLinks[text]) : menuLinks[text];
 
-    const onEnter = () => {
-        setBackgroundColor(themeSwitch(!Theme.value));
-        setColor(themeSwitch(Theme.value));
-    };
-
-    const onLeave = () => {
-        setBackgroundColor(themeSwitch(Theme.value));
-        setColor(themeSwitch(!Theme.value));
-    };
-
-    const getLink = () => (text === 'Email' ? 'mailto:' + atob(link) : link);
-
-    useEffect(() => onLeave(), [Theme.value]);
-
-    const linkBtnStyle: React.JSX.CSSProperties = {
-        backgroundColor,
-        color,
+    const target = (): string => {
+        const newTabable = ["Email", "Linkedin", "GitHub"];
+        return newTabable.includes(text) ? "_blank" : "_self";
     };
 
     return (
-        <a
-            href={getLink()}
-            target='_blank'
-            style={linkBtnStyle}
-            id='linkBtn'
-            onMouseEnter={onEnter}
-            onMouseLeave={onLeave}
+        <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            href={link}
+            style={{ color: Theme.value ? "white" : "black" }}
+            target={target()}
         >
             {text}
-        </a>
+        </motion.a>
     );
 }

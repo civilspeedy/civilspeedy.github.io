@@ -1,25 +1,21 @@
-import { Theme } from '../..';
-import text from '../../assets/json/aboutMe.json';
-import React from 'preact/compat';
-import './displayStyles.css';
-import { themeSwitch } from '../../logic/styleManagement';
-import LinkButton from '../buttons/LinkButton';
-import { motion } from 'motion/react';
+import { Theme } from "../..";
+import text from "../../assets/json/aboutMe.json";
+import React from "preact/compat";
+import "./displayStyles.css";
+import { themeSwitch } from "../../logic/styleManagement";
+import { motion } from "motion/react";
 
 export default function AboutMe(): React.JSX.Element {
     return (
         <motion.div
-            initial={{ x: '-50%', y: '-50%' }}
+            initial={{ x: "-50%", y: "-50%" }}
             style={{
                 backgroundColor: themeSwitch(Theme.value),
                 color: themeSwitch(!Theme.value),
             }}
-            id='aboutMeDiv'
+            id="aboutMeDiv"
         >
-            <LinkButton text='Linkedin' link={text.linkedin} />
-            <LinkButton text='Email' link={text.email} />
-
-            <p style={{ textWrap: 'pretty' }}>{text.bio}</p>
+            <p style={{ textWrap: "pretty" }}>{text.bio}</p>
 
             {text.education.map((edu, index) => (
                 <div key={index}>
