@@ -6,7 +6,7 @@ Personal Portfolio Website
 - Check out src directory for code.
 
 **Todo:**
-- [ ] Animated transitions
+- [x] Animated transitions
 - [ ] Impove image loading (maybe fixed)
 - [x] New video source as YouTube is bloated
   - Quality isn't too great
@@ -21,4 +21,4 @@ Personal Portfolio Website
 - [x] Text on video display too wide
 - [ ] Images clickable and expandable
 - [ ] Scaling needs improving for large/hi-res screens
-- [ ] move to PReact
+- [x] move to PReact
