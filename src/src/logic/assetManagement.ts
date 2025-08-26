@@ -1,8 +1,8 @@
 import CSS from "../assets/icons/seIcons/languageIcons/css3-svgrepo-com.svg";
+import Go from "../assets/icons/seIcons/languageIcons/Go_Logo_Blue.svg.png";
 import HTML from "../assets/icons/seIcons/languageIcons/html-5-svgrepo-com.svg";
 import Java from "../assets/icons/seIcons/languageIcons/java-svgrepo-com.svg";
 import JavaScript from "../assets/icons/seIcons/languageIcons/javascript-logo-svgrepo-com.svg";
-import TypeScript from "../assets/icons/seIcons/languageIcons/typescript-icon-svgrepo-com.svg";
 import SQL from "../assets/icons/seIcons/languageIcons/sql-svgrepo-com.svg";
 import Python from "../assets/icons/seIcons/languageIcons/python-svgrepo-com.svg";
 import Bun from "../assets/icons/seIcons/frameworkIcons/bun.svg";
@@ -64,6 +64,7 @@ export function getIcon(name: string): string {
         HTML,
         Java,
         SQL,
+        Go,
         Python,
         Bun,
         Expo: !Theme.value ? ExpoLight : Expo,

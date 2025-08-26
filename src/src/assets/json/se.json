@@ -1,5 +1,5 @@
 {
-    "languages": ["Type/JavaScript", "Python", "Java", "HTML", "SQL"],
+    "languages": ["Type/JavaScript", "Python", "Java", "HTML", "SQL", "Go"],
     "frameworks": [
         "React & React-Native",
         "Preact",

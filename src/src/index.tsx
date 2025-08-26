@@ -16,6 +16,7 @@ import ThemeButton from "./components/buttons/ThemeButton.js";
 import PhotographyPage from "./pages/P.js";
 import MenuButton from "./components/buttons/MenuButton.js";
 import React from "preact/compat";
+import CVButton from "./components/buttons/CVButton.js";
 
 export const Theme = signal(true);
 
@@ -27,6 +28,7 @@ export function App(): React.JSX.Element {
         <LocationProvider>
             <main>
                 <div id="cornerDiv">
+                    <CVButton />
                     <ThemeButton />
                     <MenuButton />
                 </div>
