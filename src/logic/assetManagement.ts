@@ -59,7 +59,6 @@ import BangkokMonk from "../assets/images/pImages/bangkokMonkHouse.jpg";
 import HoChiMinh from "../assets/images/pImages/HoChiMinh.jpg";
 import SouthamptonSun from "../assets/images/pImages/SouthamptonSunset.jpg";
 import Yakshas from "../assets/images/pImages/Yakshas.jpg";
-import links from "../assets/json/links.json";
 
 export function getIcon(name: string): string {
     const icons = {
@@ -94,8 +93,6 @@ export function getIcon(name: string): string {
     };
     return icons[name];
 }
-
-export const getLink = (name: string): string => links[name];
 
 export const Images = {
     gd: [A2, DutyCalls, Lockdown, Silhouette, TheEye, TheHand, Wallpaper],
