@@ -55,6 +55,10 @@ import Sunset from "../assets/images/pImages/sunset beach.jpg";
 import Surfer from "../assets/images/pImages/sunset surfer.jpg";
 import Vibrant from "../assets/images/pImages/vibrant drop.jpg";
 import Wood from "../assets/images/pImages/wood.jpg";
+import BangkokMonk from "../assets/images/pImages/bangkokMonkHouse.jpg";
+import HoChiMinh from "../assets/images/pImages/HoChiMinh.jpg";
+import SouthamptonSun from "../assets/images/pImages/SouthamptonSunset.jpg";
+import Yakshas from "../assets/images/pImages/Yakshas.jpg";
 import links from "../assets/json/links.json";
 
 export function getIcon(name: string): string {
@@ -93,39 +97,27 @@ export function getIcon(name: string): string {
 
 export const getLink = (name: string): string => links[name];
 
-const graphicDesignImages: readonly string[] = [
-    A2,
-    DutyCalls,
-    Lockdown,
-    Silhouette,
-    TheEye,
-    TheHand,
-    Wallpaper,
-];
-
-const photographyImages: readonly string[] = [
-    Orchid1,
-    Orchid2,
-    Orchid3,
-    CloseUp,
-    Contrast,
-    Purple,
-    Ring,
-    Skull,
-    Sunset,
-    Surfer,
-    Vibrant,
-    Wood,
-];
-
-export function getImages(group: string): readonly string[] {
-    switch (group) {
-        case "gd":
-            return graphicDesignImages;
-        case "p":
-            return photographyImages;
-    }
-}
+export const Images = {
+    gd: [A2, DutyCalls, Lockdown, Silhouette, TheEye, TheHand, Wallpaper],
+    p: [
+        Yakshas,
+        BangkokMonk,
+        HoChiMinh,
+        SouthamptonSun,
+        Orchid1,
+        Orchid2,
+        Orchid3,
+        CloseUp,
+        Contrast,
+        Purple,
+        Ring,
+        Skull,
+        Sunset,
+        Surfer,
+        Vibrant,
+        Wood,
+    ],
+};
 
 export const pages: readonly string[] = [
     "Software Engineering",
