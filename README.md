@@ -10,7 +10,7 @@ Personal Portfolio Website
 - [ ] Impove image loading (maybe fixed)
 - [x] New video source as YouTube is bloated
   - Quality isn't too great
-- [x] Mobile Version (basic)
+- [ ] Mobile Version
   - [ ] Carousel for images on mobile
   - [ ] overal clean up of mobile version
 - [x] Nav-Bar
