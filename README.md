@@ -1,7 +1,7 @@
 Personal Portfolio Website
 ====
 - To show off skills and projects. 
-- Built in React with Vite using BunJS. 
+- Built in Preact with Vite using BunJS. 
 - Compiled into HTML with Bun.
 - Check out src directory for code.
 
