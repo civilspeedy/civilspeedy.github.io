@@ -59,7 +59,14 @@ import BangkokMonk from "../assets/images/pImages/bangkokMonkHouse.jpg";
 import HoChiMinh from "../assets/images/pImages/HoChiMinh.jpg";
 import SouthamptonSun from "../assets/images/pImages/SouthamptonSunset.jpg";
 import Yakshas from "../assets/images/pImages/Yakshas.jpg";
-import links from "../assets/json/links.json";
+import SapSkyline from "../assets/images/pImages/SapSkyline.jpg";
+import SapSkyline2 from "../assets/images/pImages/SapSkyline2.jpg";
+import TokTemple from "../assets/images/pImages/TokTemple.jpg";
+import TempleGuy from "../assets/images/pImages/TempleGuy.jpg";
+import SmallWorlds from "../assets/images/pImages/SmallWorlds.jpg";
+import TokTower from "../assets/images/pImages/TokTower.jpg";
+import TempleEngrave from "../assets/images/pImages/TempleEngrave.jpg";
+import Fuji from "../assets/images/pImages/Fuji.jpg";
 
 export function getIcon(name: string): string {
     const icons = {
@@ -95,11 +102,17 @@ export function getIcon(name: string): string {
     return icons[name];
 }
 
-export const getLink = (name: string): string => links[name];
-
 export const Images = {
     gd: [A2, DutyCalls, Lockdown, Silhouette, TheEye, TheHand, Wallpaper],
     p: [
+        Fuji,
+        TempleEngrave,
+        TokTower,
+        SmallWorlds,
+        TempleGuy,
+        TokTemple,
+        SapSkyline2,
+        SapSkyline,
         Yakshas,
         BangkokMonk,
         HoChiMinh,

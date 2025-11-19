@@ -1,9 +1,10 @@
 import React from "preact/compat";
-import { getIcon, getLink } from "../../logic/assetManagement";
 import "./displayStyles.css";
 import { themeSwitch } from "../../logic/styleManagement";
 import { Theme } from "../..";
 import { motion } from "motion/react";
+import links from "../../assets/json/links.json";
+import { getIcon } from "../../logic/assetManagement";
 
 type Props = { text: string };
 export default function IconDisplay({ text }: Props): React.JSX.Element {
@@ -26,7 +27,7 @@ export default function IconDisplay({ text }: Props): React.JSX.Element {
                 color: themeSwitch(Theme.value),
                 textDecoration: "none",
             }}
-            href={getLink(text)}
+            href={links[text]}
             target="_blank"
             whileHover={{ scale: 1.2 }}
         >
