@@ -1,14 +1,14 @@
 import React from "preact/compat";
 import "./buttonStyles.css";
 import { themeSwitch } from "../../logic/styleManagement";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import { Theme } from "../..";
-import pageLinks from "../../assets/json/pageLinks.json";
+import pageLinks from "../../assets/json/menuLinks.json";
 
 type Props = { text: string };
 export default function PageButton({ text }: Props): React.JSX.Element {
     return (
-        <motion.a
+        <m.a
             href={"/" + pageLinks[text]}
             style={{ color: themeSwitch(!Theme.value) }}
             id="pageButton"
@@ -16,6 +16,6 @@ export default function PageButton({ text }: Props): React.JSX.Element {
             whileTap={{ scale: 0.9 }}
         >
             {text}
-        </motion.a>
+        </m.a>
     );
 }

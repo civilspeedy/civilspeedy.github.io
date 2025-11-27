@@ -1,5 +1,5 @@
 import React from "preact/compat";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import AboutMe from "../components/displays/AboutMe";
 import "./pageStyle.css";
 import PageButton from "../components/buttons/PageButton";
@@ -11,32 +11,28 @@ export default function Home(): React.JSX.Element {
     return (
         <>
             <BrowserView>
-                <motion.div
-                    id="page"
-                    initial={beforePageOpen}
-                    animate={pageOpen}
-                >
-                    <h1>Charlie Slorick</h1>
-                    <motion.div initial={{ x: "100%", y: "50%" }} id="btnDiv">
+                <m.div id="page" initial={beforePageOpen} animate={pageOpen}>
+                    <m.h1>Charlie Slorick</m.h1>
+                    <m.div initial={{ x: "100%", y: "50%" }} id="btnDiv">
                         {pages.map((item, index) => (
                             <PageButton text={item} key={index} />
                         ))}
-                    </motion.div>
+                    </m.div>
                     <AboutMe />
-                </motion.div>
+                </m.div>
             </BrowserView>
             <MobileView>
-                <motion.div
+                <m.div
                     id="mobilePage"
                     initial={beforePageOpen}
                     animate={pageOpen}
                 >
-                    <motion.div id="mobileHomeDiv" initial={{ y: "50%" }}>
+                    <m.div id="mobileHomeDiv" initial={{ y: "50%" }}>
                         {pages.map((page, index) => (
                             <PageButton text={page} key={index} />
                         ))}
-                    </motion.div>
-                </motion.div>
+                    </m.div>
+                </m.div>
             </MobileView>
         </>
     );

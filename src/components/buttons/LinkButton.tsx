@@ -1,21 +1,26 @@
 import React from "preact/compat";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import { Theme } from "../..";
-import menuLinks from "../../assets/json/pageLinks.json";
+import menuLinks from "../../assets/json/menuLinks.json";
 
 type Props = { text: string };
 
 export default function LinkButton({ text }: Props): React.JSX.Element {
-    const link =
-        text === "Email" ? "mailto:" + atob(menuLinks[text]) : menuLinks[text];
+    let link = "";
+
+    if (text === "Email") {
+        link = "mailto:" + atob(menuLinks[text]);
+    } else {
+        link = menuLinks[text];
+    }
 
     const target = (): string => {
-        const newTabable = ["Email", "Linkedin", "GitHub"];
-        return newTabable.includes(text) ? "_blank" : "_self";
+        const newTabs: readonly string[] = ["Email", "Linkedin", "GitHub"];
+        return newTabs.includes(text) ? "_blank" : "_self";
     };
 
     return (
-        <motion.a
+        <m.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             href={link}
@@ -23,6 +28,6 @@ export default function LinkButton({ text }: Props): React.JSX.Element {
             target={target()}
         >
             {text}
-        </motion.a>
+        </m.a>
     );
 }

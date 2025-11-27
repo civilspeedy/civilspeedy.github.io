@@ -3,23 +3,23 @@ import "./pageStyle.css";
 import text from "../assets/json/ph.json";
 import IconDisplay from "../components/displays/IconDisplay";
 import { Images } from "../logic/assetManagement";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import { beforePageOpen, pageOpen } from "../logic/animations";
 
 export default function PhotographyPage(): React.JSX.Element {
     return (
-        <motion.div id="page" initial={beforePageOpen} animate={pageOpen}>
-            <h2>Tools</h2>
-            <div id="iconDiv">
+        <m.div id="page" initial={beforePageOpen} animate={pageOpen}>
+            <m.h2>Tools</m.h2>
+            <m.div id="iconDiv">
                 {text.tools.map((tool, index) => (
                     <IconDisplay text={tool} key={index} />
                 ))}
-            </div>
-            <div id="imageDiv">
+            </m.div>
+            <m.div id="imageDiv">
                 {Images.p.map((image, index) => (
-                    <img id="image" src={image} key={index} loading="eager" />
+                    <m.img id="image" src={image} key={index} loading="eager" />
                 ))}
-            </div>
-        </motion.div>
+            </m.div>
+        </m.div>
     );
 }

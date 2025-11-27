@@ -1,5 +1,5 @@
 import React, { useEffect } from "preact/compat";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import { Theme } from "../..";
 import "./displayStyles.css";
 import { animate } from "motion";
@@ -7,14 +7,18 @@ import { pages } from "../../logic/assetManagement";
 import LinkButton from "../buttons/LinkButton";
 
 type Props = { state: boolean };
+
 export default function Menu({ state }: Props): React.JSX.Element {
     useEffect(() => {
-        state
-            ? animate("#sideMenu", { x: -2, opacity: 1 })
-            : animate("#sideMenu", { x: "100%", opacity: 0 });
+        if (state) {
+            animate("#sideMenu", { x: -2, opacity: 1 });
+        } else {
+            animate("#sideMenu", { x: "100%", opacity: 0 });
+        }
     }, [state]);
+
     return (
-        <motion.div
+        <m.div
             id="sideMenu"
             initial={{ x: "100%", opacity: 0 }}
             style={{
@@ -29,6 +33,6 @@ export default function Menu({ state }: Props): React.JSX.Element {
             <LinkButton text="Linkedin" />
             <LinkButton text="GitHub" />
             <LinkButton text="Email" />
-        </motion.div>
+        </m.div>
     );
 }

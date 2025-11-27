@@ -2,25 +2,27 @@ import React from "preact/compat";
 import "./displayStyles.css";
 import { themeSwitch } from "../../logic/styleManagement";
 import { Theme } from "../..";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import links from "../../assets/json/links.json";
 import { getIcon } from "../../logic/assetManagement";
 
 type Props = { text: string };
-export default function IconDisplay({ text }: Props): React.JSX.Element {
-    const isBox: boolean = [
-        "Type/JavaScript",
-        "Zed",
-        "Jetbrains Toolbox",
-        "Adobe Premier Pro",
-        "Adobe Photoshop",
-        "Draw.io",
-        "Adobe Lightroom",
-    ].includes(text);
+const boxIcons: readonly string[] = [
+    "Type/JavaScript",
+    "Zed",
+    "Jetbrains Toolbox",
+    "Adobe Premier Pro",
+    "Adobe Photoshop",
+    "Draw.io",
+    "Adobe Lightroom",
+];
 
+export default function IconDisplay({ text }: Props): React.JSX.Element {
+    const isBox = boxIcons.includes(text);
     const isGo = text === "Go";
+
     return (
-        <motion.a
+        <m.a
             id="iconDisplay"
             style={{
                 backgroundColor: themeSwitch(!Theme.value),
@@ -31,7 +33,7 @@ export default function IconDisplay({ text }: Props): React.JSX.Element {
             target="_blank"
             whileHover={{ scale: 1.2 }}
         >
-            <img
+            <m.img
                 src={getIcon(text)}
                 id="iconImg"
                 loading="eager"
@@ -43,6 +45,6 @@ export default function IconDisplay({ text }: Props): React.JSX.Element {
                 }}
             />
             {text}
-        </motion.a>
+        </m.a>
     );
 }
