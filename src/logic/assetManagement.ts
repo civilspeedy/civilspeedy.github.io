@@ -98,7 +98,7 @@ export function getIcon(name: string): string {
         "Draw.io": DrawIO,
         "Affinity Photo 2": Theme.value ? Photo : PhotoLight,
         "Adobe Lightroom": Theme.value ? LightroomLight : Lightroom,
-    };
+    } as const;
     return icons[name];
 }
 
@@ -130,7 +130,7 @@ export const Images = {
         Vibrant,
         Wood,
     ],
-};
+} as const;
 
 export const pages: readonly string[] = [
     "Software Engineering",

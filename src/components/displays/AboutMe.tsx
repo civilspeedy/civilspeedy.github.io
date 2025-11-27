@@ -3,11 +3,11 @@ import text from "../../assets/json/aboutMe.json";
 import React from "preact/compat";
 import "./displayStyles.css";
 import { themeSwitch } from "../../logic/styleManagement";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 
 export default function AboutMe(): React.JSX.Element {
     return (
-        <motion.div
+        <m.div
             initial={{ x: "-50%", y: "-50%" }}
             style={{
                 backgroundColor: themeSwitch(Theme.value),
@@ -15,21 +15,21 @@ export default function AboutMe(): React.JSX.Element {
             }}
             id="aboutMeDiv"
         >
-            <h2>About Me</h2>
-            <p style={{ textWrap: "pretty" }}>{text.bio}</p>
+            <m.h2>About Me</m.h2>
+            <m.p style={{ textWrap: "pretty" }}>{text.bio}</m.p>
 
             {text.education.map((edu, index) => (
-                <div key={index}>
-                    <h2>{edu.name}</h2>
-                    <ul>
+                <m.div key={index}>
+                    <m.h2>{edu.name}</m.h2>
+                    <m.ul>
                         {edu.subjects.map((sub, subIndex) => (
-                            <li key={subIndex}>
+                            <m.li key={subIndex}>
                                 {sub.subject}: {sub.grade}
-                            </li>
+                            </m.li>
                         ))}
-                    </ul>
-                </div>
+                    </m.ul>
+                </m.div>
             ))}
-        </motion.div>
+        </m.div>
     );
 }
